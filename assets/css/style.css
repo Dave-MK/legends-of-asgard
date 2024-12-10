@@ -6,10 +6,34 @@
 }
 
 /* Global Styles */
+header,
+section, 
+footer {
+    height: 100vh;
+}
+
 
 
 /* Custom Styles */
+#mob-menu-style {
+    display:none;
+}
+#mob-menu-style li {
+    padding: 0.8rem 0;
+}
 
+#god-menu {
+    z-index: 99;
+    right: 0;
+    position: fixed;
+    margin-right: 1rem;
+    padding-right: 0.5rem;
+    display: none;
+}
+/* Media Queries for tablets (screen size 768px+) */
+@media screen and (min-width: 768px) {
+    #god-menu {
+    display: block;
+}
 
-
-/* Media Queries */
+}
