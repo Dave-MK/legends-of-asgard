@@ -67,11 +67,17 @@ li {
         font-size: 1.75rem;
     }
 
-    #nav-toggle:checked ~ nav {
+    #nav-toggle:checked ~ nav,
+    #nav-toggle:checked ~ .text-label i:last-child {
         display: block;
     }
 
+    #nav-toggle:checked ~ .text-label i:first-child {
+        display: none;
+    }
+
     #nav-toggle,
+    .text-label i:last-child,
     nav {
         display: none;
     }
