@@ -5,62 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A website centered around Sagas telling of the chaos and battles of the Legends of Asgard!">
     <meta name="keywords" content="norse, old norse, mythology, nordic, scandinavian, danish, danelaw, legends, asgard, odin, tyr, thor, freyja, freyr">
-    <title>Legends of Asgard | Welcome</title>
-    <!-- Bootstrap Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Favicons for major devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <title>
+        Legends of Asgard | Welcome
+    </title>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <nav id="mob-menu" class="col-12">
-            <div class="col-12 d-flex">   
-                <div id="logo" class="col-6">
-                    <h1>LoA</h1>
-                </div>
-                <div id="menu" class="col-6 text-end">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                    <input type="checkbox" name="menu-toggle" id="menu-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-            <div id="mob-menu-style" class="col-12 text-center">
-                <ul class="list-unstyled">
-                    <li>
-                        ODIN
-                    </li>
-                    <li>
-                        THOR
-                    </li>
-                    <li>
-                        TYR
-                    </li>
-                    <li>
-                        LOKI
-                    </li>
-                    <li>
-                        ANGRABODA
-                    </li>
-                    <li>
-                        FREYJA
-                    </li>
-                    <li>
-                        FREYR
-                    </li>
-                    <li>
-                        YGGDRASSIL
-                    </li>
-                    <li>
-                        CONTACT
-                    </li>
-                </ul>
-            </div>
+    <!-- Header Section containing Nav, logo, sticky menu-->
+    <header>
+        <a href="index.html">
+            <img src="assets/images/asgard_icon.png" alt="Logo depicting the Norse symbol for Asgard">
+        </a>
+        <input type="checkbox" name="nav-toggle" id="nav-toggle">
+        <label for="nav-toggle" class="text-label">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </label>
+        <nav>
+            <ul id="menu">
+                <li>
+                    ODIN
+                </li>
+                <li>
+                    THOR
+                </li>
+                <li>
+                    TYR
+                </li>
+                <li>
+                    LOKI
+                </li>
+                <li>
+                    ANGRABODA
+                </li>
+                <li>
+                    FREYJA
+                </li>
+                <li>
+                    FREYR
+                </li>
+                <li>
+                    YGGDRASSIL
+                </li>
+                <li>
+                    CONTACT
+                </li>
+            </ul>
         </nav>
-        <!-- Header Section containing Nav, logo, sticky menu-->
-        <header class="col-12 p-2 position-relative">
-            <h1 class="col-12 p-3">LEGENDS OF ASGARD</h1>
-            <p class="col-12 col-sm-8 p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quasi eligendi? Delectus placeat velit nesciunt nulla numquam deserunt,sascxcasxsa </p>
-            <p class="col-12 col-sm-10 p-3">adipisci ipsa exercitationem expedita error illo ducimus repudiandae nihil, quia molestias dolore. autem dolore nesciunt ut, deleniti accusantium veniam repellat nisi totam odit culpa eum! Ab voluptate, sequi voluptatum natus earum eum eveniet.</p>
+    </header>
+    
+    <!-- Main Body containing Sagas, and Yggdrassil -->
+    <main>
+        <section id="hero">
+            <div class="hero-title">
+                <h1>LEGENDS OF ASGARD</h1>
+            </div>
+            <div class="hero-blurb">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quasi eligendi? Delectus placeat velit nesciunt nulla numquam deserunt,sascxcasxsa </p>
+                <p>adipisci ipsa exercitationem expedita error illo ducimus repudiandae nihil, quia molestias dolore. autem dolore nesciunt ut, deleniti accusantium veniam repellat nisi totam odit culpa eum! Ab voluptate, sequi voluptatum natus earum eum eveniet.</p>
+            </div>
             <div id="god-menu">
                 <img src="" alt="">1<br>
                 <img src="" alt="">2<br>
@@ -70,41 +77,93 @@
                 <img src="" alt="">6<br>
                 <img src="" alt="">7<br>
             </div>
-        </header>
-        
-        <!-- Main Body containing Sagas, and Yggdrassil -->
-        <main class="col-12">
-            <section>
-                <h2>Odin</h2>
-            </section>
-            <section>
-                <h2>Thor</h2>
-            </section>
-            <section>
-                <h2>Tyr</h2>
-            </section>
-            <section>
-                <h2>Loki</h2>
-            </section>
-            <section>
-                <h2>Angraboda</h2>
-            </section>
-            <section>
-                <h2>Freyja</h2>
-            </section>
-            <section>
-                <h2>Freyr</h2>
-            </section>
-        </main>
-        <!-- Footer Section Containing contact etc -->
-        <footer class="col-12">
-            <div>
-                <p>Contact form goes here</p>
-            </div>
-        </footer>
-    </div>
-    <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </section>
+        <section>
+            <h2>YMIR</h2>
+            <p>
+                In the timeless void of Ginnungagap, frost from the icy realm of Niflheim met the searing flames of Muspellheim. From the melting ice emerged Ymir, a towering figure born of chaos. Ymir slept, and from his armpits and legs sprang other giants, representing the unbridled forces of nature. Ymir’s existence was unruly, his presence a threat to the ordered cosmos yet to come.
+
+                Nearby, the great cow Audhumla appeared, licking the salty ice. From the ice emerged Búri, the first of the gods, who begot Borr, father to Odin, Vili, and Ve. Recognizing Ymir’s uncontrollable power, the three brothers plotted to end his reign. In a titanic battle, they slew Ymir, whose blood gushed out to drown most of his giant offspring.
+
+                From Ymir’s body, the gods created the world:
+
+                His skull became the sky, where stars were fixed.
+                His flesh formed the land.
+                His blood created the oceans, and his teeth and bones became mountains and cliffs.
+                His eyelashes were fashioned into the walls of Midgard, the world of humans.
+                Yet Ymir’s kin, the surviving jötnar, fled to Jötunheim and bore an everlasting grudge, sowing the seeds of conflict between gods and giants.
+            </p>
+        </section>
+        <section>
+            <h2>ODIN</h2>
+            <p>
+                Odin, chief of the Æsir, was defined by his relentless pursuit of knowledge and power. Early in his reign, Odin sought the wisdom of Mímir, guardian of the well beneath Yggdrasil. To drink from its waters, Odin offered one of his eyes. The sacrifice left him with unmatched insight into the workings of the cosmos, though he was forever marked by the price of knowledge.
+
+                Later, Odin sought mastery of runes, magical symbols holding the secrets of creation, destiny, and power. To attain them, he performed a greater sacrifice: he pierced himself with his spear, Gungnir, and hung from Yggdrasil’s branches for nine nights and nine days, teetering on the edge of life and death. As he hung, the tree whispered its secrets, and Odin grasped the runes, becoming the god of magic, poetry, and prophecy.
+
+                But even Odin’s knowledge brought sorrow. Through his visions, he foresaw the events of Ragnarök, where he would fall to Fenrir, Loki’s monstrous wolf-son. Knowing his fate, Odin tirelessly prepared for the end, assembling the Einherjar (warriors chosen from the slain) and plotting strategies to delay the inevitable.
+            </p>
+        </section>
+        <section>
+            <h2>THOR</h2>
+            <p>
+                Thor, son of Odin and the earth goddess Jörð, embodied strength and protection. With his hammer Mjölnir, Thor waged unceasing war against the jötnar, who threatened the stability of the realms. Yet Thor was not just a warrior—he was also a protector of Midgard and a symbol of unyielding determination.
+
+                One of Thor’s greatest trials involved the Utgard-Loki, a giant who tricked him through illusions. Thor was challenged to drink from a horn, unaware it was connected to the sea; his efforts created the tides. He tried to lift a massive cat, not realizing it was Jörmungandr, the World Serpent in disguise. Lastly, he wrestled an old crone who was Elli, the personification of old age, and found her unbeatable. These tests taught Thor humility, though they also foreshadowed his final battle with Jörmungandr at Ragnarök.
+
+                Another famous tale recounts the theft of Mjölnir by Thrym, who demanded Freyja as his bride. Disguised as Freyja, Thor infiltrated the giant’s hall, and when Mjölnir was brought to bless the marriage, Thor seized it and unleashed his fury, slaying Thrym and restoring his hammer to protect the worlds.
+            </p>
+        </section>
+        <section>
+            <h2>TYR</h2>
+            <p>
+                Tyr was revered for his unwavering commitment to law and sacrifice. In the age of prophecy, the gods learned that Loki’s son, Fenrir, would grow to devour Odin during Ragnarök. They sought to bind the wolf, first with chains of iron, which Fenrir easily shattered. Finally, they commissioned the dwarves to forge Gleipnir, a silken ribbon imbued with impossible elements: the roots of a mountain, the beard of a woman, the sound of a cat’s footsteps, and the breath of a fish.
+
+                Fenrir, sensing trickery, agreed to be bound only if one god placed their hand in his mouth. Tyr, knowing the cost, stepped forward. As the ribbon tightened, Fenrir thrashed and bit off Tyr’s hand, leaving the god maimed. Though Tyr bore the loss stoically, his act ensured Fenrir’s restraint until Ragnarök, when the wolf would break free.
+
+                Tyr’s sacrifice embodied the ideals of honor and justice, showing that the preservation of order often demands personal loss.
+            </p>
+        </section>
+        <section>
+            <h2>Angraboda</h2>
+            <p>
+                Angrboða, a fearsome jötunn from Jötunheim, lived apart from the gods, shrouded in mystery and power. Her union with Loki resulted in three fateful children:
+
+                Fenrir, the wolf destined to kill Odin.
+                Jörmungandr, the serpent who encircles the world and battles Thor.
+                Hel, the somber ruler of the underworld.
+                The gods, fearing the prophecy of Ragnarök, acted swiftly. They bound Fenrir with Gleipnir, cast Jörmungandr into the ocean, and banished Hel to Niflheim, granting her dominion over the dead. Angrboða, devastated by the loss of her children, became an enduring symbol of grief and vengeance.
+
+                Her prophetic abilities shaped the course of events, and her children fulfilled their roles during Ragnarök, fulfilling her warnings to the gods.
+            </p>
+        </section>
+        <section>
+            <h2>Freyja</h2>
+            <p>
+                Freyja, goddess of love and war, was also a practitioner of seiðr, a form of magic dealing with fate and transformation. She taught this craft to Odin, making it a central aspect of Norse mysticism. Freyja’s beauty captivated gods and mortals alike, but it was her necklace, Brísingamen, that symbolized her power.
+
+                When Freyja sought to acquire the necklace, she encountered four dwarves who demanded she spend a night with each of them in exchange. Freyja agreed, valuing the treasure above all else. The necklace became her most prized possession, a symbol of her dual nature as a goddess of love and fierce independence.
+
+                As a leader of the Valkyries, Freyja claimed half the warriors who died in battle, welcoming them to her hall, Fólkvangr. Freyja’s domain over life, death, and magic made her one of the most complex deities in Norse mythology.
+            </p>
+        </section>
+        <section>
+            <h2>Freyr</h2>
+            <p>
+                Freyr, the twin brother of Freyja, was a god of abundance and peace, revered for bringing prosperity to the land. One day, Freyr spied Gerðr, a beautiful jötunn, and fell deeply in love. Overcome with desire, he sent his servant Skírnir to woo her. Skírnir used both threats and promises, eventually convincing Gerðr to marry Freyr.
+
+                To secure Gerðr’s hand, Freyr gave away his magical sword, which could fight on its own. This sacrifice ensured Freyr’s happiness but left him vulnerable. During Ragnarök, Freyr faced the fire giant Surtr without his weapon and was slain, a symbol of the price of love and peace.
+
+                Freyr’s story embodies the balance between passion and responsibility, as well as the sacrifices required to sustain harmony in a turbulent world.
+            </p>
+        </section>
+    </main>
+    <!-- Footer Section Containing contact etc -->
+    <footer>
+        <form>
+            <p>Contact form goes here</p>
+        </form>
+    </footer>
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/c480bc9d4e.js" crossorigin="anonymous"></script>
 </body>

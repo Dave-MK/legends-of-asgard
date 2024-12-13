@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+
+/* Variables */
+:root {
+    /* Fonts */
+    --primary-font: "Russo One", sans-serif;
+    --secondary-font: "Kanit", sans-serif;
+    
+    /* Colours */
+    --bg-color: #303440;
+    --primary-color: #FA4465;
+    --secondary-color: #17C7BB;
+    --tertiary-color: #3E52AC;
+    --tertiary-highlight-color: #7B79FF;   
+}
+
 /* Resets */
 * {
     margin: 0;
@@ -6,34 +22,92 @@
 }
 
 /* Global Styles */
-header,
-section, 
-footer {
-    height: 100vh;
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem;
+    color: white;
+    font-family: var(--secondary-font);
 }
 
+footer {
+    margin-top: auto;
+}
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
 
 /* Custom Styles */
-#mob-menu-style {
-    display:none;
-}
-#mob-menu-style li {
-    padding: 0.8rem 0;
-}
 
-#god-menu {
-    z-index: 99;
-    right: 0;
-    position: fixed;
-    margin-right: 1rem;
-    padding-right: 0.5rem;
-    display: none;
-}
-/* Media Queries for tablets (screen size 768px+) */
-@media screen and (min-width: 768px) {
+    /* Header and section styles */
+    section {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    h1 {
+        font-family: var(--primary-font);
+        font-size: 2rem;    
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        position: relative;
+        z-index: 99;
+    }
+
+    header > a > img {
+        width: 2.25rem;
+    }
+
+    .text-label i {
+        font-size: 1.75rem;
+    }
+
+    #nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    #nav-toggle,
+    nav {
+        display: none;
+    }
+
     #god-menu {
-    display: block;
-}
+        display: none;
+    }
 
-}
+    nav {
+        padding-top: 1rem;
+        position: absolute;
+        background-color: var(--tertiary-color);
+        width: 100%;
+        top: 2.25rem;
+        z-index: 98;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    nav li {
+        padding-bottom: 1rem;
+    }
+
+/* Responsiveness Props */
+
+    /* Media Queries for tablets (screen size 768px+) */
+    @media screen (min-width: 768px) {
+        #god-menu {
+            display: block;
+        }
+    }
+        
+    
