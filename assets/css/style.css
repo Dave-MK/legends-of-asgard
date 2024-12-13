@@ -11,7 +11,8 @@
     --primary-color: #FA4465;
     --secondary-color: #17C7BB;
     --tertiary-color: #3E52AC;
-    --tertiary-highlight-color: #7B79FF;   
+    --tertiary-highlight-color: #7B79FF;
+    --transparent-tertiary: hsla(229, 47%, 20%, 0.7);
 }
 
 /* Resets */
@@ -46,23 +47,16 @@ li {
 
 /* Custom Styles */
 
-    /* Header and section styles */
-    section {
-        height: 100vh;
-        width: 100vw;
-    }
-
-    h1 {
-        font-family: var(--primary-font);
-        font-size: 2rem;    
-    }
+    /* Header and Nav styles */
 
     header {
         display: flex;
+        height: 3rem;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         position: relative;
         z-index: 99;
+        padding: 0 0.5rem;
     }
 
     header > a > img {
@@ -82,29 +76,64 @@ li {
         display: none;
     }
 
-    #god-menu {
-        display: none;
-    }
-
     nav {
         padding-top: 1rem;
         position: absolute;
         background-color: var(--tertiary-color);
         width: 100%;
-        top: 2.25rem;
+        top: 2.85rem;
+        left: 0;
+        right: 0;
         z-index: 98;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     nav li {
         padding-bottom: 1rem;
     }
 
+    /* Main and Section styles */
+    
+    section {
+        height: 100vh;
+        width: 100vw; 
+        padding: 1rem 2rem 1rem 1rem;       
+    }
+
+    h1 {
+        font-family: var(--primary-font);
+        font-size: 2rem;  
+        letter-spacing: 0.1rem; 
+    }
+
+    #god-menu {
+        display: none;
+    }
+
+    #hero {
+        background: url("../images/legends_of_asgard_header.webp") no-repeat 47.5% 70%;
+        
+    }
+
+    .hero-title {
+        width: 75%;
+        padding: 2rem 3rem 1rem 1rem;
+        color: var(--primary-color);
+    }
+
+    .hero-blurb {
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem 2rem 1rem 1rem;
+        color: var(--secondary-color);
+        background-color: var(--transparent-tertiary);
+    }
+
 /* Responsiveness Props */
 
     /* Media Queries for tablets (screen size 768px+) */
-    @media screen (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         #god-menu {
             display: block;
         }
