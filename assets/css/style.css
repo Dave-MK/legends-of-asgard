@@ -28,7 +28,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0.25rem;
     color: white;
     font-family: var(--secondary-font);
 }
@@ -56,7 +55,9 @@ li {
         align-items: center;
         position: relative;
         z-index: 99;
-        padding: 0 0.5rem;
+        padding: 1rem 0.5rem 0.5rem 1rem;
+        margin: 0.25rem;
+        background-color: hsla(225, 14%, 22%, 0.37);
     }
 
     header > a > img {
@@ -109,7 +110,7 @@ li {
 
     h1 {
         font-family: var(--primary-font);
-        font-size: 2rem;  
+        font-size: 2.5rem;  
         letter-spacing: 0.1rem; 
     }
 
@@ -118,12 +119,12 @@ li {
     }
 
     #hero {
-        background: url("../images/legends_of_asgard_header.webp") no-repeat 47.5% 70%;
+        background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 70% / cover;
         
     }
 
     .hero-title {
-        width: 75%;
+        width: 85%;
         padding: 2rem 3rem 1rem 1rem;
         color: var(--primary-color);
     }
@@ -142,6 +143,19 @@ li {
     @media screen and (min-width: 768px) {
         #god-menu {
             display: block;
+        }
+
+        header {
+            justify-content: center;
+        }
+
+        header > a > img {
+            width: 3rem;
+        }
+
+        #nav-toggle,
+        .text-label {
+            display: none;
         }
     }
         
