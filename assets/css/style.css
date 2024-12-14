@@ -38,6 +38,12 @@ footer {
 
 a {
     text-decoration: none;
+    color: var(--secondary-color);
+}
+
+a:active,
+a:focus {
+    color: #FA4465;
 }
 
 li {
@@ -48,19 +54,20 @@ li {
 
     /* Header and Nav styles */
 
-    header {
+    #wrapper {
+        width: 100vw;
+        position: fixed;
         display: flex;
-        height: 3rem;
+        height: 4rem;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        z-index: 99;
         padding: 1rem 0.5rem 0.5rem 1rem;
-        margin: 0.25rem;
-        background-color: hsla(225, 14%, 22%, 0.37);
+        background-color: hsla(225, 14%, 22%, 0.60);
     }
 
-    header > a > img {
+    
+
+    #wrapper > a > img {
         width: 2.25rem;
     }
 
@@ -72,26 +79,36 @@ li {
     #nav-toggle:checked ~ .text-label i:last-child {
         display: block;
     }
+    
+    #nav-toggle:checked ~ nav {
+        transform: translateY(0%);
+        transition: transform 250ms ease-in-out;
+    }
+    
+
+    #nav-toggle:not(:checked) ~ nav {
+        transform: translateY(-100%);
+        transition: transform 250ms ease-in-out;
+    }
 
     #nav-toggle:checked ~ .text-label i:first-child {
         display: none;
     }
 
     #nav-toggle,
-    .text-label i:last-child,
-    nav {
+    .text-label i:last-child {
         display: none;
     }
 
     nav {
-        padding-top: 1rem;
+        padding-top: 4rem;
+        /* border-top: 4rem solid var(--bg-color); */
         position: absolute;
+        z-index: -1;
         background-color: var(--tertiary-color);
         width: 100%;
-        top: 2.85rem;
+        top: 0;
         left: 0;
-        right: 0;
-        z-index: 98;
         text-align: center;
         font-size: 1.75rem;
     }
@@ -105,7 +122,7 @@ li {
     section {
         height: 100vh;
         width: 100vw; 
-        padding: 1rem 2rem 1rem 1rem;       
+        padding: 4rem 2rem 1rem 1rem;       
     }
 
     h1 {
@@ -145,11 +162,11 @@ li {
             display: block;
         }
 
-        header {
+        #wrapper {
             justify-content: center;
         }
 
-        header > a > img {
+        #wrapper > a > img {
             width: 3rem;
         }
 
