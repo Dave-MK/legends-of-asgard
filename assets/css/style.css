@@ -41,11 +41,6 @@ a {
     color: var(--secondary-color);
 }
 
-a:active,
-a:focus {
-    color: #FA4465;
-}
-
 li {
     list-style: none;
 }
@@ -65,8 +60,6 @@ li {
         background-color: hsla(225, 14%, 22%, 0.60);
     }
 
-    
-
     #wrapper > a > img {
         width: 2.25rem;
     }
@@ -74,32 +67,7 @@ li {
     .text-label i {
         font-size: 1.75rem;
     }
-
-    #nav-toggle:checked ~ nav,
-    #nav-toggle:checked ~ .text-label i:last-child {
-        display: block;
-    }
     
-    #nav-toggle:checked ~ nav {
-        transform: translateY(0%);
-        transition: transform 250ms ease-in-out;
-    }
-    
-
-    #nav-toggle:not(:checked) ~ nav {
-        transform: translateY(-100%);
-        transition: transform 250ms ease-in-out;
-    }
-
-    #nav-toggle:checked ~ .text-label i:first-child {
-        display: none;
-    }
-
-    #nav-toggle,
-    .text-label i:last-child {
-        display: none;
-    }
-
     nav {
         padding-top: 4rem;
         /* border-top: 4rem solid var(--bg-color); */
@@ -111,6 +79,29 @@ li {
         left: 0;
         text-align: center;
         font-size: 1.75rem;
+    }
+    
+    #nav-toggle:checked ~ .text-label i:last-child {
+        display: block;
+    }
+    
+    #nav-toggle:not(:checked) ~ nav {
+        transform: translateY(-100%);
+        transition: transform 250ms ease-in;
+    }
+
+    #nav-toggle:checked ~ nav {
+        transform: translateY(0%);
+        transition: transform 250ms ease-in-out;
+    }
+
+    #nav-toggle:checked ~ .text-label i:first-child {
+        display: none;
+    }
+
+    #nav-toggle,
+    .text-label i:last-child {
+        display: none;
     }
 
     nav li {
