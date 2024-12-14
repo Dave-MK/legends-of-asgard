@@ -116,6 +116,8 @@ li {
         padding: 4rem 2rem 1rem 1rem;       
     }
 
+    /* Hero section */
+
     h1 {
         font-family: var(--primary-font);
         font-size: 2.5rem;  
@@ -144,6 +146,32 @@ li {
         color: var(--secondary-color);
         background-color: var(--transparent-tertiary);
     }
+
+    /* ODIN section */
+
+
+    /* THOR section */
+
+
+    /* TYR section */
+
+
+    /* ANGRABODA section */
+
+
+    /* FREYJA section */
+
+
+    /* FREYR section */
+
+
+    /* YGGDRASSIL section */
+
+
+    /* ALTHING section */
+
+
+
 
 /* Responsiveness Props */
 
