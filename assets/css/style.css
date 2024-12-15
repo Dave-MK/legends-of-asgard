@@ -12,7 +12,7 @@
     --secondary-color: #17C7BB;
     --tertiary-color: #3E52AC;
     --tertiary-highlight-color: #7B79FF;
-    --transparent-tertiary: hsla(229, 47%, 20%, 0.7);
+    --transparent-tertiary: hsla(229, 47%, 20%, 0.5);
 }
 
 /* Resets */
@@ -30,6 +30,10 @@ body {
     flex-direction: column;
     color: white;
     font-family: var(--secondary-font);
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 footer {
@@ -53,7 +57,7 @@ li {
         width: 100vw;
         position: fixed;
         display: flex;
-        height: 4rem;
+        min-height: 5vh;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 1.75rem 1rem 1rem;
@@ -72,6 +76,7 @@ li {
         padding-top: 4rem;
         /* border-top: 4rem solid var(--bg-color); */
         position: absolute;
+        min-height: 50vh;
         z-index: -1;
         background-color: var(--tertiary-color);
         width: 100%;
@@ -110,10 +115,11 @@ li {
 
     /* Main and Section styles */
     
-    section {
+    section,
+    footer {
         height: 100vh;
         width: 100vw; 
-        padding: 4rem 2rem 1rem 1rem;       
+        padding: 4rem 2rem 1rem 1rem;    
     }
 
     /* Hero section */
@@ -130,7 +136,6 @@ li {
 
     #hero {
         background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 70% / cover;
-        
     }
 
     .hero-title {
@@ -140,40 +145,144 @@ li {
     }
 
     .hero-blurb {
-        width: 90%;
+        width: 90vw;
         padding: 1rem;
         margin: 1rem 2rem 1rem 1rem;
         color: var(--secondary-color);
         background-color: var(--transparent-tertiary);
     }
 
-    /* ODIN section */
+    /* YMIR section */
+    #ymir {
+        background: url("../images/ymir2.webp") no-repeat 55% 65% / cover;
+    }
 
+
+    /* ODIN section */
+    #odin {
+        background: url("../images/odin_section.webp") no-repeat 50% 65% / cover;
+    }
 
     /* THOR section */
-
+    #thor {
+        background: url("../images/thor2.webp") no-repeat 37.5% 65% / cover;
+    }
 
     /* TYR section */
-
+    #tyr {
+        background: url("../images/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
+    }
 
     /* ANGRABODA section */
-
+    #angraboda {
+        background: url("../images/angraboda3.webp") no-repeat 40% 65% / cover;
+    }
 
     /* FREYJA section */
-
+    #freyja {
+        background: url("../images/freyja.webp") no-repeat 50% 65% / cover;
+    }
 
     /* FREYR section */
-
+    #freyr {
+        background: url("../images/freyr.webp") no-repeat 60% 65% / cover;
+    }
 
     /* YGGDRASSIL section */
-
+    #yggdrassil {
+        background: url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
+    }
 
     /* ALTHING section */
-
+    footer {
+        background: url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
+        height: 100vh;
+    }
 
 
 
 /* Responsiveness Props */
+
+    /* Media Queries for x-small devices (screen size upto 380px) */
+    @media screen and (max-width: 670px) {
+        /* Custom Styles */
+
+        p {
+            font-size: 0.75rem;
+        }
+
+        /* Header and Nav styles */
+
+        #wrapper {
+            width: 100vw;
+            position: fixed;
+            display: flex;
+            height: 3rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0.85rem 0.5rem 0.5rem;
+            background-color: hsla(225, 14%, 22%, 0.60);
+        }
+
+        #wrapper > a > img {
+            width: 2rem;
+        }
+
+        .text-label i {
+            font-size: 1.4rem;
+        }
+        
+        nav {
+            padding-top: 3rem;
+            /* border-top: 4rem solid var(--bg-color); */
+            position: absolute;
+            z-index: -1;
+            background-color: var(--tertiary-color);
+            width: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        nav li {
+            padding-bottom: 0.5rem;
+        }
+
+        /* Main and Section styles */
+        
+        section {
+            height: 100vh;
+            width: 100vw; 
+            padding: 3rem 1.75rem 1rem 0.5rem;       
+        }
+
+        /* Hero section */
+
+        h1 {
+            font-family: var(--primary-font);
+            font-size: 2rem;  
+            letter-spacing: 0.1rem; 
+        }
+
+        #hero {
+            background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
+        }
+
+        .hero-title {
+            width: 95%;
+            padding: 2rem 3rem 1rem 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero-blurb {
+            width: 95%;
+            padding: 0.5rem;
+            margin: 0.25rem 2rem 1rem 1rem;
+            color: var(--secondary-color);
+            background-color: var(--transparent-tertiary);
+        }
+    }
 
     /* Media Queries for tablets (screen size 768px+) */
     @media screen and (min-width: 768px) {
