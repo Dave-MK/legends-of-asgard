@@ -23,6 +23,7 @@
 }
 
 /* Global Styles */
+
 body {
     background-color: var(--bg-color);
     min-height: 100vh;
@@ -85,7 +86,7 @@ li {
     }
 
     .text-label i {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         filter: brightness(200%) contrast(200%);
         filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43))
     }
@@ -166,7 +167,7 @@ li {
     }
 
     #hero {
-        background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
     }
 
     .hero-title {
@@ -183,48 +184,48 @@ li {
 
     /* YMIR section */
     #ymir {
-        background: url("../images/ymir2.webp") no-repeat 55% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/ymir2.webp") no-repeat 55% 65% / cover;
     }
 
 
     /* ODIN section */
     #odin {
-        background: url("../images/odin_section.webp") no-repeat 50% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/odin_section.webp") no-repeat 50% 65% / cover;
     }
 
     /* THOR section */
     #thor {
-        background: url("../images/thor2.webp") no-repeat 37.5% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/thor2.webp") no-repeat 37.5% 65% / cover;
     }
 
     /* TYR section */
     #tyr {
-        background: url("../images/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
     }
 
     /* ANGRABODA section */
     #angraboda {
-        background: url("../images/angraboda3.webp") no-repeat 40% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/angraboda3.webp") no-repeat 40% 65% / cover;
     }
 
     /* FREYJA section */
     #freyja {
-        background: url("../images/freyja.webp") no-repeat 50% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyja.webp") no-repeat 50% 65% / cover;
     }
 
     /* FREYR section */
     #freyr {
-        background: url("../images/freyr.webp") no-repeat 60% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyr.webp") no-repeat 60% 65% / cover;
     }
 
     /* YGGDRASSIL section */
     #yggdrassil {
-        background: url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
     }
 
     /* ALTHING section */
     footer {
-        background: url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
         height: 100vh;
         display: flex;
         flex-direction: column;
