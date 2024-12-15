@@ -32,8 +32,22 @@ body {
     font-family: var(--secondary-font);
 }
 
+h1,
+h2 {
+    font-family: var(--primary-font);
+    font-size: 1.5rem;  
+    letter-spacing: 0.1rem; 
+    color: #17C7BB;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
 p {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
+    color: #FA4465;
 }
 
 footer {
@@ -57,33 +71,36 @@ li {
         width: 100vw;
         position: fixed;
         display: flex;
-        min-height: 5vh;
+        height: 3rem;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.75rem 1rem 1rem;
-        background-color: hsla(225, 14%, 22%, 0.60);
+        padding: 0.5rem 0.85rem 0.5rem 0.5rem;
+        /* background-color: hsla(225, 14%, 22%, 0.60); */
+        
     }
 
     #wrapper > a > img {
         width: 2.25rem;
+        filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0));
     }
 
     .text-label i {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        filter: brightness(200%) contrast(200%);
+        filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43))
     }
     
     nav {
-        padding-top: 4rem;
+        padding-top: 3rem;
         /* border-top: 4rem solid var(--bg-color); */
         position: absolute;
-        min-height: 50vh;
         z-index: -1;
         background-color: var(--tertiary-color);
         width: 100%;
         top: 0;
         left: 0;
         text-align: center;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     
     #nav-toggle:checked ~ .text-label i:last-child {
@@ -110,45 +127,57 @@ li {
     }
 
     nav li {
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
     }
 
     /* Main and Section styles */
     
-    section,
-    footer {
+    section {
         height: 100vh;
         width: 100vw; 
-        padding: 4rem 2rem 1rem 1rem;    
+        padding: 3rem 1rem 1rem 0rem;       
     }
+
+    #ymir div,
+    #odin div,
+    #thor div,
+    #tyr div,
+    #angraboda div,
+    #freyja div,
+    #freyr div,
+    #yggdrassil div,
+    #althing div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        padding: 1rem;
+        margin: 1rem;
+        color: var(--secondary-color);
+        background-color: var(--transparent-tertiary);
+    }
+
 
     /* Hero section */
-
-    h1 {
-        font-family: var(--primary-font);
-        font-size: 2.5rem;  
-        letter-spacing: 0.1rem; 
-    }
 
     #god-menu {
         display: none;
     }
 
     #hero {
-        background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 70% / cover;
+        background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
     }
 
     .hero-title {
-        width: 85%;
+        width: 95%;
         padding: 2rem 3rem 1rem 1rem;
-        color: var(--primary-color);
     }
 
     .hero-blurb {
-        width: 90vw;
-        padding: 1rem;
-        margin: 1rem 2rem 1rem 1rem;
-        color: var(--secondary-color);
+        width: 95%;
+        padding: 0.5rem;
+        margin: 0.25rem 2rem 1rem 1rem;
         background-color: var(--transparent-tertiary);
     }
 
@@ -197,92 +226,72 @@ li {
     footer {
         background: url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
+    footer > p {
+        color: #17C7BB;
+    }
 
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer form input {
+        width: 100%;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        font-family: var(--secondary-font);
+        font-size: 1rem;
+        border-radius: 50px;
+        border: 0;
+        background-color: hsla(167, 80%, 40%, 0.301);
+        color: #FA4465;
+    }
+
+    footer form textarea,
+    footer form button {
+        width: 100%;
+        padding: 1rem;
+        font-family: var(--secondary-font);
+        font-size: 1rem;
+        background-color: hsla(167, 80%, 40%, 0.301);
+        border: 0;
+    }
+
+    footer form textarea {
+        border-radius: 10px;
+        color: #FA4465;
+        margin-bottom: 1rem;
+    }
+
+    footer form button {
+        width: 75%;
+        background-color: #FA4465;
+        border-radius: 50px;
+        font-size: 1.25rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #FA4465;
+    }
+
+    footer form input:focus-within,
+    footer form textarea:focus-within {
+        background-color: hsla(167, 80%, 40%, 0.788);
+    }
 
 /* Responsiveness Props */
-
-    /* Media Queries for x-small devices (screen size upto 380px) */
-    @media screen and (max-width: 670px) {
-        /* Custom Styles */
-
-        p {
-            font-size: 0.75rem;
-        }
-
-        /* Header and Nav styles */
-
-        #wrapper {
-            width: 100vw;
-            position: fixed;
-            display: flex;
-            height: 3rem;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0.85rem 0.5rem 0.5rem;
-            background-color: hsla(225, 14%, 22%, 0.60);
-        }
-
-        #wrapper > a > img {
-            width: 2rem;
-        }
-
-        .text-label i {
-            font-size: 1.4rem;
-        }
-        
-        nav {
-            padding-top: 3rem;
-            /* border-top: 4rem solid var(--bg-color); */
-            position: absolute;
-            z-index: -1;
-            background-color: var(--tertiary-color);
-            width: 100%;
-            top: 0;
-            left: 0;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-
-        nav li {
-            padding-bottom: 0.5rem;
-        }
-
-        /* Main and Section styles */
-        
-        section {
-            height: 100vh;
-            width: 100vw; 
-            padding: 3rem 1.75rem 1rem 0.5rem;       
-        }
-
-        /* Hero section */
-
-        h1 {
-            font-family: var(--primary-font);
-            font-size: 2rem;  
-            letter-spacing: 0.1rem; 
-        }
-
-        #hero {
-            background: url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
-        }
-
-        .hero-title {
-            width: 95%;
-            padding: 2rem 3rem 1rem 1rem;
-            color: var(--primary-color);
-        }
-
-        .hero-blurb {
-            width: 95%;
-            padding: 0.5rem;
-            margin: 0.25rem 2rem 1rem 1rem;
-            color: var(--secondary-color);
-            background-color: var(--transparent-tertiary);
-        }
-    }
 
     /* Media Queries for tablets (screen size 768px+) */
     @media screen and (min-width: 768px) {
