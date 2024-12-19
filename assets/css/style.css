@@ -22,12 +22,12 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Global Styles & Fonts */
 
 body {
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    display: flex;
+    background-color: var(--bg-color);      
+    min-height: 100vh;                      
+    display: flex;                          
     flex-direction: column;
     color: white;
     font-family: var(--secondary-font);
@@ -36,14 +36,18 @@ body {
 h1,
 h2 {
     font-family: var(--primary-font);
-    font-size: 1.5rem;  
+    font-size: 2rem;  
     letter-spacing: 0.1rem; 
     color: #17C7BB;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 0.75rem;
 }
 
 p {
@@ -95,6 +99,7 @@ li {
         padding-top: 3rem;
         /* border-top: 4rem solid var(--bg-color); */
         position: absolute;
+        height: 100vh;
         z-index: -1;
         background-color: var(--tertiary-color);
         width: 100%;
@@ -134,7 +139,7 @@ li {
     /* Main and Section styles */
     
     section {
-        height: 100vh;
+        min-height: 100vh;
         width: 100vw; 
         padding: 3rem 1rem 1rem 0rem;       
     }
@@ -173,13 +178,16 @@ li {
     .hero-title {
         width: 95%;
         padding: 2rem 3rem 1rem 1rem;
+        margin-top: 3rem;
     }
 
     .hero-blurb {
         width: 95%;
         padding: 0.5rem;
-        margin: 0.25rem 2rem 1rem 1rem;
+        margin: 2rem 2rem 1rem 1rem;
         background-color: var(--transparent-tertiary);
+        text-transform: uppercase;
+        font-size: 1rem;
     }
 
     /* YMIR section */
@@ -226,7 +234,8 @@ li {
     /* ALTHING section */
     footer {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
-        height: 100vh;
+        min-height: 100vh;
+        padding-top: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -293,6 +302,27 @@ li {
     }
 
 /* Responsiveness Props */
+
+    /* Media Queries for tablets (screen size 365px+) */
+    @media screen and (min-width: 365px) {
+        h1,
+        h2 {
+            font-family: var(--primary-font);
+            font-size: 2.5rem;  
+            letter-spacing: 0.1rem; 
+            color: #17C7BB;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #FA4465;
+        }
+    }
 
     /* Media Queries for tablets (screen size 768px+) */
     @media screen and (min-width: 768px) {
