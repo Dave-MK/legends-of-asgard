@@ -172,7 +172,7 @@ li {
     }
 
     #hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;  
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
     }
 
     .hero-title {
@@ -327,7 +327,68 @@ li {
     /* Media Queries for tablets (screen size 768px+) */
     @media screen and (min-width: 768px) {
         #god-menu {
-            display: block;
+            width: 10rem;
+            height: 100vh;
+            right: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-bottom: 1rem;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+
+        #god-menu img {
+            height: 5rem;
+            width: 7.5rem;
+        }
+
+        .images {
+            filter: grayscale(1) brightness(0.5);
+            transition: 0.5s;
+        }
+
+        .images:hover {
+            filter: brightness(1) grayscale(0);
+            transform: translateZ(50px);
+        }
+
+        .img1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/ymir1.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img2 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/odin_section.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img3 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/thor1.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img4 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/tyr_catches_fenrir.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img5 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/angraboda2.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img6 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyja.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img7 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyr.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img8 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 45% 95%/ cover;
+        }
+
+        .img9 {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
         }
 
         #wrapper {
