@@ -41,6 +41,7 @@ h2 {
     font-size: 2rem;  
     letter-spacing: 0.1rem; 
     color: #17C7BB;
+    filter: drop-shadow(0px 2px 1px black);
 }
 
 h2 {
@@ -50,11 +51,14 @@ h2 {
 
 h3 {
     font-size: 0.75rem;
+    filter: drop-shadow(0px 2px 1px black);
 }
 
 p {
     font-size: 0.75rem;
     color: #FA4465;
+    z-index: 98;
+    filter: drop-shadow(0px 2px 1px black);
 }
 
 footer {
@@ -174,6 +178,7 @@ li {
         color: var(--secondary-color);
         background-color: var(--glassmorphic-color);
         backdrop-filter: var(--glassmorphic-filter);
+        z-index: 97;
     }
 
 
@@ -347,7 +352,22 @@ li {
 
     /* Media Queries for tablets (screen size 768px+) */
     @media screen and (min-width: 768px) {
-       
+        nav {
+            display: none;
+        }
+
+        #ymir div,
+        #odin div,
+        #thor div,
+        #tyr div,
+        #angraboda div,
+        #freyja div,
+        #freyr div,
+        #yggdrassil div,
+        #althing div {
+            width: 75vw;
+        }     
+    
         /* Header Container and Nav */
         #wrapper {
             justify-content: center;
