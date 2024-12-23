@@ -8,8 +8,8 @@
     
     /* Colours */
     --bg-color: #303440;
-    --primary-color: #FA4465;
-    --secondary-color: #17C7BB;
+    --primary-color: #17C7BB;
+    --secondary-color: #FA4465;
     --tertiary-color: #3E52AC;
     --tertiary-highlight-color: #7B79FF;
     --glassmorphic-color: hsla(0, 0%, 100%, 0.15);
@@ -40,13 +40,14 @@ h2 {
     font-family: var(--primary-font);
     font-size: 2rem;  
     letter-spacing: 0.1rem; 
-    color: #17C7BB;
+    color: var(--secondary-color);
     filter: drop-shadow(0px 2px 1px black);
 }
 
 h2 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
+    color: var(--primary-color);
 }
 
 h3 {
@@ -56,7 +57,7 @@ h3 {
 
 p {
     font-size: 0.75rem;
-    color: #FA4465;
+    color: var(--secondary-color);
     z-index: 98;
     filter: drop-shadow(0px 2px 1px black);
 }
@@ -67,7 +68,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 li {
@@ -269,7 +270,7 @@ li {
     }
 
     footer > p {
-        color: #17C7BB;
+        color: var(--secondary-color);
     }
 
     form {
@@ -289,7 +290,7 @@ li {
         border-radius: 50px;
         border: 0;
         background-color: hsla(167, 80%, 40%, 0.301);
-        color: #FA4465;
+        color: var(--primary-color);
     }
 
     footer form textarea,
@@ -304,13 +305,13 @@ li {
 
     footer form textarea {
         border-radius: 10px;
-        color: #FA4465;
+        color: var(--primary-color);
         margin-bottom: 1rem;
     }
 
     footer form button {
         width: 75%;
-        background-color: #FA4465;
+        background-color: var(--primary-color);
         border-radius: 50px;
         font-size: 1.25rem;
         color: white;
@@ -319,7 +320,7 @@ li {
 
     input::placeholder,
     textarea::placeholder {
-        color: #FA4465;
+        color: var(--primary-color);
     }
 
     footer form input:focus-within,
@@ -333,10 +334,8 @@ li {
     @media screen and (min-width: 365px) {
         h1,
         h2 {
-            font-family: var(--primary-font);
             font-size: 2.5rem;  
             letter-spacing: 0.1rem; 
-            color: #17C7BB;
         }
 
         h2 {
@@ -346,7 +345,6 @@ li {
 
         p {
             font-size: 1rem;
-            color: #FA4465;
         }
     }
 
