@@ -162,7 +162,7 @@ li {
     #angraboda div,
     #freyja div,
     #freyr div,
-    #yggdrassil div,
+    .yggy,
     #althing div {
         display: flex;
         flex-direction: column;
@@ -258,6 +258,27 @@ li {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
     }
 
+    #god-tree {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .heads {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: #FA4465;
+    }
+
+    .lines {
+        width: 10px;
+        height: 20px;
+    }
+
     /* ALTHING section */
     footer {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
@@ -270,7 +291,7 @@ li {
     }
 
     footer > p {
-        color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     form {
@@ -290,7 +311,7 @@ li {
         border-radius: 50px;
         border: 0;
         background-color: hsla(167, 80%, 40%, 0.301);
-        color: var(--primary-color);
+        color: var(--secondary-color);
     }
 
     footer form textarea,
@@ -305,7 +326,7 @@ li {
 
     footer form textarea {
         border-radius: 10px;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         margin-bottom: 1rem;
     }
 
@@ -320,7 +341,7 @@ li {
 
     input::placeholder,
     textarea::placeholder {
-        color: var(--primary-color);
+        color: var(--secondary-color);
     }
 
     footer form input:focus-within,
@@ -384,6 +405,7 @@ li {
         /* God Menu and Animation Props */
         #god-menu {
             width: 21.25vh;
+            height: 95vh;
             padding: 0.75rem;
             position: fixed;
             display: flex;
