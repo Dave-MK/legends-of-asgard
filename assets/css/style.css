@@ -104,7 +104,6 @@ li {
     
     nav {
         padding-top: 3rem;
-        /* border-top: 4rem solid var(--bg-color); */
         position: absolute;
         height: 100vh;
         z-index: -1;
@@ -258,25 +257,133 @@ li {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
     }
 
-    #god-tree {
-        width: 90vw;
+    .yggy h2 {
+        color: var(--secondary-color);
+        font-size: 1.75rem;
+    }
+
+    #world-tree {
+        width: 90%;
+        position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-around;
-
     }
 
-    .heads {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: #FA4465;
+    .worlds {
+        margin: 0.75rem;
+        width: 7.5rem !important;
+        height: 7.5rem;
+        border-radius: 50%;
+        background-color: #17C7BB;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
     }
 
-    .lines {
-        width: 10px;
-        height: 20px;
+    .asgard,
+    .muspelheim,
+    .vanaheim,
+    .jotunheimr,
+    .niflheim {
+        align-self: flex-start;
+    }
+
+    .asgard h3,
+    .muspelheim h3,
+    .vanaheim h3,
+    .jotunheimr h3,
+    .niflheim h3 {
+        color: white;
+        position: absolute;
+        margin-top: 2rem;
+        font-size: 2.25rem;
+        left: 10rem;
+    }
+
+    .alfheim,
+    .midgard,
+    .nidavellir,
+    .helheim {
+        align-self: flex-end;
+    }
+
+    .alfheim h3,
+    .midgard h3,
+    .nidavellir h3,
+    .helheim h3 {
+        color: white;
+        position: absolute;
+        margin-top: 2rem;
+        font-size: 2.25rem;
+        right: 10rem;
+    }
+
+    /* Tooltip container */
+    .asgard-tooltip,
+    .muspelheim-tooltip,
+    .vanaheim-tooltip,
+    .jotunheimr-tooltip,
+    .niflheim-tooltip,
+    .alfheim-tooltip,
+    .midgard-tooltip,
+    .nidavellir-tooltip,
+    .helheim-tooltip {
+        position: relative;
+        
+    }
+
+    /* Tooltip text */
+    .asgard-tooltip .asgard-tooltext,
+    .muspelheim-tooltip .muspelheim-tooltext,
+    .vanaheim-tooltip .vanaheim-tooltext,
+    .jotunheimr-tooltip .jotunheimr-tooltext,
+    .niflheim-tooltip .niflheim-tooltext {
+        visibility: hidden;
+        width: 75vw;
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+        text-align: left;
+        padding: 0.5rem;
+        border-radius: 5px;
+        
+    /* Position the tooltip text - see examples below! */
+        position: absolute;
+        left: -12.5px;
+        z-index: 1;
+    }
+
+    
+    .alfheim-tooltip .alfheim-tooltext,
+    .midgard-tooltip .midgard-tooltext,
+    .nidavellir-tooltip .nidavellir-tooltext,
+    .helheim-tooltip .helheim-tooltext {
+        visibility: hidden;
+        width: 75vw;
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+        text-align: left;
+        padding: 0.5rem;
+        border-radius: 5px;
+        
+    /* Position the tooltip text - see examples below! */
+        position: absolute;
+        left: -242.5px;
+        z-index: 1;
+    }
+
+    
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .asgard-tooltip:hover .asgard-tooltext,
+    .muspelheim-tooltip:hover .muspelheim-tooltext,
+    .vanaheim-tooltip:hover .vanaheim-tooltext,
+    .jotunheimr-tooltip:hover .jotunheimr-tooltext,
+    .niflheim-tooltip:hover .niflheim-tooltext,
+    .alfheim-tooltip:hover .alfheim-tooltext,
+    .midgard-tooltip:hover .midgard-tooltext,
+    .nidavellir-tooltip:hover .nidavellir-tooltext,
+    .helheim-tooltip:hover .helheim-tooltext {
+        visibility: visible;
     }
 
     /* ALTHING section */
