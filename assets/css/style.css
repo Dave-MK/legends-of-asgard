@@ -257,65 +257,32 @@ li {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
     }
 
+    .yggy {
+        width: 95vw;
+
+    }
+
     .yggy h2 {
         color: var(--secondary-color);
         font-size: 1.75rem;
     }
 
     #world-tree {
-        width: 90%;
+        width: 90vw;
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
     }
 
-    .worlds {
-        margin: 0.75rem;
-        width: 7.5rem !important;
-        height: 7.5rem;
-        border-radius: 50%;
-        background-color: #17C7BB;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
-    }
-
-    .asgard,
-    .muspelheim,
-    .vanaheim,
-    .jotunheimr,
-    .niflheim {
-        align-self: flex-start;
-    }
-
-    .asgard h3,
-    .muspelheim h3,
-    .vanaheim h3,
-    .jotunheimr h3,
-    .niflheim h3 {
+    .asgard-tooltip h3,
+    .muspelheim-tooltip h3,
+    .vanaheim-tooltip h3,
+    .jotunheimr-tooltip h3,
+    .niflheim-tooltip h3,
+    .alfheim-tooltip h3,
+    .midgard-tooltip h3,
+    .nidavellir-tooltip h3,
+    .helheim-tooltip h3 {
         color: white;
-        position: absolute;
-        margin-top: 2rem;
-        font-size: 2.25rem;
-        left: 10rem;
-    }
-
-    .alfheim,
-    .midgard,
-    .nidavellir,
-    .helheim {
-        align-self: flex-end;
-    }
-
-    .alfheim h3,
-    .midgard h3,
-    .nidavellir h3,
-    .helheim h3 {
-        color: white;
-        position: absolute;
-        margin-top: 2rem;
-        font-size: 2.25rem;
-        right: 10rem;
+        font-size: 7.5vw;
     }
 
     /* Tooltip container */
@@ -329,7 +296,10 @@ li {
     .nidavellir-tooltip,
     .helheim-tooltip {
         position: relative;
-        
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 1rem;
     }
 
     /* Tooltip text */
@@ -339,16 +309,19 @@ li {
     .jotunheimr-tooltip .jotunheimr-tooltext,
     .niflheim-tooltip .niflheim-tooltext {
         visibility: hidden;
-        width: 75vw;
+        width: 85%;
+        max-height: 7.5rem;
+        overflow-y: scroll;
         background-color: var(--bg-color);
         color: var(--primary-color);
         text-align: left;
-        padding: 0.5rem;
+        padding: 0.75rem;
         border-radius: 5px;
-        
+        align-self: center;
+        filter: drop-shadow(0px 2px 1px black);
+        align-self: center;
     /* Position the tooltip text - see examples below! */
         position: absolute;
-        left: -12.5px;
         z-index: 1;
     }
 
@@ -358,20 +331,20 @@ li {
     .nidavellir-tooltip .nidavellir-tooltext,
     .helheim-tooltip .helheim-tooltext {
         visibility: hidden;
-        width: 75vw;
+        width: 85%;
+        max-height: 7.5rem;
+        overflow-y: scroll;
         background-color: var(--bg-color);
         color: var(--primary-color);
         text-align: left;
-        padding: 0.5rem;
+        padding: 0.75rem;
         border-radius: 5px;
-        
+        filter: drop-shadow(0px 2px 1px black);
+        align-self: center;
     /* Position the tooltip text - see examples below! */
         position: absolute;
-        left: -242.5px;
         z-index: 1;
     }
-
-    
 
     /* Show the tooltip text when you mouse over the tooltip container */
     .asgard-tooltip:hover .asgard-tooltext,
@@ -384,6 +357,21 @@ li {
     .nidavellir-tooltip:hover .nidavellir-tooltext,
     .helheim-tooltip:hover .helheim-tooltext {
         visibility: visible;
+    }
+
+    .asgard-tooltip img,
+    .muspelheim-tooltip img,
+    .vanaheim-tooltip img,
+    .jotunheimr-tooltip img,
+    .niflheim-tooltip img,
+    .alfheim-tooltip img,
+    .midgard-tooltip img,
+    .nidavellir-tooltip img,
+    .helheim-tooltip img {
+        width: 25vw;
+        height: 25vw;
+        margin: 0.75rem;
+        border-radius: 50%;
     }
 
     /* ALTHING section */
