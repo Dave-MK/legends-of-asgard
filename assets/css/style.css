@@ -2,9 +2,40 @@
 
 /* Variables */
 :root {
-    /* Fonts */
+    /* Fonts & Sizes */
     --primary-font: "Russo One", sans-serif;
     --secondary-font: "Kanit", sans-serif;
+
+        /* x-small devices */
+        --font-h1-xs: 12vw;
+        --font-h2-xs: 10vw;
+        --font-h3-xs: 7.5vw;
+        --font-p-xs: 5vw;
+        /* small devices */
+        --font-h1-s: 12vw;
+        --font-h2-s: 10vw;
+        --font-h3-s: 7.5vw;
+        --font-p-s: 5vw;
+        /* medium devices */
+        --font-h1-md: 12vw;
+        --font-h2-md: 10vw;
+        --font-h3-md: 7.5vw;
+        --font-p-md: 5vw;
+        /* large devices */
+        --font-h1-lg: 12vw;
+        --font-h2-lg: 10vw;
+        --font-h3-lg: 7.5vw;
+        --font-p-lg: 5vw;
+        /* x-large devices */
+        --font-h1-xl: 12vw;
+        --font-h2-xl: 10vw;
+        --font-h3-xl: 7.5vw;
+        --font-p-xl: 5vw;
+        /* xx-large devices */
+        --font-h1-xxl: 12vw;
+        --font-h2-xxl: 10vw;
+        --font-h3-xxl: 7.5vw;
+        --font-p-xxl: 5vw;
     
     /* Colours */
     --bg-color: hsl(225, 14%, 22%);
@@ -13,11 +44,14 @@
     --tertiary-color: rgb(62, 82, 172);
     --tertiary-highlight-color: rgb(125, 122, 255);
     --glassmorphic-color: rgba(255, 255, 255, 0.15);
+
+    /* Filters & Overlays */
     --glassmorphic-filter: blur(0.15rem);
     --section-bg-overlay-one: linear-gradient(rgba(24, 201, 189, 0.35), rgba(250, 66, 100, 0.35));
     --section-bg-overlay-two: linear-gradient(rgba(250, 66, 100, 0.35), rgba(24, 201, 189, 0.35));
-    --drop-shadow: drop-shadow(0px 2px 1px black);
 
+    /* Shadows & Borders */
+    --drop-shadow: drop-shadow(0px 2px 1px black);
 }
 
 /* Resets */
