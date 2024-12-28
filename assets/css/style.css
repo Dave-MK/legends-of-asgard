@@ -7,13 +7,16 @@
     --secondary-font: "Kanit", sans-serif;
     
     /* Colours */
-    --bg-color: #303440;
-    --primary-color: #17C7BB;
-    --secondary-color: #FA4465;
-    --tertiary-color: #3E52AC;
-    --tertiary-highlight-color: #7B79FF;
-    --glassmorphic-color: hsla(0, 0%, 100%, 0.15);
+    --bg-color: hsl(225, 14%, 22%);
+    --primary-color: rgb(24, 201, 189);
+    --secondary-color: rgb(250, 66, 100);
+    --tertiary-color: rgb(62, 82, 172);
+    --tertiary-highlight-color: rgb(125, 122, 255);
+    --glassmorphic-color: rgba(255, 255, 255, 0.15);
     --glassmorphic-filter: blur(0.15rem);
+    --section-bg-overlay-one: linear-gradient(rgba(24, 201, 189, 0.35), rgba(250, 66, 100, 0.35));
+    --section-bg-overlay-two: linear-gradient(rgba(250, 66, 100, 0.35), rgba(24, 201, 189, 0.35));
+    --drop-shadow: drop-shadow(0px 2px 1px black);
 
 }
 
@@ -22,6 +25,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Global Styles & Fonts */
@@ -38,26 +42,28 @@ body {
 h1,
 h2 {
     font-family: var(--primary-font);
-    font-size: 2rem;  
+    font-size: 11vw;  
     letter-spacing: 0.1rem; 
     color: var(--secondary-color);
     filter: drop-shadow(0px 2px 1px black);
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 5.25vw;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
 }
 
 h3 {
-    font-size: 0.75rem;
+    font-size: 4vw;
     filter: drop-shadow(0px 2px 1px black);
 }
 
 p {
-    font-size: 0.75rem;
-    color: var(--secondary-color);
+    font-size: 4vw;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.075rem;
     z-index: 98;
     filter: drop-shadow(0px 2px 1px black);
 }
@@ -92,6 +98,7 @@ li {
     }
 
     #wrapper > a > img {
+        padding-top: 0.5rem;
         width: 2.75rem;
         filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0));
     }
@@ -103,6 +110,7 @@ li {
     }
     
     nav {
+        display: none;
         padding-top: 3rem;
         position: absolute;
         height: 100vh;
@@ -115,16 +123,20 @@ li {
         font-size: 1.5rem;
     }
     
-    #nav-toggle:checked ~ .text-label i:last-child {
+    #nav-toggle:checked ~ .text-label i:last-child, nav, nav li {
         display: block;
     }
+
+    #nav-toggle:not(:checked) ~ nav li {
+        display: none;
+    }
     
-    #nav-toggle:not(:checked) ~ nav {
+    #nav-toggle:not(:checked) ~ nav, nav li {
         transform: translateY(-100%);
         transition: transform 250ms ease-in;
     }
 
-    #nav-toggle:checked ~ nav {
+    #nav-toggle:checked ~ nav, nav li {
         transform: translateY(0%);
         transition: transform 250ms ease-in-out;
     }
@@ -165,22 +177,42 @@ li {
     #althing div {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: safe center;
         align-items: center;
         border-radius: 0.5rem;
         border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
         border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        width: 90vw;
+        width: 95vw;
+        max-width: 1200px;
+        max-height: 60vh;
+        overflow-y: scroll;
         padding: 1rem;
-        margin: 1rem;
+        margin-left: 1rem;
+        margin-top: 5rem;
         color: var(--secondary-color);
         background-color: var(--glassmorphic-color);
         backdrop-filter: var(--glassmorphic-filter);
         z-index: 97;
     }
 
+    .yggy, #althing div {
+        overflow: visible;
+        max-height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    #althing div {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    section:not(#hero) h2 {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        font-size: 12vw;
+    }
 
     /* Hero section */
 
@@ -190,21 +222,22 @@ li {
     }
 
     #hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
+        background: var(--section-bg-overlay-two), url("../images/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
     }
 
     .hero-title {
         width: 95%;
         align-self: flex-start;
         padding: 2rem 3rem 1rem 1rem;
-        margin-top: 3rem;
+        margin-top: -5rem;
+        margin-bottom: 3rem;
     }
 
     .hero-blurb {
-        width: 60%;
-        padding: 0.5rem;
-        margin: 2rem 2rem 1rem 1rem;
-        align-self: flex-start;
+        width: 90%;
+        padding: 1rem;
+        margin-left: 1rem;
+        align-self: center;
         border-radius: 0.5rem;
         border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
         border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
@@ -213,59 +246,59 @@ li {
         background-color: var(--glassmorphic-color);
         backdrop-filter: var(--glassmorphic-filter);
         text-transform: uppercase;
-        font-size: 1rem;
     }
 
     /* YMIR section */
     #ymir {
-        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/ymir2.webp") no-repeat 55% 65% / cover;
+        background: var(--section-bg-overlay-one), url("../images/ymir2.webp") no-repeat 55% 65% / cover;
     }
 
 
     /* ODIN section */
     #odin {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/odin_section.webp") no-repeat 50% 65% / cover;
+        background: var(--section-bg-overlay-two), url("../images/odin_section.webp") no-repeat 50% 65% / cover;
     }
 
     /* THOR section */
     #thor {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/thor2.webp") no-repeat 37.5% 65% / cover;
+        background: var(--section-bg-overlay-one), url("../images/thor2.webp") no-repeat 37.5% 65% / cover;
     }
 
     /* TYR section */
     #tyr {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
+        background: var(--section-bg-overlay-two), url("../images/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
     }
 
     /* ANGRABODA section */
     #angraboda {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/angraboda3.webp") no-repeat 40% 65% / cover;
+        background: var(--section-bg-overlay-one), url("../images/angraboda3.webp") no-repeat 40% 65% / cover;
     }
 
     /* FREYJA section */
     #freyja {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyja.webp") no-repeat 50% 65% / cover;
+        background: var(--section-bg-overlay-two), url("../images/freyja.webp") no-repeat 50% 65% / cover;
     }
 
     /* FREYR section */
     #freyr {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/freyr.webp") no-repeat 60% 65% / cover;
+        background: var(--section-bg-overlay-one), url("../images/freyr.webp") no-repeat 60% 65% / cover;
     }
 
     /* YGGDRASSIL section */
     #yggdrassil {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
+        background: var(--section-bg-overlay-two), url("../images/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
     }
 
-    .yggy {
+    div.yggy {
         width: 95vw;
-
+        margin-top: 3rem;
     }
 
-    .yggy h2 {
+    div.yggy h2 {
         color: var(--secondary-color);
-        font-size: 1.75rem;
-    }
+        font-size: 7.5vw !important;
+        margin: 0 1rem 1rem;      
+    }    
 
     #world-tree {
         width: 90vw;
@@ -374,15 +407,34 @@ li {
         border-radius: 50%;
     }
 
+    .asgard-tooltip ,
+    .muspelheim-tooltip ,
+    .vanaheim-tooltip ,
+    .jotunheimr-tooltip ,
+    .niflheim-tooltip {
+        flex-direction: row-reverse;
+    }
+
     /* ALTHING section */
     footer {
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/contact_bg.webp") no-repeat 45% 95%/ cover;
         min-height: 100vh;
         padding-top: 3rem;
+        padding-bottom: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    footer > h2 {
+        font-size: 10vw;
+        padding-top: 3rem;
+    }
+
+    footer > h3 {
+        font-size: 5vw;
+
     }
 
     footer > p {
@@ -402,7 +454,7 @@ li {
         margin-bottom: 1rem;
         padding: 1rem;
         font-family: var(--secondary-font);
-        font-size: 1rem;
+        font-size: 5vw;
         border-radius: 50px;
         border: 0;
         background-color: hsla(167, 80%, 40%, 0.301);
@@ -414,7 +466,7 @@ li {
         width: 100%;
         padding: 1rem;
         font-family: var(--secondary-font);
-        font-size: 1rem;
+        font-size: 5vw;
         background-color: hsla(167, 80%, 40%, 0.301);
         border: 0;
     }
@@ -426,10 +478,10 @@ li {
     }
 
     footer form button {
-        width: 75%;
+        width: 50vw;
         background-color: var(--primary-color);
         border-radius: 50px;
-        font-size: 1.25rem;
+        font-size: 5vw;
         color: white;
         font-weight: bold;
     }
@@ -446,26 +498,8 @@ li {
 
 /* Responsiveness Props */
 
-    /* Media Queries for tablets (screen size 365px+) */
-    @media screen and (min-width: 365px) {
-        h1,
-        h2 {
-            font-size: 2.5rem;  
-            letter-spacing: 0.1rem; 
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    /* Media Queries for tablets (screen size 768px+) */
-    @media screen and (min-width: 768px) {
+    /* Media Queries for tablets (screen size 920px+) */
+    @media screen and (min-width: 920px) {
         nav {
             display: none;
         }
