@@ -76,30 +76,31 @@ body {
 h1,
 h2 {
     font-family: var(--primary-font);
-    font-size: 11vw;  
+    font-size: clamp(1.5rem, 11vw, 3.5rem);  
     letter-spacing: 0.1rem; 
     color: var(--secondary-color);
-    filter: drop-shadow(0px 2px 1px black);
+    filter: drop-shadow(0px 2px 1px var(--primary-color));
 }
 
 h2 {
-    font-size: 5.25vw;
+    font-size: clamp(1rem, 5.25vw, 2rem);
     margin-bottom: 0.75rem;
     color: var(--primary-color);
+    filter: drop-shadow(0px 2px 1px var(--tertiary-highlight-color));
 }
 
 h3 {
-    font-size: 4vw;
-    filter: drop-shadow(0px 2px 1px black);
+    font-size: clamp(0.75rem, 4vw, 1.5rem);
+    filter: drop-shadow(0px 2px 1px var(--tertiary-color));
 }
 
 p {
-    font-size: 4vw;
+    font-size: clamp(0.75rem, 4vw, 1.5rem);
     color: white;
     font-weight: 300;
     letter-spacing: 0.075rem;
     z-index: 98;
-    filter: drop-shadow(0px 2px 1px black);
+    filter: drop-shadow(0px 2px 1px var(--tertiary-color));
 }
 
 footer {
@@ -218,7 +219,7 @@ li {
         border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        width: 95vw;
+        width: clamp(275px, 95vw, 768px);
         max-width: 1200px;
         max-height: 60vh;
         overflow-y: scroll;
@@ -245,7 +246,7 @@ li {
     section:not(#hero) h2 {
         margin-top: 1.5rem;
         margin-left: 1rem;
-        font-size: 12vw;
+        font-size: clamp(2rem, 12vw, 5rem);
     }
 
     /* Hero section */
@@ -330,7 +331,7 @@ li {
 
     div.yggy h2 {
         color: var(--secondary-color);
-        font-size: 7.5vw !important;
+        font-size: clamp(1.25rem, 6vw, 3rem) !important;
         margin: 0 1rem 1rem;      
     }    
 
@@ -462,12 +463,12 @@ li {
     }
 
     footer > h2 {
-        font-size: 10vw;
+        font-size: clamp(1.25rem, 10vw, 3rem);
         padding-top: 3rem;
     }
 
     footer > h3 {
-        font-size: 5vw;
+        font-size: clamp(1rem, 5vw, 2rem);
 
     }
 
@@ -488,7 +489,7 @@ li {
         margin-bottom: 1rem;
         padding: 1rem;
         font-family: var(--secondary-font);
-        font-size: 5vw;
+        font-size: clamp(0.75rem, 4vw, 1.75rem);
         border-radius: 50px;
         border: 0;
         background-color: hsla(167, 80%, 40%, 0.301);
@@ -500,7 +501,7 @@ li {
         width: 100%;
         padding: 1rem;
         font-family: var(--secondary-font);
-        font-size: 5vw;
+        font-size: clamp(0.75rem, 4vw, 1.75rem);
         background-color: hsla(167, 80%, 40%, 0.301);
         border: 0;
     }
@@ -512,10 +513,10 @@ li {
     }
 
     footer form button {
-        width: 50vw;
+        width: clamp(7.5rem, 50vw, 20rem);
         background-color: var(--primary-color);
         border-radius: 50px;
-        font-size: 5vw;
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
         color: white;
         font-weight: bold;
     }
@@ -601,7 +602,7 @@ li {
             display: flex;
             justify-content: center;
             justify-items: center;
-            filter: grayscale(1) brightness(0.15);
+            filter: grayscale(1) brightness(0.5);
             transition: 0.3s ease-in-out;
         }
 
