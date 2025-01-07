@@ -39,6 +39,10 @@
 
 /* Global Styles & Fonts */
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     background-color: var(--bg-color);      
     min-height: 100vh;                      
@@ -166,6 +170,13 @@ li {
 
     /* Main and Section styles */
     
+    header,
+    section,
+    footer {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
     section {
         display: flex;
         flex-direction: column;
