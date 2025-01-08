@@ -538,6 +538,7 @@ li {
             display: none;
         }
 
+        #hero div,
         #ymir div,
         #odin div,
         #thor div,
@@ -548,6 +549,7 @@ li {
         #yggdrassil div,
         #althing div {
             width: 75vw;
+            align-self: flex-start;
         }     
     
         /* Header Container and Nav */
