@@ -214,13 +214,13 @@ li {
         flex-direction: column;
         justify-content: safe center;
         align-items: center;
+        align-self: center;
         border-radius: 0.5rem;
         border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
         border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        width: clamp(275px, 95vw, 768px);
-        max-width: 1200px;
+        width: 90vw;
         max-height: 60vh;
         overflow-y: scroll;
         padding: 1rem;
@@ -548,7 +548,8 @@ li {
         #freyr div,
         #yggdrassil div,
         #althing div {
-            width: 75vw;
+            margin-left: 4rem;
+            width: clamp(10rem, 65vw, 130rem);
             align-self: flex-start;
         }     
     
@@ -637,5 +638,62 @@ li {
             display: block;
         }
     }
+
+    /* Media Queries for laptops (screen size 992px+) */
+    @media screen and (min-width: 992px) {
+        #hero div,
+        #ymir div,
+        #odin div,
+        #thor div,
+        #tyr div,
+        #angraboda div,
+        #freyja div,
+        #freyr div,
+        #yggdrassil div,
+        #althing div {
+            max-height: 90vh;
+            width: clamp(10rem, 70vw, 130rem);
+            align-self: flex-start;
+        }  
+
+    }
+
+    /* Media Queries for laptops (screen size 1200px+) */
+    @media screen and (min-width: 1200px) {
+        #hero div,
+        #ymir div,
+        #odin div,
+        #thor div,
+        #tyr div,
+        #angraboda div,
+        #freyja div,
+        #freyr div,
+        #yggdrassil div,
+        #althing div {
+            width: clamp(10rem, 75vw, 130rem);
+            align-self: flex-start;
+        }  
+
+    }
+
+    /* Media Queries for laptops (screen size 1440px+) */
+    @media screen and (min-width: 1440px) {
+        #hero div,
+        #ymir div,
+        #odin div,
+        #thor div,
+        #tyr div,
+        #angraboda div,
+        #freyja div,
+        #freyr div,
+        #yggdrassil div,
+        #althing div {
+            margin-left: 7.5rem;
+            width: clamp(10rem, 80vw, 160rem);
+            align-self: flex-start;
+        }  
+
+    }
+      
         
     
