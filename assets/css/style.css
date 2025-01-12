@@ -55,6 +55,7 @@
 
 html {
     scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 }
 
 body {
@@ -263,7 +264,7 @@ li {
     .hero-title {
         width: clamp(10rem, 95vw, 50rem);
         align-self: flex-start;
-        padding: 2rem 3rem 1rem 1rem;
+        padding: 2rem 3rem 1rem 1.75rem;
         margin-bottom: 3rem;
     }
 
@@ -272,13 +273,13 @@ li {
         padding: 1rem;
         margin-left: 1rem;
         align-self: center;
-        border-radius: 0.5rem;
+        /* border-radius: 0.5rem;
         border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
         border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
         border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
         background-color: var(--glassmorphic-color);
-        backdrop-filter: var(--glassmorphic-filter);
+        backdrop-filter: var(--glassmorphic-filter); */
         text-transform: uppercase;
     }
 
@@ -652,12 +653,11 @@ li {
         #yggdrassil div,
         #althing div {
             width: clamp(10rem, 70vw, 130rem);
-            align-self: flex-start;
         }  
 
     }
 
-    /* Media Queries for laptops (screen size 1200px+) */
+    /* Media Queries for desktops and larger devices (screen size 1200px+) */
     @media screen and (min-width: 1200px) {
         #hero div,
         #ymir div,
@@ -670,12 +670,11 @@ li {
         #yggdrassil div,
         #althing div {
             width: clamp(10rem, 75vw, 130rem);
-            align-self: flex-start;
         }  
 
     }
 
-    /* Media Queries for laptops (screen size 1440px+) */
+    /* Media Queries for larger devices and 4k+ devices (screen size 1440px+) */
     @media screen and (min-width: 1440px) {
         #hero div,
         #ymir div,
@@ -689,7 +688,6 @@ li {
         #althing div {
             margin-left: 7.5rem;
             width: clamp(10rem, 80vw, 160rem);
-            align-self: flex-start;
         }   
 
     }
