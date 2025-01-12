@@ -189,7 +189,7 @@ li {
         justify-content: center;
         position: fixed;
         bottom: 0;
-        color: var(--primary-color);
+        
         font-size: 2rem;
         margin-bottom: 0.5rem;
         filter: opacity(0.65);
@@ -281,23 +281,14 @@ li {
 
     .hero-title {
         width: clamp(10rem, 95vw, 50rem);
-        align-self: flex-start;
-        padding: 2rem 3rem 1rem 1.75rem;
+        padding: 2rem 3rem 1rem 1rem;
         margin-bottom: 3rem;
     }
 
     .hero-blurb {
-        width: clamp(10rem, 90vw, 100rem) !important;
+        width: clamp(10rem, 75vw, 100rem) !important;
         padding: 1rem;
-        margin-left: 1rem;
         align-self: center;
-        /* border-radius: 0.5rem;
-        border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
-        border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
-        border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        background-color: var(--glassmorphic-color);
-        backdrop-filter: var(--glassmorphic-filter); */
         text-transform: uppercase;
     }
 
