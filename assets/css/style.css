@@ -268,7 +268,7 @@ li {
     }
 
     .hero-blurb {
-        width: clamp(10rem, 90vw, 42.5rem);
+        width: clamp(10rem, 90vw, 100rem) !important;
         padding: 1rem;
         margin-left: 1rem;
         align-self: center;
@@ -325,6 +325,7 @@ li {
 
     div.yggy {
         width: 95vw;
+        height: fit-content;
         margin-top: 3rem;
     }
 
@@ -333,11 +334,6 @@ li {
         font-size: clamp(1.25rem, 6vw, 3rem) !important;
         margin: 0 1rem 1rem;      
     }    
-
-    #world-tree {
-        width: 90vw;
-        position: relative;
-    }
 
     .asgard-tooltip h3,
     .muspelheim-tooltip h3,
@@ -378,7 +374,7 @@ li {
     .jotunheimr-tooltip .jotunheimr-tooltext,
     .niflheim-tooltip .niflheim-tooltext {
         visibility: hidden;
-        width: clamp(10rem, 85vw, 20rem);
+        width: clamp(10rem, 65vw, 50rem);
         max-height: 7.5rem;
         overflow-y: scroll;
         background-color: var(--bg-color);
@@ -399,7 +395,7 @@ li {
     .nidavellir-tooltip .nidavellir-tooltext,
     .helheim-tooltip .helheim-tooltext {
         visibility: hidden;
-        width: clamp(10rem, 85vw, 20rem);
+        width: clamp(10rem, 65vw, 50rem);
         max-height: 7.5rem;
         overflow-y: scroll;
         background-color: var(--bg-color);
@@ -637,6 +633,10 @@ li {
         .image-item:hover h2 {
             display: block;
         }
+
+        #world-tree {
+            margin-left: -6rem !important;
+        }
     }
 
     /* Media Queries for laptops (screen size 992px+) */
@@ -651,7 +651,6 @@ li {
         #freyr div,
         #yggdrassil div,
         #althing div {
-            max-height: 90vh;
             width: clamp(10rem, 70vw, 130rem);
             align-self: flex-start;
         }  
@@ -691,7 +690,7 @@ li {
             margin-left: 7.5rem;
             width: clamp(10rem, 80vw, 160rem);
             align-self: flex-start;
-        }  
+        }   
 
     }
       
