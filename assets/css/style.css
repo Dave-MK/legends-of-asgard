@@ -183,6 +183,24 @@ li {
         padding-bottom: 0.5rem;
     }
 
+    #socials {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        filter: opacity(0.65);
+    }
+
+    .social-icons {
+        width: 75vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     /* Main and Section styles */
     
     header,
