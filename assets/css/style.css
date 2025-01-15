@@ -80,7 +80,7 @@ h2 {
     font-size: var(--font-h2);
     margin-bottom: 0.75rem;
     color: var(--primary-color);
-    filter: drop-shadow(0px 2px 1px var(--tertiary-highlight-color));
+    filter: drop-shadow(0px 2px 1px var(--secondary-color));
 }
 
 h3 {
@@ -127,14 +127,14 @@ li {
     }
 
     #wrapper > a > img {
-        padding-top: 0.5rem;
-        width: 2.75rem;
-        filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0));
+        padding-top: clamp(1.25rem, 25%, 3rem);
+        width: clamp(3rem, 10vw, 6rem);
+        filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
     }
 
     .text-label i {
-        font-size: 2.25rem;
-        filter: brightness(200%) contrast(200%);
+        padding-top: clamp(1rem, 20%, 2.75rem);
+        font-size: clamp(2.5rem, 8vw, 7.5rem);
         filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43))
     }
     
@@ -149,7 +149,7 @@ li {
         top: 0;
         left: 0;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 4vw, 3rem);
     }
     
     #nav-toggle:checked ~ .text-label i:last-child, nav, nav li {
@@ -189,16 +189,19 @@ li {
         justify-content: center;
         position: fixed;
         bottom: 0;
-        
-        font-size: 2rem;
         margin-bottom: 0.5rem;
-        filter: opacity(0.65);
     }
 
     .social-icons {
         width: 75vw;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .social-icons i {
+        font-size: clamp(2.25rem, 7.5vw, 3rem);
+        filter: var(--drop-shadow) opacity(0.65);
+        color: var(--secondary-color) !important;
     }
 
     /* Main and Section styles */
@@ -217,7 +220,7 @@ li {
         align-items: center;
         min-height: 100vh;
         width: 100vw; 
-        padding: 3rem 1rem 1rem 0rem;       
+        padding: 0rem 1rem 1rem 0rem;       
     }
 
     #ymir div,
@@ -244,7 +247,8 @@ li {
         overflow-y: scroll;
         padding: 1rem;
         margin-left: 1rem;
-        margin-top: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
         color: var(--secondary-color);
         background-color: var(--glassmorphic-color);
         backdrop-filter: var(--glassmorphic-filter);
@@ -254,16 +258,17 @@ li {
     .yggy, #althing div {
         overflow: visible;
         max-height: fit-content;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
     }
 
     #althing div {
         margin-left: 0;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     section:not(#hero) h2 {
-        margin-top: 1.5rem;
+        margin-top: 5rem;
         margin-left: 1rem;
         font-size: clamp(2rem, 12vw, 5rem);
     }
@@ -336,7 +341,7 @@ li {
     div.yggy {
         width: 95vw;
         height: fit-content;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     div.yggy h2 {
@@ -515,6 +520,7 @@ li {
         border-radius: 10px;
         color: var(--secondary-color);
         margin-bottom: 1rem;
+        padding-top: 0.35rem;
     }
 
     footer form button {
@@ -539,7 +545,7 @@ li {
 /* Responsiveness Props */
 
     /* Media Queries for tablets (screen size 768px+) */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (orientation: landscape) {
         nav {
             display: none;
         }
@@ -562,11 +568,7 @@ li {
         /* Header Container and Nav */
         #wrapper {
             justify-content: center;
-            padding-top: 3rem;
-        }
-
-        #wrapper > a > img {
-            width: 4rem;
+            padding-top: 1.5rem;
         }
 
         #nav-toggle,
