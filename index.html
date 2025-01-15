@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Load screen animation -->
+    <div class="loader loader-active">
+    </div>
     <!-- Header Section containing Nav, logo, sticky menu-->
     <header>
         <div id="wrapper">
@@ -349,6 +352,10 @@
 
     <!-- Custom script to fix issue closing nav menu whenever link is clicked (mobile devices only) -->
     <script>
+        window.addEventListener("load", () => {
+            document.querySelector(".loader").classList.remove("loader-active");
+        });
+
         // Get all links in the list
         const links = document.querySelectorAll("#wrapper li a");
 
