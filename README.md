@@ -24,7 +24,7 @@
        - A section containing information about the 9 realms/worlds of Norse mythology
        - A contact section in the footer
 
-#### The general direction and structure can be seen here in the [WIREFRAMES](https://github.com/Dave-MK/mp1-legends-of-asgard/blob/main/assets/images/Legends_of_Asgard_WF.png)
+#### The general direction and structure can be seen here in the [WIREFRAMES](https://github.com/Dave-MK/mp1-legends-of-asgard/blob/main/assets/images/planning/Latest-LoA-Wireframe.png)
 
    ### Directional reasoning
    - Some original decisions made in the planning phase were reviewed during development:
