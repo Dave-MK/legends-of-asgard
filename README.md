@@ -64,7 +64,7 @@
 
 - The live working site can be viewed [HERE](https://dave-mk.github.io/mp1-legends-of-asgard)
 
-- The original manual test script can be viewed [HERE](https://dave-mk.github.io/mp1-legends-of-asgard)
+- The original manual test script can be viewed [HERE](/workspace/legends-of-asgard/TESTING.md)
 
 - All project tasks along with issues logged can be viewed [HERE](https://github.com/users/Dave-MK/projects/3)
 
