@@ -52,3 +52,8 @@
 | Meta titles and descriptions | Verify each page has an appropriate meta title and description.                                     |               |                          |                      |
 | Headings for SEO          | Ensure headings (H1, H2) are keyword-rich and follow a structured format.                            |               |                          |                      |
 | Image SEO                 | Check that all images have meaningful file names and alt attributes for SEO purposes.                |               |                          |                      |
+
+## LIGHTHOUSE REPORTS
+### First Report - 27/01/2025
+
+![alt text](image-1.png)
