@@ -7,23 +7,23 @@
     --secondary-font: "Kanit", sans-serif;
 
         /* Size clamping */
-        --font-h1: clamp(1.5rem, 11vw, 3.5rem);
+        --font-h1: clamp(1.5rem, 11vw, 4rem);
         --font-h2: clamp(1rem, 5.25vw, 2rem);
         --font-h3: clamp(0.75rem, 4vw, 1.5rem);
         --font-p: clamp(0.75rem, 4vw, 1.5rem);
     
     /* Colours */
     --bg-color: hsl(225, 14%, 22%);
-    --primary-color: rgb(24, 201, 189);
-    --secondary-color: rgb(250, 66, 100);
+    --primary-color: rgb(68, 179, 173);
+    --secondary-color: rgb(167, 34, 85);
     --tertiary-color: rgb(62, 82, 172);
     --tertiary-highlight-color: rgb(125, 122, 255);
     --glassmorphic-color: rgba(255, 255, 255, 0.15);
 
     /* Filters & Overlays */
     --glassmorphic-filter: blur(0.15rem);
-    --section-bg-overlay-one: linear-gradient(rgba(24, 201, 189, 0.35), rgba(250, 66, 100, 0.35));
-    --section-bg-overlay-two: linear-gradient(rgba(250, 66, 100, 0.35), rgba(24, 201, 189, 0.35));
+    --section-bg-overlay-one: linear-gradient(rgba(0, 255, 238, 0.25), rgba(255, 0, 47, 0.25));
+    --section-bg-overlay-two: linear-gradient(rgba(255, 0, 47, 0.25), rgba(0, 255, 238, 0.25));
 
     /* Shadows & Borders */
     --drop-shadow: drop-shadow(0px 2px 1px black);
@@ -48,7 +48,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 /* Global Styles & Fonts */
@@ -56,6 +55,7 @@
 html {
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -73,19 +73,19 @@ h2 {
     font-size: var(--font-h1);  
     letter-spacing: 0.1rem; 
     color: var(--secondary-color);
-    filter: drop-shadow(0px 2px 1px var(--primary-color));
+    filter: var(--drop-shadow);
 }
 
 h2 {
     font-size: var(--font-h2);
     margin-bottom: 0.75rem;
     color: var(--primary-color);
-    filter: drop-shadow(0px 2px 1px var(--secondary-color));
+    filter: var(--drop-shadow);
 }
 
 h3 {
     font-size: var(--font-h3);
-    filter: drop-shadow(0px 2px 1px var(--tertiary-color));
+    filter: var(--drop-shadow);
 }
 
 p {
@@ -94,7 +94,7 @@ p {
     font-weight: 300;
     letter-spacing: 0.075rem;
     z-index: 98;
-    filter: drop-shadow(0px 2px 1px var(--tertiary-color));
+    filter: var(--drop-shadow);
 }
 
 footer {
@@ -270,13 +270,14 @@ li {
     /* Main and Section styles */
     
     header,
-    section,
+    article,
     footer {
         scroll-snap-align: start;
         scroll-snap-stop: always;
+        scroll-behavior: smooth;
     }
 
-    section {
+    article {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -308,6 +309,7 @@ li {
         width: 90vw;
         max-height: 60vh;
         overflow-y: scroll;
+        scroll-behavior: smooth;
         padding: 1rem;
         margin-left: 1rem;
         margin-top: 1rem;
@@ -330,7 +332,7 @@ li {
         margin-top: 1rem;
     }
 
-    section:not(#hero) h2 {
+    article:not(#hero) h2 {
         margin-top: 5rem;
         margin-left: 1rem;
         font-size: clamp(2rem, 12vw, 5rem);
@@ -402,9 +404,9 @@ li {
     }
 
     div.yggy {
-        width: 95vw;
+        width: fit-content;
         height: fit-content;
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 
     div.yggy h2 {
@@ -584,6 +586,7 @@ li {
         color: var(--secondary-color);
         margin-bottom: 1rem;
         padding-top: 0.35rem;
+        resize: none;
     }
 
     footer form button {
