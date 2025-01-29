@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn of the of the chaos surrounding the Legends of Asgard, told within these thrilling Sagas from old Norse mythology!">
+    <meta name="keywords" content="norse, old norse, mythology, nordic, scandinavian, danish, danelaw, legends, asgard, odin, tyr, thor, freyja, freyr">
+    <!-- Favicons for major devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <title>
+        Legends of Asgard | Thank You
+    </title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Load screen animation -->
+    <aside class="loader loader-active">
+    </aside>
+    <!-- Header Section containing Nav, logo, sticky menu-->
+    <header>
+        <div id="wrapper">
+            <a href="index.html#hero">
+                <img src="assets/images/icons/asgard_icon.png" alt="Logo depicting the Norse symbol for Asgard">
+            </a>
+            <input type="checkbox" name="nav-toggle" id="nav-toggle">
+            <label for="nav-toggle" class="text-label">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars-staggered"></i>
+            </label>
+            <nav>
+                <ul id="menu">
+                    <li>
+                        <a href="index.html#hero">
+                            RETURN TO ASGARD
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#ymir">
+                            YMIR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#odin">
+                            ODIN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#thor">
+                            THOR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#tyr">
+                            TYR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#angraboda">
+                            ANGRABODA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#freyja">
+                            FREYJA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#freyr">
+                            FREYR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#yggdrassil">
+                            YGGDRASSIL
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#althing">
+                            ALTHING
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Body containing God Menu, Sagas, and Yggdrassil -->
+    <main>
+        <section>
+            <article id="thanks">
+                <h2>YOUR VOICE IS HEARD!</h2>
+                <div>
+                    <h3>
+                        Thank you for your feedback
+                    </h3>
+                </div>
+            </article>
+        </section>
+        <aside id="socials">
+            <div class="social-icons">
+                <a href="https://x.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </aside>
+    </main>
+
+    <!-- SCRIPTS -->
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/c480bc9d4e.js" crossorigin="anonymous"></script>
+
+    <!-- Custom script to fix issue closing nav menu whenever link is clicked (mobile devices only) -->
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector(".loader").classList.remove("loader-active");
+        });
+
+        // Get all links in the list
+        const links = document.querySelectorAll("#wrapper li a");
+
+        // Attach click event to each link
+        links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            const checkbox = document.getElementById("nav-toggle");
+            // Trigger a click on the checkbox to toggle content
+            checkbox.click();
+        });
+        });
+    </script>
+</body>
+</html>
