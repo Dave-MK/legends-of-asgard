@@ -13,20 +13,21 @@
         --font-p: clamp(0.75rem, 4vw, 1.5rem);
     
     /* Colours */
-    --bg-color: hsl(225, 14%, 22%);
-    --primary-color: rgb(68, 179, 173);
-    --secondary-color: rgb(167, 34, 85);
-    --tertiary-color: rgb(62, 82, 172);
-    --tertiary-highlight-color: rgb(125, 122, 255);
+    --bg-color: rgb(13, 22, 55);
+    --primary-color: rgb(23, 191, 191);
+    --secondary-color: rgb(255, 138, 91);
+    --tertiary-color: rgb(63, 50, 104);
+    --tertiary-highlight-color: rgb(5, 51, 98);
     --glassmorphic-color: rgba(255, 255, 255, 0.15);
 
     /* Filters & Overlays */
     --glassmorphic-filter: blur(0.15rem);
-    --section-bg-overlay-one: linear-gradient(rgba(0, 255, 238, 0.25), rgba(255, 0, 47, 0.25));
-    --section-bg-overlay-two: linear-gradient(rgba(255, 0, 47, 0.25), rgba(0, 255, 238, 0.25));
+    --section-bg-overlay-one: linear-gradient(rgba(3, 3, 3, 0.2), rgba(3, 3, 3, 0.2));
+    --section-bg-overlay-two: linear-gradient(rgba(3, 3, 3, 0.2), rgba(3, 3, 3, 0.2));
 
     /* Shadows & Borders */
     --drop-shadow: drop-shadow(0px 2px 1px black);
+    --drop-shadow-alt: drop-shadow(0px 0px 8px var(--primary-color));
 }
 
 /* Custom Scrollbar */
@@ -72,29 +73,30 @@ h2 {
     font-family: var(--primary-font);
     font-size: var(--font-h1);  
     letter-spacing: 0.1rem; 
-    color: var(--secondary-color);
+    color: var(--primary-color);
     filter: var(--drop-shadow);
 }
 
 h2 {
     font-size: var(--font-h2);
     margin-bottom: 0.75rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     filter: var(--drop-shadow);
 }
 
 h3 {
     font-size: var(--font-h3);
+    color:bisque;
     filter: var(--drop-shadow);
 }
 
 p {
     font-size: var(--font-p);
-    color: white;
+    color: black;
     font-weight: 300;
     letter-spacing: 0.075rem;
     z-index: 98;
-    filter: var(--drop-shadow);
+    filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
 }
 
 footer {
@@ -252,6 +254,7 @@ li {
         justify-content: center;
         position: fixed;
         bottom: 0;
+        z-index: 100;
         margin-bottom: 0.5rem;
     }
 
@@ -265,6 +268,11 @@ li {
         font-size: clamp(2.25rem, 7.5vw, 3rem);
         filter: var(--drop-shadow) opacity(0.65);
         color: var(--secondary-color) !important;
+    }
+
+    .social-icons i:hover {
+        filter: var(--drop-shadow) opacity(0.65);
+        color: var(--tertiary-highlight-color) !important;
     }
 
     /* Main and Section styles */
@@ -294,7 +302,6 @@ li {
     #angraboda div,
     #freyja div,
     #freyr div,
-    .yggy,
     #althing div {
         display: flex;
         flex-direction: column;
@@ -320,16 +327,10 @@ li {
         z-index: 97;
     }
 
-    .yggy, #althing div {
+    #althing div {
         overflow: visible;
         max-height: fit-content;
-        margin-bottom: 3rem;
         margin-top: 2rem;
-    }
-
-    #althing div {
-        margin-left: 0;
-        margin-top: 1rem;
     }
 
     article:not(#hero) h2 {
@@ -401,16 +402,22 @@ li {
     /* YGGDRASSIL section */
     #yggdrassil {
         background: var(--section-bg-overlay-two), url("../images/sections/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    div.yggy {
-        width: fit-content;
-        height: fit-content;
+    #yggy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: ;
         margin-top: 4rem;
     }
 
-    div.yggy h2 {
-        color: var(--secondary-color);
+    .yggy h2 {
+        color: var(--tertiary-alternative);
         font-size: clamp(1.25rem, 6vw, 3rem) !important;
         margin: 0 1rem 1rem;      
     }    
@@ -425,7 +432,7 @@ li {
     .nidavellir-tooltip h3,
     .helheim-tooltip h3 {
         color: white;
-        font-size: clamp(1.7rem, 7.5vw, 5rem);
+        font-size: clamp(0.75rem, 7.5vw, 3rem);
     }
 
     /* Tooltip container */
@@ -438,12 +445,13 @@ li {
     .midgard-tooltip,
     .nidavellir-tooltip,
     .helheim-tooltip {
-        width: clamp(17.5rem, 95vw, 75rem);
+        width: clamp(20rem, 50%, 50rem) !important;
         position: relative;
         display: flex;
-        justify-content:space-evenly;
+        justify-self: center;
         align-items: center;
-        padding: 0 1rem;
+        justify-content: center;
+        margin: 0 auto;
         margin: -1rem;
     }
 
@@ -454,7 +462,8 @@ li {
     .jotunheimr-tooltip .jotunheimr-tooltext,
     .niflheim-tooltip .niflheim-tooltext {
         visibility: hidden;
-        width: clamp(10rem, 65vw, 50rem);
+        margin-left: 6rem;
+        width: clamp(15rem, 75%, 30rem);
         max-height: 7.5rem;
         overflow-y: scroll;
         background-color: var(--bg-color);
@@ -475,7 +484,8 @@ li {
     .nidavellir-tooltip .nidavellir-tooltext,
     .helheim-tooltip .helheim-tooltext {
         visibility: hidden;
-        width: clamp(10rem, 65vw, 50rem);
+        width: clamp(15rem, 75%, 30rem);
+        margin-left: 6rem;
         max-height: 7.5rem;
         overflow-y: scroll;
         background-color: var(--bg-color);
@@ -512,7 +522,7 @@ li {
     .midgard-tooltip img,
     .nidavellir-tooltip img,
     .helheim-tooltip img {
-        width: clamp(8rem, 25vw, 15rem);
+        width: clamp(6rem, 25vw, 10rem);
         border-radius: 50%;
         padding: 1rem;
     }
@@ -558,6 +568,11 @@ li {
         align-items: center;
     }
 
+    #althing > div > p {
+        max-width: 60rem;
+        text-align: center;
+    }
+
     footer form input {
         width: 100%;
         height: 2.5rem;
@@ -567,7 +582,7 @@ li {
         font-size: clamp(0.75rem, 4vw, 1.75rem);
         border-radius: 50px;
         border: 0;
-        background-color: hsla(167, 80%, 40%, 0.301);
+        background-color: var(--tertiary-highlight-color);
         color: var(--secondary-color);
     }
 
@@ -577,7 +592,7 @@ li {
         padding: 1rem;
         font-family: var(--secondary-font);
         font-size: clamp(0.75rem, 4vw, 1.75rem);
-        background-color: hsla(167, 80%, 40%, 0.301);
+        background-color: var(--tertiary-highlight-color);
         border: 0;
     }
 
@@ -591,21 +606,52 @@ li {
 
     footer form button {
         width: clamp(7.5rem, 50vw, 20rem);
-        background-color: var(--primary-color);
+        background-color: var(--tertiary-color);
         border-radius: 50px;
         font-size: clamp(1.25rem, 4vw, 1.75rem);
         color: white;
         font-weight: bold;
     }
 
+    footer form button:hover {
+        background-color: var(--tertiary-highlight-color);
+    }    
+
     input::placeholder,
     textarea::placeholder {
-        color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     footer form input:focus-within,
     footer form textarea:focus-within {
         background-color: hsla(167, 80%, 40%, 0.788);
+    }
+
+    #thankyou {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/sections/contact_bg.webp") no-repeat 45% 95%/ cover;
+    }
+
+    #back2asgard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: clamp(7.5rem, 50vw, 20rem);
+        background-color: var(--tertiary-color);
+        border-radius: 50px;
+        font-size: 0.75rem;
+        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+        margin-top: 1rem;
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        color: white;
+        font-weight: bold;
+    }
+
+    #back2asgard i {
+        font-size: 3.5rem;
+    }
+
+    #back2asgard:hover {
+        background-color: var(--tertiary-highlight-color);
     }
 
 /* Responsiveness Props */
