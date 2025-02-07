@@ -245,7 +245,13 @@ li {
     }
 
     nav li {
-        padding-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    nav li:hover,
+    nav li:hover a {
+        background-color: var(--bg-color);
+        color: var(--secondary-color);
     }
 
     #socials {
@@ -593,6 +599,7 @@ li {
         font-family: var(--secondary-font);
         font-size: clamp(0.75rem, 4vw, 1.75rem);
         background-color: var(--tertiary-highlight-color);
+        color: var(--primary-color);
         border: 0;
     }
 
@@ -602,6 +609,11 @@ li {
         margin-bottom: 1rem;
         padding-top: 0.35rem;
         resize: none;
+    }
+
+    footer form input::placeholder,
+    footer form textarea::placeholder {
+        color: var(--primary-color);
     }
 
     footer form button {
@@ -615,16 +627,17 @@ li {
 
     footer form button:hover {
         background-color: var(--tertiary-highlight-color);
+        color: var(--secondary-color);
     }    
 
-    input::placeholder,
-    textarea::placeholder {
-        color: var(--primary-color);
+    footer form input:focus-within::placeholder,
+    footer form textarea:focus-within::placeholder {
+        color: var(--secondary-color);
     }
 
     footer form input:focus-within,
     footer form textarea:focus-within {
-        background-color: hsla(167, 80%, 40%, 0.788);
+        background-color: var(--tertiary-color);
     }
 
     #thankyou {
@@ -764,15 +777,17 @@ li {
             align-items: center;
         }
 
-        .image-item h2 {
+        .image-item figcaption {
             display: none;
-            filter: drop-shadow(0px 2px 1px black);
+            filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
             position: absolute;
-            font-size: 0.55rem;
-            bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            font-weight: 800;
+            bottom: 0.75rem;
         }
 
-        .image-item:hover h2 {
+        .image-item:hover figcaption {
             display: block;
         }
 

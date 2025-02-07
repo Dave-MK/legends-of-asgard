@@ -17,68 +17,68 @@
 </head>
 <body>
     <!-- Load screen animation -->
-    <aside class="loader loader-active">
+    <aside class="loader loader-active" aria-label="loading" role="progressbar">
     </aside>
     <!-- Header Section containing Nav, logo, sticky menu-->
     <header>
-        <div id="wrapper">
-            <a href="index.html#hero">
+        <div id="wrapper" aria-label="navbar">
+            <a href="index.html#hero" aria-label="go back to the top of the page">
                 <img src="assets/images/icons/asgard_icon.png" alt="Logo depicting the Norse symbol for Asgard">
             </a>
             <input type="checkbox" name="nav-toggle" id="nav-toggle">
-            <label for="nav-toggle" class="text-label">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-bars-staggered"></i>
+            <label for="nav-toggle" class="text-label" aria-label="hamburger menu (click this to open the mobile menu and select the gods)">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
             </label>
-            <nav>
+            <nav aria-label="mobile navigation (choose from the menu)">
                 <ul id="menu">
                     <li>
-                        <a href="index.html#hero">
+                        <a href="index.html#hero" aria-label="return to the top of the page">
                             RETURN TO ASGARD
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#ymir">
+                        <a href="index.html#ymir" aria-label="learn more about the god ymir">
                             YMIR
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#odin">
+                        <a href="index.html#odin" aria-label="learn more about the god odin">
                             ODIN
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#thor">
+                        <a href="index.html#thor" aria-label="learn more about the god thor">
                             THOR
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#tyr">
+                        <a href="index.html#tyr" aria-label="learn more about the god tyr">
                             TYR
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#angraboda">
+                        <a href="index.html#angraboda" aria-label="learn more about the goddess angraboda">
                             ANGRABODA
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#freyja">
+                        <a href="index.html#freyja" aria-label="learn more about the goddess freya">
                             FREYJA
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#freyr">
+                        <a href="index.html#freyr" aria-label="learn more about the god freyr">
                             FREYR
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#yggdrassil">
+                        <a href="index.html#yggdrassil" aria-label="learn more about yggdrassil">
                             YGGDRASSIL
                         </a>
                     </li>
                     <li>
-                        <a href="index.html#althing">
+                        <a href="index.html#althing" aria-label="learn more about the althing">
                             ALTHING
                         </a>
                     </li>
@@ -87,71 +87,71 @@
         </div>
     </header>
     <!-- Animated God Menu for larger devices -->
-    <aside id="god-menu" class="menu-list">
-        <div class="b2t">
-            <a href="index.html#hero"><i class="fa-solid fa-circle-up"></i></a>
-        </div>
-        <div>
-            <div class="image-item">
-                <a href="index.html#ymir">
-                    <img src="assets/images/gods/ymir2_prof.webp" alt="">
-                    <h2>YMIR</h2>
+    <aside id="god-menu" class="menu-list" aria-label="god menu (use this to select a god)" role="navigation">
+        <ul>
+            <li class="b2t">
+                <a href="index.html#hero" aria-label="return to the top of the page"><i class="fa-solid fa-circle-up" aria-hidden="true"></i></a>
+            </li>
+            <li class="image-item">
+                <a href="index.html#ymir" aria-label="the god ymir (click to visit this section)">
+                    <img src="assets/images/gods/ymir2_prof.webp" alt="a smaller image of the god ymir">
+                    <figcaption aria-label="ymir">YMIR</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#odin">
-                    <img src="assets/images/gods/odin_prof.webp" alt="">
-                    <h2>ODIN</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#odin" aria-label="the god odin (click to visit this section)">
+                    <img src="assets/images/gods/odin_prof.webp" alt="a smaller image of the god odin">
+                    <figcaption aria-label="odin">ODIN</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#thor">
-                    <img src="assets/images/gods/thor2_prof.webp" alt="">
-                    <h2>THOR</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#thor" aria-label="the god thor (click to visit this section)">
+                    <img src="assets/images/gods/thor2_prof.webp" alt="a smaller image of the god thor">
+                    <figcaption aria-label="thor">THOR</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#tyr">
-                    <img src="assets/images/gods/tyr_prof.webp" alt="">
-                    <h2>TYR</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#tyr" aria-label="the god tyr (click to visit this section)">
+                    <img src="assets/images/gods/tyr_prof.webp" alt="a smaller image of the god tyr">
+                    <figcaption aria-label="tyr">TYR</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#angraboda">
-                    <img src="assets/images/gods/angraboda_prof.webp" alt="">
-                    <h2>ANGRABODA</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#angraboda" aria-label="the god angraboda (click to visit this section)">
+                    <img src="assets/images/gods/angraboda_prof.webp" alt="a smaller image of the god angraboda">
+                    <figcaption aria-label="angraboda">ANGRABODA</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#freyja">
-                    <img src="assets/images/gods/freyja_prof.webp" alt="">
-                    <h2>FREYJA</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#freyja" aria-label="the god freya (click to visit this section)">
+                    <img src="assets/images/gods/freyja_prof.webp" alt="a smaller image of the god freyja">
+                    <figcaption aria-label="freya">FREYJA</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#freyr">
-                    <img src="assets/images/gods/freyr_prof.webp" alt="">
-                    <h2>FREYR</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#freyr" aria-label="the god freyr (click to visit this section)">
+                    <img src="assets/images/gods/freyr_prof.webp" alt="a smaller image of the god freyr">
+                    <figcaption aria-label="freyr">FREYR</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#yggdrassil">
-                    <img src="assets/images/gods/yggdrassil_prof.webp" alt="">
-                    <h2>YGGDRASSIL</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#yggdrassil" aria-label="yggdrassil (click to visit this section)">
+                    <img src="assets/images/gods/yggdrassil_prof.webp" alt="a smaller image of yggdrassil">
+                    <figcaption aria-label="yggdrassil">YGGDRASSIL</figcaption>
                 </a>
-            </div>
-            <div class="image-item">
-                <a href="index.html#althing">
-                    <img src="assets/images/gods/althing_prof.webp" alt="">
-                    <h2>ALTHING</h2>
+            </li>
+            <li class="image-item">
+                <a href="index.html#althing" aria-label="the althing(click to visit this section)">
+                    <img src="assets/images/gods/althing_prof.webp" alt="a smaller image of an althing">
+                    <figcaption aria-label="althing">ALTHING</figcaption>
                 </a>
-            </div>
-        </div>
+            </li>
+        </ul>
     </aside>
     <!-- Main Body containing God Menu, Sagas, and Yggdrassil -->
     <main>
         <section>    
-            <article id="hero">
+            <article id="hero" aria-label="hero section">
                 <div class="hero-title">
                     <h1>LEGENDS OF ASGARD</h1>
                 </div>
@@ -160,7 +160,7 @@
                     <h3>Odin gave an eye for wisdom. Be careful you don't lose part of yourself on your quest for wisdom of your own.</h3>
                 </div>
             </article>
-            <article id="ymir">
+            <article id="ymir" aria-label="ymir section">
                 <h2>YMIR</h2>
                 <div>
                     <p>
@@ -177,7 +177,7 @@
                     </p>
                 </div>
             </article>
-            <article id="odin">
+            <article id="odin" aria-label="odin section">
                 <h2>ODIN</h2>
                 <div>
                     <p>
@@ -189,7 +189,7 @@
                     </p>
                 </div>
             </article>
-            <article id="thor">
+            <article id="thor" aria-label="thor section">
                 <h2>THOR</h2>
                 <div>
                     <p>
@@ -201,7 +201,7 @@
                     </p>
                 </div>
             </article>
-            <article id="tyr">
+            <article id="tyr" aria-label="tyr section">
                 <h2>TYR</h2>
                 <div>
                     <p>
@@ -213,7 +213,7 @@
                     </p>
                 </div>
             </article>
-            <article id="angraboda">
+            <article id="angraboda" aria-label="angraboda section">
                 <h2>ANGRABODA</h2>
                 <div>
                     <p>
@@ -228,7 +228,7 @@
                     </p>
                 </div>
             </article>
-            <article id="freyja">
+            <article id="freyja" aria-label="freya section">
                 <h2>FREYJA</h2>
                 <div>
                     <p>
@@ -240,7 +240,7 @@
                     </p>
                 </div>
             </article>
-            <article id="freyr">
+            <article id="freyr"  aria-label="freyr section">
                 <h2>FREYR</h2>
                 <div>
                     <p>
@@ -252,7 +252,7 @@
                     </p>
                 </div>
             </article>
-            <article id="yggdrassil">
+            <article id="yggdrassil" aria-label="yggdrassil section">
                 <h2>YGGDRASSIL</h2>
                 <h3>
                     The Nine Realms
@@ -326,27 +326,30 @@
                 </div>
             </article>
         </section>
-        <aside id="socials">
+        <aside id="socials" role="navigation">
             <div class="social-icons">
-                <a href="https://x.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com" target="_blank" rel="noopener" aria-label="visit our twitter page"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="visit our instagram page"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="visit our github repo"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="visit our linkedin page"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
             </div>
         </aside>
     </main>
     <!-- Footer Section Containing contact etc -->
-    <footer id="althing">
+    <footer id="althing"  aria-label="althing section">
         <h2>THE ALTHING!</h2>
         <h3>Send us your feedback!</h3>
         <div>
             <p>The Althing was a gathering of nations within the nordic world, where people could air their opinions, ask questions and settle disputes. 
                 <br>We welcome you to do the same!</p><br>
-            <form id="althing-form" action="thankyou.html" method="get" target="_blank">
-                <input type="text" name="full-name" id="full-name" placeholder="Full Name...">
-                <input type="email" name="email" id="email" placeholder="Email Address..." required>
-                <textarea name="query" id="query" placeholder="Enter your query..." rows="4" wrap="soft" required></textarea>
-                <button>Gods Hear Me</button>
+            <form id="althing-form" action="thankyou.html" method="get" target="_blank" name="althing-form" aria-label="althing contact form">
+                <label for="full-name" aria-hidden="true" hidden>Full Name</label>
+                <input type="text" name="full-name" id="full-name" placeholder="Full Name..." aria-label="enter your full name this is an optional field">
+                <label for="email" aria-hidden="true" hidden>Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Email Address..." aria-label="enter your email this is a required field)" required>
+                <label for="query" aria-hidden="true" hidden>Enter your Query</label>
+                <textarea name="query" id="query" placeholder="Enter your query..." rows="4" wrap="soft" aria-label="enter your query this is a required field" required></textarea>
+                <button aria-label="click to submit this form">Gods Hear Me</button>
             </form>
         </div>
     </footer>
