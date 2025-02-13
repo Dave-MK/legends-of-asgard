@@ -372,7 +372,7 @@ article:not(#hero) h2 {
 }
 
 .hero-blurb {
-  width: clamp(10rem, 75vw, 100rem) !important;
+  width: clamp(10rem, 60vw, 100rem) !important;
   padding: 1rem;
   align-self: center;
   text-transform: uppercase;
