@@ -378,6 +378,10 @@ article:not(#hero) h2 {
   text-transform: uppercase;
 }
 
+.hero-blurb > h3 {
+  color: var(--secondary-color);
+}
+
 /* YMIR section */
 #ymir {
   background: var(--section-bg-overlay-one),
