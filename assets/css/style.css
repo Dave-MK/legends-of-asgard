@@ -1,852 +1,863 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap");
 
 /* Variables */
 :root {
-    /* Fonts & Sizes */
-    --primary-font: "Russo One", sans-serif;
-    --secondary-font: "Kanit", sans-serif;
+  /* Fonts & Sizes */
+  --primary-font: "Russo One", sans-serif;
+  --secondary-font: "Kanit", sans-serif;
 
-        /* Size clamping */
-        --font-h1: clamp(1.5rem, 11vw, 4rem);
-        --font-h2: clamp(1rem, 5.25vw, 2rem);
-        --font-h3: clamp(0.75rem, 4vw, 1.5rem);
-        --font-p: clamp(0.75rem, 4vw, 1.5rem);
-    
-    /* Colours */
-    --bg-color: rgb(13, 22, 55);
-    --primary-color: rgb(23, 191, 191);
-    --secondary-color: rgb(255, 138, 91);
-    --tertiary-color: rgb(63, 50, 104);
-    --tertiary-highlight-color: rgb(5, 51, 98);
-    --glassmorphic-color: rgba(255, 255, 255, 0.15);
+  /* Size clamping */
+  --font-h1: clamp(1.5rem, 11vw, 4rem);
+  --font-h2: clamp(1rem, 5.25vw, 2rem);
+  --font-h3: clamp(0.75rem, 4vw, 1.5rem);
+  --font-p: clamp(0.75rem, 4vw, 1.5rem);
 
-    /* Filters & Overlays */
-    --glassmorphic-filter: blur(0.15rem);
-    --section-bg-overlay-one: linear-gradient(rgba(3, 3, 3, 0.2), rgba(3, 3, 3, 0.2));
-    --section-bg-overlay-two: linear-gradient(rgba(3, 3, 3, 0.2), rgba(3, 3, 3, 0.2));
+  /* Colours */
+  --bg-color: rgb(13, 22, 55);
+  --primary-color: rgb(23, 191, 191);
+  --secondary-color: rgb(255, 138, 91);
+  --tertiary-color: rgb(63, 50, 104);
+  --tertiary-highlight-color: rgb(5, 51, 98);
+  --glassmorphic-color: rgba(255, 255, 255, 0.15);
 
-    /* Shadows & Borders */
-    --drop-shadow: drop-shadow(0px 2px 1px black);
-    --drop-shadow-alt: drop-shadow(0px 0px 8px var(--primary-color));
+  /* Filters & Overlays */
+  --glassmorphic-filter: blur(0.15rem);
+  --section-bg-overlay-one: linear-gradient(
+    rgba(3, 3, 3, 0.2),
+    rgba(3, 3, 3, 0.2)
+  );
+  --section-bg-overlay-two: linear-gradient(
+    rgba(3, 3, 3, 0.2),
+    rgba(3, 3, 3, 0.2)
+  );
+
+  /* Shadows & Borders */
+  --drop-shadow: drop-shadow(0px 2px 1px black);
+  --drop-shadow-alt: drop-shadow(0px 0px 8px var(--primary-color));
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 7.5px;
+  width: 7.5px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(rgb(52, 204, 196), rgb(202, 83, 206));
-    border-radius: 10px;
+  background: linear-gradient(rgb(52, 204, 196), rgb(202, 83, 206));
+  border-radius: 10px;
 }
 
 /* Resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Global Styles & Fonts */
 
 html {
-    scroll-snap-type: y mandatory;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg-color);      
-    min-height: 100vh;                      
-    display: flex;                          
-    flex-direction: column;
-    color: white;
-    font-family: var(--secondary-font);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: var(--secondary-font);
 }
 
 h1,
 h2 {
-    font-family: var(--primary-font);
-    font-size: var(--font-h1);  
-    letter-spacing: 0.1rem; 
-    color: var(--primary-color);
-    filter: var(--drop-shadow);
+  font-family: var(--primary-font);
+  font-size: var(--font-h1);
+  letter-spacing: 0.1rem;
+  color: var(--primary-color);
+  filter: var(--drop-shadow);
 }
 
 h2 {
-    font-size: var(--font-h2);
-    margin-bottom: 0.75rem;
-    color: var(--secondary-color);
-    filter: var(--drop-shadow);
+  font-size: var(--font-h2);
+  margin-bottom: 0.75rem;
+  color: var(--secondary-color);
+  filter: var(--drop-shadow);
 }
 
 h3 {
-    font-size: var(--font-h3);
-    color:bisque;
-    filter: var(--drop-shadow);
+  font-size: var(--font-h3);
+  color: bisque;
+  filter: var(--drop-shadow);
 }
 
 p {
-    font-size: var(--font-p);
-    color: black;
-    font-weight: 300;
-    letter-spacing: 0.075rem;
-    z-index: 98;
-    filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
+  font-size: var(--font-p);
+  color: black;
+  font-weight: 300;
+  letter-spacing: 0.075rem;
+  z-index: 98;
+  filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
 }
 
 footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /* Custom Styles */
 
-    /* Load screen */
-
-    .loader {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        background: var(--bg-color);
-        z-index: 100;
-    }
-
-    .loader-active {
-        display: flex;
-    }
-    
-    .loader::before {
-        content: "";
-        position: absolute;
-        width: 5rem;
-        height: 1.75rem;
-        background: var(--primary-color);
-        border-radius: 100px;
-        animation: loader 1s 0.5s infinite ease-in;
-    }
-
-    .loader::after {
-        content: "";
-        position: absolute;
-        width: 4.5rem;
-        height: 1.75rem;
-        background: var(--secondary-color);
-        animation: loader 1s infinite ease-in;
-        border-radius: 100px;
-    }
-
-    @keyframes loader {
-        0% {
-            transform: scale(0.85) translateY(-15px);
-        }
-
-        25% {
-            transform: scale(1.05) translateY(0px);
-            z-index: 1;
-            
-        }
-
-        50% {
-            transform: scale(1.05) translateY(15px);
-        }
-
-        75% {
-            transform: scale(1.05) translateY(0px);
-            z-index: 0;
-        }
-
-        100% {
-            transform: scale(0.85) translateY(-15px);
-        }
-    }
-
-
-    /* Header and Nav styles */
-
-    #wrapper {
-        width: 100vw;
-        position: fixed;
-        display: flex;
-        height: 3rem;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.25rem 0.85rem 0.5rem 0.5rem;
-        z-index: 99;
-        
-    }
-
-    #wrapper > a > img {
-        padding-top: clamp(1.75rem, 50%, 3rem);
-        width: clamp(3.5rem, 7.5vw, 5rem);
-        filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
-    }
-
-    .text-label i {
-        padding-top: clamp(1rem, 20%, 2.75rem);
-        font-size: clamp(2.75rem, 7vw, 4rem);
-        filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43))
-    }
-    
-    nav {
-        display: none;
-        padding-top: 3rem;
-        position: absolute;
-        height: 100vh;
-        z-index: -1;
-        background-color: var(--tertiary-color);
-        width: 100%;
-        top: 0;
-        left: 0;
-        text-align: center;
-        font-size: clamp(1.5rem, 4vw, 3rem);
-    }
-    
-    #nav-toggle:checked ~ .text-label i:last-child, nav, nav li {
-        display: block;
-    }
-
-    #nav-toggle:not(:checked) ~ nav li {
-        display: none;
-    }
-    
-    #nav-toggle:not(:checked) ~ nav, nav li {
-        transform: translateY(-100%);
-        transition: transform 250ms ease-in;
-    }
-
-    #nav-toggle:checked ~ nav, nav li {
-        transform: translateY(0%);
-        transition: transform 250ms ease-in-out;
-    }
-
-    #nav-toggle:checked ~ .text-label i:first-child {
-        display: none;
-    }
-
-    #nav-toggle,
-    .text-label i:last-child {
-        display: none;
-    }
-
-    nav li {
-        padding: 0.5rem;
-    }
-
-    nav li:hover,
-    nav li:hover a {
-        background-color: var(--bg-color);
-        color: var(--secondary-color);
-    }
-
-    #socials {
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        bottom: 0;
-        z-index: 100;
-        margin-bottom: 0.5rem;
-    }
-
-    .social-icons {
-        width: 75vw;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .social-icons i {
-        font-size: clamp(2.25rem, 7.5vw, 3rem);
-        filter: var(--drop-shadow) opacity(0.65);
-        color: var(--secondary-color) !important;
-    }
-
-    .social-icons i:hover {
-        filter: var(--drop-shadow) opacity(0.65);
-        color: bisque !important;
-    }
-
-    /* Main and Section styles */
-    
-    header,
-    article,
-    footer {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        scroll-behavior: smooth;
-    }
-
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        width: 100vw; 
-        padding: 0rem 1rem 1rem 0rem;       
-    }
-
-    #ymir div,
-    #odin div,
-    #thor div,
-    #tyr div,
-    #angraboda div,
-    #freyja div,
-    #freyr div,
-    #althing div {
-        display: flex;
-        flex-direction: column;
-        justify-content: safe center;
-        align-items: center;
-        align-self: center;
-        border-radius: 0.5rem;
-        border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        border-right: 0.05rem solid hsla(0, 0%, 55%, 0.40);
-        border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.40);
-        border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
-        width: 90vw;
-        max-height: 60vh;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        padding: 1rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 5rem;
-        color: var(--secondary-color);
-        background-color: var(--glassmorphic-color);
-        backdrop-filter: var(--glassmorphic-filter);
-        z-index: 97;
-    }
-
-    #althing div {
-        overflow: visible;
-        max-height: fit-content;
-        margin-top: 2rem;
-    }
-
-    article:not(#hero) h2 {
-        margin-top: 5rem;
-        margin-left: 1rem;
-        font-size: clamp(2rem, 12vw, 5rem);
-    }
-
-    /* Hero section */
-
-    #god-menu {
-        display: none;
-        z-index: 99;
-    }
-
-    #hero {
-        background: var(--section-bg-overlay-two), url("../images/sections/legends_of_asgard_header.webp") no-repeat 37.5% 50% / cover;
-    }
-
-    .hero-title {
-        width: clamp(10rem, 95vw, 50rem);
-        padding: 2rem 3rem 1rem 4rem;
-        margin-bottom: 3rem;
-    }
-
-    .hero-blurb {
-        width: clamp(10rem, 75vw, 100rem) !important;
-        padding: 1rem;
-        align-self: center;
-        text-transform: uppercase;
-    }
-
-    /* YMIR section */
-    #ymir {
-        background: var(--section-bg-overlay-one), url("../images/sections/ymir2.webp") no-repeat 55% 65% / cover;
-    }
-
-
-    /* ODIN section */
-    #odin {
-        background: var(--section-bg-overlay-two), url("../images/sections/odin_section.webp") no-repeat 50% 65% / cover;
-    }
-
-    /* THOR section */
-    #thor {
-        background: var(--section-bg-overlay-one), url("../images/sections/thor2.webp") no-repeat 37.5% 65% / cover;
-    }
-
-    /* TYR section */
-    #tyr {
-        background: var(--section-bg-overlay-two), url("../images/sections/tyr_catches_fenrir.webp") no-repeat 65% 65% / cover;
-    }
-
-    /* ANGRABODA section */
-    #angraboda {
-        background: var(--section-bg-overlay-one), url("../images/sections/angraboda3.webp") no-repeat 40% 65% / cover;
-    }
-
-    /* FREYJA section */
-    #freyja {
-        background: var(--section-bg-overlay-two), url("../images/sections/freyja.webp") no-repeat 50% 65% / cover;
-    }
-
-    /* FREYR section */
-    #freyr {
-        background: var(--section-bg-overlay-one), url("../images/sections/freyr.webp") no-repeat 60% 65% / cover;
-    }
-
-    /* YGGDRASSIL section */
-    #yggdrassil {
-        background: var(--section-bg-overlay-two), url("../images/sections/yggdrassil_section.webp") no-repeat 52.5% 65% / cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #yggy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4rem;
-    }
-
-    .yggy h2 {
-        color: var(--tertiary-alternative);
-        font-size: clamp(1.25rem, 6vw, 3rem) !important;
-        margin: 0 1rem 1rem;      
-    }    
-
-    .asgard-tooltip h3,
-    .muspelheim-tooltip h3,
-    .vanaheim-tooltip h3,
-    .jotunheimr-tooltip h3,
-    .niflheim-tooltip h3,
-    .alfheim-tooltip h3,
-    .midgard-tooltip h3,
-    .nidavellir-tooltip h3,
-    .helheim-tooltip h3 {
-        color: white;
-        font-size: clamp(0.75rem, 7.5vw, 3rem);
-    }
-
-    /* Tooltip container */
-    .asgard-tooltip,
-    .muspelheim-tooltip,
-    .vanaheim-tooltip,
-    .jotunheimr-tooltip,
-    .niflheim-tooltip,
-    .alfheim-tooltip,
-    .midgard-tooltip,
-    .nidavellir-tooltip,
-    .helheim-tooltip {
-        width: clamp(20rem, 50%, 50rem) !important;
-        position: relative;
-        display: flex;
-        justify-self: center;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        margin: -1rem;
-    }
-
-    /* Tooltip text */
-    .asgard-tooltip .asgard-tooltext,
-    .muspelheim-tooltip .muspelheim-tooltext,
-    .vanaheim-tooltip .vanaheim-tooltext,
-    .jotunheimr-tooltip .jotunheimr-tooltext,
-    .niflheim-tooltip .niflheim-tooltext {
-        visibility: hidden;
-        margin-left: 6rem;
-        width: clamp(15rem, 75%, 30rem);
-        max-height: 7.5rem;
-        overflow-y: scroll;
-        background-color: var(--bg-color);
-        color: var(--primary-color);
-        text-align: left;
-        padding: 0.75rem;
-        border-radius: 5px;
-        filter: drop-shadow(0px 2px 1px black);
-        align-self: center;
-    /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 1;
-    }
-
-    
-    .alfheim-tooltip .alfheim-tooltext,
-    .midgard-tooltip .midgard-tooltext,
-    .nidavellir-tooltip .nidavellir-tooltext,
-    .helheim-tooltip .helheim-tooltext {
-        visibility: hidden;
-        width: clamp(15rem, 75%, 30rem);
-        margin-left: 6rem;
-        max-height: 7.5rem;
-        overflow-y: scroll;
-        background-color: var(--bg-color);
-        color: var(--primary-color);
-        text-align: left;
-        padding: 0.75rem;
-        border-radius: 5px;
-        filter: drop-shadow(0px 2px 1px black);
-        align-self: center;
-    /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 1;
-    }
-
-    /* Show the tooltip text when you mouse over the tooltip container */
-    .asgard-tooltip:hover .asgard-tooltext,
-    .muspelheim-tooltip:hover .muspelheim-tooltext,
-    .vanaheim-tooltip:hover .vanaheim-tooltext,
-    .jotunheimr-tooltip:hover .jotunheimr-tooltext,
-    .niflheim-tooltip:hover .niflheim-tooltext,
-    .alfheim-tooltip:hover .alfheim-tooltext,
-    .midgard-tooltip:hover .midgard-tooltext,
-    .nidavellir-tooltip:hover .nidavellir-tooltext,
-    .helheim-tooltip:hover .helheim-tooltext {
-        visibility: visible;
-    }
-
-    .asgard-tooltip img,
-    .muspelheim-tooltip img,
-    .vanaheim-tooltip img,
-    .jotunheimr-tooltip img,
-    .niflheim-tooltip img,
-    .alfheim-tooltip img,
-    .midgard-tooltip img,
-    .nidavellir-tooltip img,
-    .helheim-tooltip img {
-        width: clamp(6rem, 25vw, 10rem);
-        border-radius: 50%;
-        padding: 1rem;
-    }
-
-    .asgard-tooltip ,
-    .muspelheim-tooltip ,
-    .vanaheim-tooltip ,
-    .jotunheimr-tooltip ,
-    .niflheim-tooltip {
-        flex-direction: row-reverse;
-    }
-
-    /* ALTHING section */
-    footer {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/sections/contact_bg.webp") no-repeat 45% 95%/ cover;
-        min-height: 100vh;
-        padding-top: 3rem;
-        padding-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    footer > h2 {
-        font-size: clamp(1.25rem, 10vw, 3rem);
-        padding-top: 3rem;
-    }
-
-    footer > h3 {
-        font-size: clamp(1rem, 5vw, 2rem);
-
-    }
-
-    footer > p {
-        color: var(--primary-color);
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #althing > div > p {
-        max-width: 60rem;
-        text-align: center;
-    }
-
-    footer form input {
-        width: 100%;
-        height: 2.5rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        font-family: var(--secondary-font);
-        font-size: clamp(0.75rem, 4vw, 1.75rem);
-        border-radius: 50px;
-        border: 0;
-        background-color: var(--tertiary-highlight-color);
-        color: var(--secondary-color);
-    }
-
-    footer form textarea,
-    footer form button {
-        width: 100%;
-        padding: 1rem;
-        font-family: var(--secondary-font);
-        font-size: clamp(0.75rem, 4vw, 1.75rem);
-        background-color: var(--tertiary-highlight-color);
-        color: var(--primary-color);
-        border: 0;
-    }
-
-    footer form textarea {
-        border-radius: 10px;
-        color: var(--secondary-color);
-        margin-bottom: 1rem;
-        padding-top: 0.35rem;
-        resize: none;
-    }
-
-    footer form input::placeholder,
-    footer form textarea::placeholder {
-        color: var(--primary-color);
-    }
-
-    footer form button {
-        width: clamp(7.5rem, 50vw, 20rem);
-        background-color: var(--tertiary-color);
-        border-radius: 50px;
-        font-size: clamp(1.25rem, 4vw, 1.75rem);
-        color: white;
-        font-weight: bold;
-    }
-
-    footer form button:hover {
-        background-color: var(--tertiary-highlight-color);
-        color: var(--secondary-color);
-    }    
-
-    footer form input:focus-within::placeholder,
-    footer form textarea:focus-within::placeholder {
-        color: var(--secondary-color);
-    }
-
-    footer form input:focus-within,
-    footer form textarea:focus-within {
-        background-color: var(--tertiary-color);
-    }
-
-    #thankyou {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/sections/contact_bg.webp") no-repeat 45% 95%/ cover;
-    }
-
-    #back2asgard {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: clamp(7.5rem, 50vw, 20rem);
-        background-color: var(--tertiary-color);
-        border-radius: 50px;
-        font-size: 0.75rem;
-        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
-        margin-top: 1rem;
-        font-size: clamp(1.25rem, 4vw, 1.75rem);
-        color: white;
-        font-weight: bold;
-    }
-
-    #back2asgard i {
-        font-size: 3.5rem;
-    }
-
-    #back2asgard:hover {
-        background-color: var(--tertiary-highlight-color);
-    }
+/* Load screen */
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  z-index: 100;
+}
+
+.loader-active {
+  display: flex;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1.75rem;
+  background: var(--primary-color);
+  border-radius: 100px;
+  animation: loader 1s 0.5s infinite ease-in;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 4.5rem;
+  height: 1.75rem;
+  background: var(--secondary-color);
+  animation: loader 1s infinite ease-in;
+  border-radius: 100px;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0.85) translateY(-15px);
+  }
+
+  25% {
+    transform: scale(1.05) translateY(0px);
+    z-index: 1;
+  }
+
+  50% {
+    transform: scale(1.05) translateY(15px);
+  }
+
+  75% {
+    transform: scale(1.05) translateY(0px);
+    z-index: 0;
+  }
+
+  100% {
+    transform: scale(0.85) translateY(-15px);
+  }
+}
+
+/* Header and Nav styles */
+
+#wrapper {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0.85rem 0.5rem 0.5rem;
+  z-index: 99;
+}
+
+#wrapper > a > img {
+  padding-top: clamp(1.75rem, 50%, 3rem);
+  width: clamp(3.5rem, 7.5vw, 5rem);
+  filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
+}
+
+.text-label i {
+  padding-top: clamp(1rem, 20%, 2.75rem);
+  font-size: clamp(2.75rem, 7vw, 4rem);
+  filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43));
+}
+
+nav {
+  display: none;
+  padding-top: 3rem;
+  position: absolute;
+  height: 100vh;
+  z-index: -1;
+  background-color: var(--tertiary-color);
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+#nav-toggle:checked ~ .text-label i:last-child,
+nav,
+nav li {
+  display: block;
+}
+
+#nav-toggle:not(:checked) ~ nav li {
+  display: none;
+}
+
+#nav-toggle:not(:checked) ~ nav,
+nav li {
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+#nav-toggle:checked ~ nav,
+nav li {
+  transform: translateY(0%);
+  transition: transform 250ms ease-in-out;
+}
+
+#nav-toggle:checked ~ .text-label i:first-child {
+  display: none;
+}
+
+#nav-toggle,
+.text-label i:last-child {
+  display: none;
+}
+
+nav li {
+  padding: 0.5rem;
+}
+
+nav li:hover,
+nav li:hover a {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+#socials {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  width: 75vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icons i {
+  font-size: clamp(2.25rem, 7.5vw, 3rem);
+  filter: var(--drop-shadow) opacity(0.65);
+  color: var(--secondary-color) !important;
+}
+
+.social-icons i:hover {
+  filter: var(--drop-shadow) opacity(0.65);
+  color: bisque !important;
+}
+
+/* Main and Section styles */
+
+header,
+article,
+footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0rem 1rem 1rem 0rem;
+}
+
+#ymir div,
+#odin div,
+#thor div,
+#tyr div,
+#angraboda div,
+#freyja div,
+#freyr div,
+#althing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: center;
+  align-self: center;
+  border-radius: 0.5rem;
+  border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
+  border-right: 0.05rem solid hsla(0, 0%, 55%, 0.4);
+  border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.4);
+  border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
+  width: 90vw;
+  max-height: 60vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  color: var(--secondary-color);
+  background-color: var(--glassmorphic-color);
+  backdrop-filter: var(--glassmorphic-filter);
+  z-index: 97;
+}
+
+#althing div {
+  overflow: visible;
+  max-height: fit-content;
+  margin-top: 2rem;
+}
+
+article:not(#hero) h2 {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  font-size: clamp(2rem, 12vw, 5rem);
+}
+
+/* Hero section */
+
+#god-menu {
+  display: none;
+  z-index: 99;
+}
+
+#hero {
+  background: var(--section-bg-overlay-two),
+    url("../images/sections/legends_of_asgard_header.avif") no-repeat 37.5% 50% /
+      cover;
+}
+
+.hero-title {
+  width: clamp(10rem, 95vw, 50rem);
+  padding: 2rem 3rem 1rem 4rem;
+  margin-bottom: 3rem;
+}
+
+.hero-blurb {
+  width: clamp(10rem, 75vw, 100rem) !important;
+  padding: 1rem;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+/* YMIR section */
+#ymir {
+  background: var(--section-bg-overlay-one),
+    url("../images/sections/ymir2.avif") no-repeat 55% 65% / cover;
+}
+
+/* ODIN section */
+#odin {
+  background: var(--section-bg-overlay-two),
+    url("../images/sections/odin_section.avif") no-repeat 50% 65% / cover;
+}
+
+/* THOR section */
+#thor {
+  background: var(--section-bg-overlay-one),
+    url("../images/sections/thor2.avif") no-repeat 37.5% 65% / cover;
+}
+
+/* TYR section */
+#tyr {
+  background: var(--section-bg-overlay-two),
+    url("../images/sections/tyr_catches_fenrir.avif") no-repeat 65% 65% / cover;
+}
+
+/* ANGRABODA section */
+#angraboda {
+  background: var(--section-bg-overlay-one),
+    url("../images/sections/angraboda3.avif") no-repeat 40% 65% / cover;
+}
+
+/* FREYJA section */
+#freyja {
+  background: var(--section-bg-overlay-two),
+    url("../images/sections/freyja.avif") no-repeat 50% 65% / cover;
+}
+
+/* FREYR section */
+#freyr {
+  background: var(--section-bg-overlay-one),
+    url("../images/sections/freyr.avif") no-repeat 60% 65% / cover;
+}
+
+/* YGGDRASSIL section */
+#yggdrassil {
+  background: var(--section-bg-overlay-two),
+    url("../images/sections/yggdrassil_section.avif") no-repeat 52.5% 65% /
+      cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#yggy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.yggy h2 {
+  color: var(--tertiary-alternative);
+  font-size: clamp(1.25rem, 6vw, 3rem) !important;
+  margin: 0 1rem 1rem;
+}
+
+.asgard-tooltip h3,
+.muspelheim-tooltip h3,
+.vanaheim-tooltip h3,
+.jotunheimr-tooltip h3,
+.niflheim-tooltip h3,
+.alfheim-tooltip h3,
+.midgard-tooltip h3,
+.nidavellir-tooltip h3,
+.helheim-tooltip h3 {
+  color: white;
+  font-size: clamp(0.75rem, 7.5vw, 3rem);
+}
+
+/* Tooltip container */
+.asgard-tooltip,
+.muspelheim-tooltip,
+.vanaheim-tooltip,
+.jotunheimr-tooltip,
+.niflheim-tooltip,
+.alfheim-tooltip,
+.midgard-tooltip,
+.nidavellir-tooltip,
+.helheim-tooltip {
+  width: clamp(20rem, 50%, 50rem) !important;
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin: -1rem;
+}
+
+/* Tooltip text */
+.asgard-tooltip .asgard-tooltext,
+.muspelheim-tooltip .muspelheim-tooltext,
+.vanaheim-tooltip .vanaheim-tooltext,
+.jotunheimr-tooltip .jotunheimr-tooltext,
+.niflheim-tooltip .niflheim-tooltext {
+  visibility: hidden;
+  margin-left: 6rem;
+  width: clamp(15rem, 75%, 30rem);
+  max-height: 7.5rem;
+  overflow-y: scroll;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  text-align: left;
+  padding: 0.75rem;
+  border-radius: 5px;
+  filter: drop-shadow(0px 2px 1px black);
+  align-self: center;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.alfheim-tooltip .alfheim-tooltext,
+.midgard-tooltip .midgard-tooltext,
+.nidavellir-tooltip .nidavellir-tooltext,
+.helheim-tooltip .helheim-tooltext {
+  visibility: hidden;
+  width: clamp(15rem, 75%, 30rem);
+  margin-left: 6rem;
+  max-height: 7.5rem;
+  overflow-y: scroll;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  text-align: left;
+  padding: 0.75rem;
+  border-radius: 5px;
+  filter: drop-shadow(0px 2px 1px black);
+  align-self: center;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.asgard-tooltip:hover .asgard-tooltext,
+.muspelheim-tooltip:hover .muspelheim-tooltext,
+.vanaheim-tooltip:hover .vanaheim-tooltext,
+.jotunheimr-tooltip:hover .jotunheimr-tooltext,
+.niflheim-tooltip:hover .niflheim-tooltext,
+.alfheim-tooltip:hover .alfheim-tooltext,
+.midgard-tooltip:hover .midgard-tooltext,
+.nidavellir-tooltip:hover .nidavellir-tooltext,
+.helheim-tooltip:hover .helheim-tooltext {
+  visibility: visible;
+}
+
+.asgard-tooltip img,
+.muspelheim-tooltip img,
+.vanaheim-tooltip img,
+.jotunheimr-tooltip img,
+.niflheim-tooltip img,
+.alfheim-tooltip img,
+.midgard-tooltip img,
+.nidavellir-tooltip img,
+.helheim-tooltip img {
+  width: clamp(6rem, 25vw, 10rem);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.asgard-tooltip,
+.muspelheim-tooltip,
+.vanaheim-tooltip,
+.jotunheimr-tooltip,
+.niflheim-tooltip {
+  flex-direction: row-reverse;
+}
+
+/* ALTHING section */
+footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > h2 {
+  font-size: clamp(1.25rem, 10vw, 3rem);
+  padding-top: 3rem;
+}
+
+footer > h3 {
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+footer > p {
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#althing > div > p {
+  max-width: 60rem;
+  text-align: center;
+}
+
+footer form input {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-family: var(--secondary-font);
+  font-size: clamp(0.75rem, 4vw, 1.75rem);
+  border-radius: 50px;
+  border: 0;
+  background-color: var(--tertiary-highlight-color);
+  color: var(--secondary-color);
+}
+
+footer form textarea,
+footer form button {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--secondary-font);
+  font-size: clamp(0.75rem, 4vw, 1.75rem);
+  background-color: var(--tertiary-highlight-color);
+  color: var(--primary-color);
+  border: 0;
+}
+
+footer form textarea {
+  border-radius: 10px;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  padding-top: 0.35rem;
+  resize: none;
+}
+
+footer form input::placeholder,
+footer form textarea::placeholder {
+  color: var(--primary-color);
+}
+
+footer form button {
+  width: clamp(7.5rem, 50vw, 20rem);
+  background-color: var(--tertiary-color);
+  border-radius: 50px;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  color: white;
+  font-weight: bold;
+}
+
+footer form button:hover {
+  background-color: var(--tertiary-highlight-color);
+  color: var(--secondary-color);
+}
+
+footer form input:focus-within::placeholder,
+footer form textarea:focus-within::placeholder {
+  color: var(--secondary-color);
+}
+
+footer form input:focus-within,
+footer form textarea:focus-within {
+  background-color: var(--tertiary-color);
+}
+
+#thankyou {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
+}
+
+#back2asgard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(7.5rem, 50vw, 20rem);
+  background-color: var(--tertiary-color);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+  margin-top: 1rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  color: white;
+  font-weight: bold;
+}
+
+#back2asgard i {
+  font-size: 3.5rem;
+}
+
+#back2asgard:hover {
+  background-color: var(--tertiary-highlight-color);
+}
 
 /* Responsiveness Props */
 
-    /* Media Queries for tablets (screen size 768px+) */
-    @media screen and (min-width: 768px) {
-        nav {
-            display: none;
-        }
+/* Media Queries for tablets (screen size 768px+) */
+@media screen and (min-width: 768px) {
+  nav {
+    display: none;
+  }
 
-        .hero-title {
-        padding-left: 1rem;
-        }
+  .hero-title {
+    padding-left: 1rem;
+  }
 
-        #hero div,
-        #ymir div,
-        #odin div,
-        #thor div,
-        #tyr div,
-        #angraboda div,
-        #freyja div,
-        #freyr div,
-        #yggdrassil div,
-        #althing div {
-            margin-left: 4rem;
-            width: clamp(10rem, 65vw, 130rem);
-            align-self: flex-start;
-        }     
-    
-        /* Header Container and Nav */
-        #wrapper {
-            justify-content: center;
-            padding-top: 1.5rem;
-        }
+  #hero div,
+  #ymir div,
+  #odin div,
+  #thor div,
+  #tyr div,
+  #angraboda div,
+  #freyja div,
+  #freyr div,
+  #yggdrassil div,
+  #althing div {
+    margin-left: 4rem;
+    width: clamp(10rem, 65vw, 130rem);
+    align-self: flex-start;
+  }
 
-        #nav-toggle,
-        .text-label {
-            display: none;
-        }
-        
-        /* God Menu and Animation Props */
-        #god-menu {
-            width: 20.5vh;
-            margin: 1rem 0.5rem;
-            padding: 0.75rem;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            right: 0;
-        }
+  /* Header Container and Nav */
+  #wrapper {
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
 
-        .b2t i {
-            position: absolute;
-            z-index: 200;
-            bottom: 2.25rem;
-            left: -3.5rem;
-            color: var(--primary-color);
-            filter: opacity(0.75) grayscale(1);
-            font-size: 3rem;
-        }
+  #nav-toggle,
+  .text-label {
+    display: none;
+  }
 
-        .b2t i:hover {
-            filter: grayscale(0);
-        }
+  /* God Menu and Animation Props */
+  #god-menu {
+    width: 20.5vh;
+    margin: 1rem 0.5rem;
+    padding: 0.75rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+  }
 
-        .image-item img {
-            width: 100%;
-            border-radius: 10px;
-            align-self: center;
-            justify-self: center;
-            border-top: 2px solid rgba(255, 166, 0, 0.35);
-            border-left: 2px solid rgba(10, 235, 216, 0.35);
-            border-right: 2px solid rgba(255, 166, 0, 0.35);
-            border-bottom: 2px solid rgba(10, 235, 216, 0.35);
-        }
+  .b2t i {
+    position: absolute;
+    z-index: 200;
+    bottom: 2.25rem;
+    left: -3.5rem;
+    color: var(--primary-color);
+    filter: opacity(0.75) grayscale(1);
+    font-size: 3rem;
+  }
 
-        .menu-list {
-            transform-style: preserve-3d;
-            transform: perspective(1750px);
-        }
+  .b2t i:hover {
+    filter: grayscale(0);
+  }
 
-        .image-item {
-            display: flex;
-            justify-content: center;
-            justify-items: center;
-            filter: grayscale(1) brightness(0.5);
-            transition: 0.3s ease-in-out;
-        }
+  .image-item img {
+    width: 100%;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    border-top: 2px solid rgba(255, 166, 0, 0.35);
+    border-left: 2px solid rgba(10, 235, 216, 0.35);
+    border-right: 2px solid rgba(255, 166, 0, 0.35);
+    border-bottom: 2px solid rgba(10, 235, 216, 0.35);
+  }
 
-        .image-item:hover {
-            filter: brightness(1) grayscale(0);
-            transform: translateZ(100px) translateX(-10px);
-        }
+  .menu-list {
+    transform-style: preserve-3d;
+    transform: perspective(1750px);
+  }
 
-        .image-item:hover + * {
-            filter: brightness(0.4);
-            transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
-        }
+  .image-item {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    filter: grayscale(1) brightness(0.5);
+    transition: 0.3s ease-in-out;
+  }
 
-        .image-item:has(+ *:hover) {
-            filter: brightness(0.4);
-            transform: translateZ(40px) translateX(-10px) rotateX(30deg);
-        }
+  .image-item:hover {
+    filter: brightness(1) grayscale(0);
+    transform: translateZ(100px) translateX(-10px);
+  }
 
-        .image-item a {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+  .image-item:hover + * {
+    filter: brightness(0.4);
+    transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
+  }
 
-        .image-item figcaption {
-            display: none;
-            filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
-            position: absolute;
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            font-weight: 800;
-            bottom: 0.75rem;
-        }
+  .image-item:has(+ *:hover) {
+    filter: brightness(0.4);
+    transform: translateZ(40px) translateX(-10px) rotateX(30deg);
+  }
 
-        .image-item:hover figcaption {
-            display: block;
-        }
+  .image-item a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-        #world-tree {
-            margin-left: -6rem !important;
-        }
-    }
+  .image-item figcaption {
+    display: none;
+    filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
+    position: absolute;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    bottom: 0.75rem;
+  }
 
-    /* Media Queries for laptops (screen size 992px+) */
-    @media screen and (min-width: 992px) {
-        #hero div,
-        #ymir div,
-        #odin div,
-        #thor div,
-        #tyr div,
-        #angraboda div,
-        #freyja div,
-        #freyr div,
-        #yggdrassil div,
-        #althing div {
-            width: clamp(10rem, 70vw, 130rem);
-        }  
+  .image-item:hover figcaption {
+    display: block;
+  }
 
-    }
+  #world-tree {
+    margin-left: -6rem !important;
+  }
+}
 
-    /* Media Queries for desktops and larger devices (screen size 1200px+) */
-    @media screen and (min-width: 1200px) {
-        #hero div,
-        #ymir div,
-        #odin div,
-        #thor div,
-        #tyr div,
-        #angraboda div,
-        #freyja div,
-        #freyr div,
-        #yggdrassil div,
-        #althing div {
-            width: clamp(10rem, 75vw, 130rem);
-        }  
+/* Media Queries for laptops (screen size 992px+) */
+@media screen and (min-width: 992px) {
+  #hero div,
+  #ymir div,
+  #odin div,
+  #thor div,
+  #tyr div,
+  #angraboda div,
+  #freyja div,
+  #freyr div,
+  #yggdrassil div,
+  #althing div {
+    width: clamp(10rem, 70vw, 130rem);
+  }
+}
 
-    }
+/* Media Queries for desktops and larger devices (screen size 1200px+) */
+@media screen and (min-width: 1200px) {
+  #hero div,
+  #ymir div,
+  #odin div,
+  #thor div,
+  #tyr div,
+  #angraboda div,
+  #freyja div,
+  #freyr div,
+  #yggdrassil div,
+  #althing div {
+    width: clamp(10rem, 75vw, 130rem);
+  }
+}
 
-    /* Media Queries for larger devices and 4k+ devices (screen size 1440px+) */
-    @media screen and (min-width: 1440px) {
-        #hero div,
-        #ymir div,
-        #odin div,
-        #thor div,
-        #tyr div,
-        #angraboda div,
-        #freyja div,
-        #freyr div,
-        #yggdrassil div,
-        #althing div {
-            margin-left: 7.5rem;
-            width: clamp(10rem, 80vw, 160rem);
-        }   
-
-    }
-      
-        
-    
+/* Media Queries for larger devices and 4k+ devices (screen size 1440px+) */
+@media screen and (min-width: 1440px) {
+  #hero div,
+  #ymir div,
+  #odin div,
+  #thor div,
+  #tyr div,
+  #angraboda div,
+  #freyja div,
+  #freyr div,
+  #yggdrassil div,
+  #althing div {
+    margin-left: 7.5rem;
+    width: clamp(10rem, 80vw, 160rem);
+  }
+}
