@@ -462,12 +462,14 @@ for styling the web page. -->
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/c480bc9d4e.js" crossorigin="anonymous"></script>
 
-    <!-- Custom script to fix issue closing nav menu whenever link is clicked (mobile devices only) -->
+    <!-- Custom script to present a loader page until site is fully loaded -->
     <script>
         window.addEventListener("load", () => {
             document.querySelector(".loader").classList.remove("loader-active");
         });
     </script>
+
+    <!-- Custom script to fix issue closing nav menu whenever link is clicked (mobile devices only) -->
     <script>
         // Get all links in the list
         const links = document.querySelectorAll("#wrapper li a");
