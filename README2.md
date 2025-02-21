@@ -223,7 +223,7 @@ In your IDE Terminal, type the following command to clone my repository:
 
 + #### Media
 
-    - All the images for the website were taken from [Unsplash](https://unsplash.com/).
+    - All the images for the website were created using text to image AI in [Adobe Firefly](https://www.adobe.com).
     + [Hero image](https://unsplash.com/photos/9gz3wfHr65U);
     + Main cons images:
         - [1st image](https://unsplash.com/photos/_STvosrG-pw)
@@ -268,11 +268,11 @@ In your IDE Terminal, type the following command to clone my repository:
 
 + #### Tools
 
-    - [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
-    - [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
-    - [EzGif](https://ezgif.com) was used to resize GIF images.
-    - [GIMP](https://www.gimp.org/) was used to edit all README.md images.
-    - [cooler](https://coolors.co/) was used to create the color palette.
+    - [Compress PNG](https://compresspng.com/) was used to compress JPEG images.
+    - [Convert PNG to WEBP](https://compresspng.com/) was used to compress JPEG images.
+    - [Convert WEBP to AVIF](https://compresspng.com/) was used to compress JPEG images.
+    - [Coolers](https://coolors.co/) was used to create the color palette.
+    - [Adobe Color](https://compresspng.com/) was used to compress JPEG images.
 
 
 ---
