@@ -3,32 +3,28 @@
 # Legends of Asgard
 ---
 
-The Animal Shelter website allows people to learn about the company "Animal Shelter" and find information about animals living in this shelter. The visitors of the website could quickly contact the company about adopting animals as well as making a donation.
+Legends of Asgard is a site for visitors to get their fix of Norse Mythology, whether they are a newcomer, an enthusiast or just a returning visitor they can learn about
+the many Gods and the Realms in which they dwelled. There is a contact form available and social links where visitors can follow the sites social accounts.
 
 The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of-asgard)
-
-![Responsive Mockup](documentation/responsive_mockup.png)
-
 
 ---
 ## User Stories
 
 ### First Time Visitor Goals:
 
-* As a First Time Visitor, I want to easily understand the main purpose of the site, so I can learn more about the organization.
-* As a First Time Visitor, I want to be able to easily navigate through the website, so I can find the content.
-* As a First Time Visitor, I want to see the testimonials, so I can see whether the organization is trustworthy.
+* As an event planner, I would like to contact the site owner, to discuss working together on a Norse themed event I am planning
 
 ### Returning Visitor Goals:
 
-* As a Returning Visitor, I want to see various pets, so that I can pick from.
-* As a Returning Visitor, I want to see information about animals, so that I can learn about each animal and make a prudent decision.
-* As a Returning Visitor, I want to find a way to get in contact with the organization, so that I can ask additional questions or send a request about a particular animal.
-* As a Returning Visitor, I want to find community links, so that I can learn more about the organization.
+* As a lover of Old Norse culture I want to see more information about the nine realms together with the ability to see the information about them, so that I better understand the Old Norse beliefs
+* As a Norse Mythology teacher, I would like the ability to share information about the Viking gods and Sagas, so that I can easily share them with my students in an interesting format
+* As a returning visitor of the site, I would like to sign up for updates, so that I can find out when new gods and sagas are added
 
 ### Frequent Visitor Goals:
-* As a Frequent User, I want to check whether there are any changes with available animals, so I can make a choice which animal to adopt.
-* As a Frequent User, I want to have options for the reason to contact the company, so I can get an explicit answer to my email. 
+* As a Mythology/Folklore enthusiast, I would like an area showing all the gods with links to their short blurbs and saga info displayed in eye catching card format, so that I may quickly find the sagas and all the information I need
+* As a Norse Mythology student, I would like to click a link that goes to external knowledge articles with more in depth information, so that I can build on my knowledge and ensure my work is cited from a reputable source
+
 
 ## Features
 
@@ -36,38 +32,33 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 
 + ##### Navigation
     - Taking a Mobile first approach:
-        - Positioned at the top of the page.
-        - Contains logo of Asgard to the left on mobile and tablet and in the center for larger devices.
-        - Contains a God navigation on the right side:
-            * HOME - leads to the home page where users can learn about the company Animal Shelter.
-            * GALLERY - leads to the gallery page where users can see available animals in the Animal Shelter.
-            * CONTACT - leads to the contact form page where users can fill out the form in order to get in touch with the company.
-        - The links have animated hover effect.
-        - The navigation is clear and easy to understand for the user.
+        * On mobile and tablet Devices
+        ![NavBar Mobile Closed](documentation/navbar_mobile_closed.png)
+        - When the hamburger menu is clicked, there is dropdown menu with the links in the same order.
+        ![NavBar Mobile Open](documentation/navbar_mobile_open.png)
+        * On tablets: navigation bar is split into to lines: the first line filled with the logo and the second line filled with links. All elements are centered.
+        ![NavBar Tablets](documentation/navbar_tablets.png)
+
+        * On Desktop devices: 
+        - navigation bar filled with the logo in the center and a hamburger menu implemented on the left side of the navigation bar.      
         ![NavBar desktop](documentation/navbar_desktop.png)
-
-        - The navigation bar is responsive:
-            * On tablets: navigation bar is split into to lines: the first line filled with the logo and the second line filled with links. All elements are centered.
-            ![NavBar Tablets](documentation/navbar_tablets.png)
-
-            * On mobile devices: 
-                - navigation bar filled with the logo in the center and a hamburger menu implemented on the left side of the navigation bar.      
-                ![NavBar Mobile Closed](documentation/navbar_mobile_closed.png)
-            
-                - When the hamburger menu is clicked, there is dropdown menu with the links in the same order.
-                ![NavBar Mobile Open](documentation/navbar_mobile_open.png)
+    
 
 ---
 
 + #### Hero Section
 
-    - Hero section have a fixed background image.
+    - Hero section has a fixed background image.
 
-    - Hero section have the block section below the image that consist:
+    - Hero section has a header text that consist:
 
-        * The name of the company.
-        * Short description of the company's philosophy.
-        * Contact button that leads directly to the contact page.
+        * The name of the site.
+        * Short blurb prompting the user to look around.
+    
+    - Also the site as a whole has:
+        * Fixed side menu that scrolls as the user navigates down the page.
+        * Back to top button
+        * Four social icons
 
     
     ![Hero Section](documentation/hero_section.png)
