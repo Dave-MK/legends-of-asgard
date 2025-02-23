@@ -33,15 +33,16 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 + ##### Navigation
     - Taking a Mobile first approach:
         * On mobile and tablet Devices
-        ![NavBar Mobile Closed](documentation/navbar_mobile_closed.png)
-        - When the hamburger menu is clicked, there is dropdown menu with the links in the same order.
-        ![NavBar Mobile Open](documentation/navbar_mobile_open.png)
-        * On tablets: navigation bar is split into to lines: the first line filled with the logo and the second line filled with links. All elements are centered.
+        ![NavBar Closed](documentation/navbar_mobile_closed.png)
+        - When the hamburger menu is clicked, there is dropdown menu with the links in the same order. Essentially this is a mobile version of the
+        Desktop side menu specified below.
+        ![NavBar Open](documentation/navbar_mobile_open.png)
         ![NavBar Tablets](documentation/navbar_tablets.png)
 
         * On Desktop devices: 
-        - navigation bar filled with the logo in the center and a hamburger menu implemented on the left side of the navigation bar.      
+        - The navigation bar has the logo in the center and the hamburger menu disappears and is replaced with a fixed graphical side menu positioned a bit further down the viewport.     
         ![NavBar desktop](documentation/navbar_desktop.png)
+        ![NavBar desktop hover](documentation/navbar_desktop.png)
     
 
 ---
@@ -53,13 +54,7 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
     - Hero section has a header text that consist:
 
         * The name of the site.
-        * Short blurb prompting the user to look around.
-    
-    - Also the site as a whole has:
-        * Fixed side menu that scrolls as the user navigates down the page.
-        * Back to top button
-        * Four social icons
-
+        * Short blurb building anticipation for the content that follows.
     
     ![Hero Section](documentation/hero_section.png)
 
@@ -67,11 +62,11 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 
 + #### God Section(s)
 
-    - Highlight Section has 4 cards with strong descriptive characteristics of the company.
+    - Each section contains a static background image of the relevant God, with the Gods name at the top.
 
-    - Tells website visitors how well animals are in the Animal Shelter.
+    - A lengthy blurb with a Glassmorphic background contains details relating to the God for its relevant section.
 
-    - Attracts viewers to use this company for animal adoption.
+    - The blurb (sagas) tell stories urging the user to continue reading.
 
     
     ![Highlights Section](documentation/main_cons.png)
@@ -80,19 +75,15 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
     ---
 + #### YGGDRASSIL
 
-    - Testimonials Section has three feedbacks from people who were satisfied with the company's service.
+    - This is the section that shows the nine realms in norse myth.
 
-    - Each card has a picture of an animal with its owner.
-
-    - Each card has a story from the people who had an experience of using the Animal Shelter.
-
-    - Each card has a name of the pet's owner.
+    - Each realm is hoverable and when hovered displays a tooltip with a description.
 
 ​
     ![Testimonials Section](documentation/testimonials.png)
 
 ---
-+ #### Footer / The Althing
++ #### The Althing
 
     - Footer contains social media links that open in a new tab.
 
@@ -115,6 +106,16 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
     ![Contact page](documentation/contact_form_page.png)
 
 ---
+
++ #### Footer
+
+    - Footer contains social media links that open in a new tab.
+
+    - Contact page has a contact form:
+
+
+---
+
 + ### Thank you response page
 
     - Response page appears after submitting the contact form.
@@ -203,6 +204,8 @@ In your IDE Terminal, type the following command to clone my repository:
 - add accessability report with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/);
 - improve the quality of the commit messages (I am aware that some of them are not very clear and not meeting the standards and will improve them in the future);
 - add fully functional contact form.
+- Add opt-in form for email addresses or incorporate this into the contact form via a checkbox.
+- Add the external links to God wikis for more reputable source referencing.
 
 ---
 ## Credits
@@ -216,46 +219,21 @@ In your IDE Terminal, type the following command to clone my repository:
 
     - All the images for the website were created using text to image AI in [Adobe Firefly](https://www.adobe.com).
     + [Hero image](https://unsplash.com/photos/9gz3wfHr65U);
-    + Main cons images:
+    + God section images:
         - [1st image](https://unsplash.com/photos/_STvosrG-pw)
         - [2nd image](https://unsplash.com/photos/v3-zcCWMjgM);
         - [3rd image](https://unsplash.com/photos/W4EUiwceZjs);
         - [4th image](https://unsplash.com/photos/sXU6BeWoZqI).
-    + Testimonial Section: 
+    + Yggdrassil Section: 
         - [1st image](https://unsplash.com/photos/UCFgM_AojFg);
         - [2nd image](https://unsplash.com/photos/ISg37AI2A-s);
         - [3rd image](https://unsplash.com/photos/2WeHZHIW6v0).
-    + Gallery:
-         - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
-         - [2nd image](https://unsplash.com/photos/FdR_CoENqp8);
-         - [3rd image](https://unsplash.com/photos/C0zDWAPFT9A);
-         - [4th image](https://unsplash.com/photos/WrG-lFojjW4);
-         - [5th image](https://unsplash.com/photos/IbPxGLgJiMI);
-         - [6th image](https://unsplash.com/photos/tf2BKM9iy9o);
-         - [7th image](https://unsplash.com/photos/iYQC9xWMvw4);
-         - [8th image](https://unsplash.com/photos/o_QTeyGVWjQ);
-         - [9th image](https://unsplash.com/photos/AH7JYgyAlqA);
-         - [10th image](https://unsplash.com/photos/sssxyuZape8);
-         - [11th image](https://unsplash.com/photos/4tc7_jEgGzg);
-         - [12th image](https://unsplash.com/photos/GewH2PtoR1s);
-         - [13th image](https://unsplash.com/photos/7GX5aICb5i4);
-         - [14th image](https://unsplash.com/photos/VvO8e8n0Ffg);
-         - [15th image](https://unsplash.com/photos/1Y4LupdrDZk);
-         - [16th image](https://unsplash.com/photos/uumnRC_kVks);
-         - [17th image](https://unsplash.com/photos/h7VBJRBcieM);
-         - [18th image](https://unsplash.com/photos/Ud4k7O6CJPM);
-         - [19th image](https://unsplash.com/photos/ngqyo2AYYnE);
-         - [20th image](https://unsplash.com/photos/g3B53PbBfwU);
-         - [21st image](https://unsplash.com/photos/JSfsK9VH4q8);
-         - [22nd image](https://unsplash.com/photos/FilM6ng7VGQ);
-         - [23rd image](https://unsplash.com/photos/UtrE5DcgEyg);
-         - [24th image](https://unsplash.com/photos/IuJc2qh2TcA);
-         - [25th image](https://unsplash.com/photos/1-sM8xqPFTM);
-         - [26th image](https://unsplash.com/photos/zBvVuRJ71vU);
-         - [27th image](https://unsplash.com/photos/dEtvMzcbYiA);
-         - [28th image](https://unsplash.com/photos/J7rRzjba-kY);
-         - [29th image](https://unsplash.com/photos/mx0DEnfYxic);
-         - [30th image](https://unsplash.com/photos/VwqecUsYKvs);
+    + Althing section:
+        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
+        - [2nd image](https://unsplash.com/photos/FdR_CoENqp8);
+        - [3rd image](https://unsplash.com/photos/C0zDWAPFT9A);
+    + Thank you reponse page:
+        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
 
 + #### Tools
 
