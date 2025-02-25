@@ -40,7 +40,7 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
         ![NavBar Tablets](documentation/navbar_tablets.png)
 
         * On Desktop devices: 
-        - The navigation bar has the logo in the center and the hamburger menu disappears and is replaced with a fixed graphical side menu positioned a bit further down the viewport.     
+        - The navigation bar has the logo in the center and the hamburger menu disappears and is replaced with a fixed graphical side menu positioned a bit further down the viewport on the right hand side.     
         ![NavBar desktop](documentation/navbar_desktop.png)
         ![NavBar desktop hover](documentation/navbar_desktop.png)
     
@@ -69,41 +69,42 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
     - The blurb (sagas) tell stories urging the user to continue reading.
 
     
-    ![Highlights Section](documentation/main_cons.png)
+    ![YMIR](documentation/main_cons.png)
+    ![ODIN](documentation/main_cons.png)
+    ![THOR](documentation/main_cons.png)
+    ![TYR](documentation/main_cons.png)
+    ![ANGRABODA](documentation/main_cons.png)
+    ![FREYJA](documentation/main_cons.png)
+    ![FREYR](documentation/main_cons.png)
 
 
     ---
 + #### YGGDRASSIL
 
-    - This is the section that shows the nine realms in norse myth.
+    - Originally planned to be a tree of the gods showing links and relationships, but realised
+    during development that this would be more time consuming than originally planned.
+
+    - This is the section that shows the nine realms in norse myth instead.
 
     - Each realm is hoverable and when hovered displays a tooltip with a description.
 
 ​
-    ![Testimonials Section](documentation/testimonials.png)
+    ![Yggdrassil Section](documentation/testimonials.png)
 
 ---
 + #### The Althing
 
-    - Footer contains social media links that open in a new tab.
-
-    - Contact page has a contact form:
+    - The Althing section has a contact form:
 
         - All text input fields are customized.
         - Labels are animated when the input field is in focus and are not empty.
         - All inputs are set to be required to fill out.
-        - It has to checkboxes for the visitors to fill voluntary:
-
-            - The 1st is - ADAPT, which helps the company to understand the motive of the visitor.
-            - The 2nd is - DONATE, which motivates users to consider financial support for the company. 
 
         - The submit button is animated on hover.
 
-    - The page is responsive on all common screen sizes.
-
-    - The submit button leads to the response page.
+    - The 'Gods Hear Me' button leads to the response page.
 ​
-    ![Contact page](documentation/contact_form_page.png)
+    ![Althing section](documentation/contact_form_page.png)
 
 ---
 
@@ -111,7 +112,11 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 
     - Footer contains social media links that open in a new tab.
 
-    - Contact page has a contact form:
+    - This is a fixed footer.
+
+    - Links highlight on hover.
+
+    ![Footer](documentation/contact_form_page.png)
 
 
 ---
@@ -119,8 +124,7 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 + ### Thank you response page
 
     - Response page appears after submitting the contact form.
-    - It contains the thank you message and the promise to get in touch with the applicant within 24 hours.
-    - It will automatically direct the user to the main page in 10 seconds.
+    - It contains the thank you message and a button to return to the homepage.
 
     ![Response page](documentation/response_page.png)
 
@@ -176,6 +180,11 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 
 Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
 
+### Accessibility & Performance
+
+insert WAVE report before and after
+Insert page load report before and after
+
 ---
 
 
@@ -200,11 +209,11 @@ In your IDE Terminal, type the following command to clone my repository:
 ---
 
 ## Future improvements
-- add custom 404 page;
-- add accessability report with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/);
-- improve the quality of the commit messages (I am aware that some of them are not very clear and not meeting the standards and will improve them in the future);
-- add fully functional contact form.
-- Add opt-in form for email addresses or incorporate this into the contact form via a checkbox.
+- Add custom 404 page;
+- Add accessability report with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/);
+- Improve the quality of the commit messages (I am aware that some of them may not meet the standards and will improve these in the future);
+- Add fully functional contact form.
+- Add opt-in form for email addresses or incorporate this into the contact form via a opt-in checkbox.
 - Add the external links to God wikis for more reputable source referencing.
 
 ---
@@ -237,11 +246,10 @@ In your IDE Terminal, type the following command to clone my repository:
 
 + #### Tools
 
-    - [Compress PNG](https://compresspng.com/) was used to compress JPEG images.
-    - [Convert PNG to WEBP](https://compresspng.com/) was used to compress JPEG images.
-    - [Convert WEBP to AVIF](https://compresspng.com/) was used to compress JPEG images.
-    - [Coolers](https://coolors.co/) was used to create the color palette.
-    - [Adobe Color](https://compresspng.com/) was used to compress JPEG images.
+    - [Compress PNG](https://compresspng.com/) was used to compress PNG images.
+    - [Convert PNG to WEBP](https://compresspng.com/) was used to convert PNG images to WEBP.
+    - [Convert WEBP to AVIF](https://compresspng.com/) was used to convert WEBP images to AVIF.
+    - [Coolers](https://coolors.co/) & [Adobe Color](https://compresspng.com/) were used to create the color palette.
 
 
 ---
@@ -251,6 +259,6 @@ In your IDE Terminal, type the following command to clone my repository:
 - [Miguel](https://) was a great supporter of another bold idea of mine for this project. Tim guided me through the development of the project and helped me to learn a lot of new things by challenging me to do something new.
 - [Iuliia Konovalova](https://github.com/IuliiaKonovalova/), my code institute mentor was a huge asset in the mid to late stages of the project, assisting with syntax and semantic code improvements and best practices.
 - [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
-- [Lun Dev](https://www.youtube.com/user/lundev) for his amazing CSS tutorials.
+- [Lun Dev](https://www.youtube.com/user/lundev) for his amazing tutorials on CSS wizardry.
 
 ---

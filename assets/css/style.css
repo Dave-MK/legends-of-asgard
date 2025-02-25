@@ -1,5 +1,12 @@
+/* The below code is importing a Google Fonts stylesheet for the fonts "Kanit" and "Russo One" with
+various font weights and styles. The imported stylesheet will be used to apply these fonts to the
+HTML elements on the webpage. */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap");
 
+/* This code is defining CSS custom properties (variables) using the `:root` pseudo-class. These
+variables are being used to set values for various aspects of the design such as fonts, sizes,
+colors, filters, overlays, shadows, and borders. By using custom properties, the code aims to make
+it easier to maintain and update the design elements throughout the CSS file. */
 /* Variables */
 :root {
   /* Fonts & Sizes */
@@ -36,6 +43,20 @@
   --drop-shadow-alt: drop-shadow(0px 0px 8px var(--primary-color));
 }
 
+/* The below code is a CSS reset code. It sets the margin and padding of all elements to 0 and uses
+the border-box value for the box-sizing property. This helps in creating a consistent starting point
+for styling elements across different browsers by removing default browser styling. */
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The code below is styling a custom scrollbar for webkit browsers (such as Chrome and Safari). It
+sets the width of the scrollbar to 7.5px, makes the scrollbar track transparent, and styles the
+scrollbar thumb with a linear gradient background and border radius of 10px. */
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 7.5px;
@@ -50,14 +71,12 @@
   border-radius: 10px;
 }
 
-/* Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Global Styles & Fonts */
+/* The code below is a set of CSS rules that define global styles and fonts for the site. */
+
+/* Below, the CSS code is styling the HTML and body elements of a webpage. Here is a breakdown of what
+each part of the code is doing: */
 
 html {
   scroll-snap-type: y mandatory;
@@ -74,6 +93,8 @@ body {
   font-family: var(--secondary-font);
 }
 
+/* The below code is a CSS stylesheet defining styles for various HTML elements. Here's a breakdown of
+what each part of the code is doing: */
 h1,
 h2 {
   font-family: var(--primary-font);
@@ -105,9 +126,9 @@ p {
   filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
 }
 
-footer {
-  margin-top: auto;
-}
+/* This section of code is a CSS code snippet. It sets the text decoration of anchor elements (`a`) to none
+and the color to a custom variable `--primary-color`. It also removes the list-style from list items
+(`li`). */
 
 a {
   text-decoration: none;
@@ -118,7 +139,33 @@ li {
   list-style: none;
 }
 
+/* This CSS code is styling the header, article, and footer elements on the webpage. Here is a
+breakdown of what each part of the code is doing: */
+header,
+article,
+footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0rem 1rem 1rem 0rem;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
 /* Custom Styles */
+/* The CSS code below is creating a custom loader animation to ensure the site is fully visible before showing. */
 
 /* Load screen */
 
@@ -181,7 +228,8 @@ li {
   }
 }
 
-/* Header and Nav styles */
+
+/* Header, Nav styles and fixed footer styles */
 
 #wrapper {
   width: 100vw;
@@ -289,24 +337,6 @@ nav li:hover a {
 }
 
 /* Main and Section styles */
-
-header,
-article,
-footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scroll-behavior: smooth;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 0rem 1rem 1rem 0rem;
-}
 
 #ymir div,
 #odin div,
@@ -562,7 +592,7 @@ article:not(#hero) h2 {
 }
 
 /* ALTHING section */
-footer {
+#althing {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
   min-height: 100vh;
@@ -574,20 +604,20 @@ footer {
   align-items: center;
 }
 
-footer > h2 {
+#althing > h2 {
   font-size: clamp(1.25rem, 10vw, 3rem);
   padding-top: 3rem;
 }
 
-footer > h3 {
+#althing > h3 {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
-footer > p {
+#althing > p {
   color: var(--primary-color);
 }
 
-form {
+#althing-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -599,7 +629,7 @@ form {
   text-align: center;
 }
 
-footer form input {
+#althing form input {
   width: 100%;
   height: 2.5rem;
   margin-bottom: 1rem;
@@ -612,8 +642,8 @@ footer form input {
   color: var(--secondary-color);
 }
 
-footer form textarea,
-footer form button {
+#althing form textarea,
+#althing form button {
   width: 100%;
   padding: 1rem;
   font-family: var(--secondary-font);
@@ -623,7 +653,7 @@ footer form button {
   border: 0;
 }
 
-footer form textarea {
+#althing form textarea {
   border-radius: 10px;
   color: var(--secondary-color);
   margin-bottom: 1rem;
@@ -631,12 +661,12 @@ footer form textarea {
   resize: none;
 }
 
-footer form input::placeholder,
-footer form textarea::placeholder {
+#althing form input::placeholder,
+#althing form textarea::placeholder {
   color: var(--primary-color);
 }
 
-footer form button {
+#althing form button {
   width: clamp(7.5rem, 50vw, 20rem);
   background-color: var(--tertiary-color);
   border-radius: 50px;
@@ -645,18 +675,18 @@ footer form button {
   font-weight: bold;
 }
 
-footer form button:hover {
+#althing form button:hover {
   background-color: var(--tertiary-highlight-color);
   color: var(--secondary-color);
 }
 
-footer form input:focus-within::placeholder,
-footer form textarea:focus-within::placeholder {
+#althing form input:focus-within::placeholder,
+#althing form textarea:focus-within::placeholder {
   color: var(--secondary-color);
 }
 
-footer form input:focus-within,
-footer form textarea:focus-within {
+#althing form input:focus-within,
+#althing form textarea:focus-within {
   background-color: var(--tertiary-color);
 }
 

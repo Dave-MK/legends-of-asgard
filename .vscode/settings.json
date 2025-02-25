@@ -1,5 +1,5 @@
 {
-  "files.exclude": {
+   "files.exclude": {
       "**/.DS_Store": true,
       "**/.git": true,
       "**/.github": true,
@@ -15,5 +15,5 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "One Dark Pro Darker",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "docwriter.style": "Google",
+   "docwriter.style": "Auto-detect",
 }
