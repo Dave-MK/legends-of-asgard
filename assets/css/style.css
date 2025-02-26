@@ -1074,27 +1074,6 @@ article:not(#hero) h2 {
 
 /* 
   Responsiveness Props
-
-  Media Queries for tablets (screen size 768px+):
-  - Hides the navigation bar.
-  - Adjusts padding for the hero title.
-  - Sets margin and width for various div elements.
-  - Centers the header container and hides certain elements.
-  - Styles the god menu with fixed positioning and flex layout.
-  - Styles back-to-top icon with hover effects.
-  - Styles image items with borders, grayscale, and hover effects.
-  - Adds 3D transformation effects to the menu list and image items.
-  - Shows figcaption on image item hover.
-  - Adjusts margin for the world tree.
-
-  Media Queries for laptops (screen size 992px+):
-  - Adjusts the width of various div elements.
-
-  Media Queries for desktops and larger devices (screen size 1200px+):
-  - Further adjusts the width of various div elements.
-
-  Media Queries for larger devices and 4k+ devices (screen size 1440px+):
-  - Increases margin and width for various div elements.
 */
 
 /* Media Queries for tablets (screen size 768px+) */
