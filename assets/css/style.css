@@ -169,6 +169,25 @@ footer {
 
 /* Load screen */
 
+/* Custom Styles */
+/* The CSS code below is creating a custom loader animation to ensure the site is fully visible before showing. */
+
+/* Load screen */
+
+/**
+ * .loader
+ * A full-screen loader that is initially hidden and can be activated by adding the .loader-active class.
+ * 
+ * Properties:
+ * - width: 100vw; (full viewport width)
+ * - height: 100vh; (full viewport height)
+ * - position: fixed; (fixed position relative to the viewport)
+ * - display: none; (initially hidden)
+ * - align-items: center; (center items vertically)
+ * - justify-content: center; (center items horizontally)
+ * - background: var(--bg-color); (background color from CSS variable)
+ * - z-index: 100; (stacking order)
+ */
 .loader {
   width: 100vw;
   height: 100vh;
@@ -180,10 +199,27 @@ footer {
   z-index: 100;
 }
 
+/**
+ * .loader-active
+ * Activates the loader by changing display to flex.
+ */
 .loader-active {
   display: flex;
 }
 
+/**
+ * .loader::before
+ * A pseudo-element representing the primary part of the loader animation.
+ * 
+ * Properties:
+ * - content: ""; (empty content)
+ * - position: absolute; (absolute positioning)
+ * - width: 5rem; (width of the element)
+ * - height: 1.75rem; (height of the element)
+ * - background: var(--primary-color); (background color from CSS variable)
+ * - border-radius: 100px; (rounded corners)
+ * - animation: loader 1s 0.5s infinite ease-in; (animation with delay)
+ */
 .loader::before {
   content: "";
   position: absolute;
@@ -194,6 +230,19 @@ footer {
   animation: loader 1s 0.5s infinite ease-in;
 }
 
+/**
+ * .loader::after
+ * A pseudo-element representing the secondary part of the loader animation.
+ * 
+ * Properties:
+ * - content: ""; (empty content)
+ * - position: absolute; (absolute positioning)
+ * - width: 4.5rem; (width of the element)
+ * - height: 1.75rem; (height of the element)
+ * - background: var(--secondary-color); (background color from CSS variable)
+ * - border-radius: 100px; (rounded corners)
+ * - animation: loader 1s infinite ease-in; (animation without delay)
+ */
 .loader::after {
   content: "";
   position: absolute;
@@ -204,6 +253,17 @@ footer {
   border-radius: 100px;
 }
 
+/**
+ * @keyframes loader
+ * Defines the keyframes for the loader animation.
+ * 
+ * Keyframes:
+ * - 0%: scale(0.85) translateY(-15px); (initial state)
+ * - 25%: scale(1.05) translateY(0px); z-index: 1; (first intermediate state)
+ * - 50%: scale(1.05) translateY(15px); (second intermediate state)
+ * - 75%: scale(1.05) translateY(0px); z-index: 0; (third intermediate state)
+ * - 100%: scale(0.85) translateY(-15px); (final state)
+ */
 @keyframes loader {
   0% {
     transform: scale(0.85) translateY(-15px);
@@ -228,9 +288,15 @@ footer {
   }
 }
 
-
 /* Header, Nav styles and fixed footer styles */
 
+/* #wrapper
+  - Sets the width to 100% of the viewport width.
+  - Fixes the position of the element.
+  - Uses flexbox for layout.
+  - Sets the height to 3rem.
+  - Justifies content space-between and centers items.
+  - Adds padding and sets z-index to 99. */
 #wrapper {
   width: 100vw;
   position: fixed;
@@ -242,18 +308,33 @@ footer {
   z-index: 99;
 }
 
+/* #wrapper > a > img
+  - Adds padding-top using clamp for responsive design.
+  - Sets the width using clamp for responsive design.
+  - Applies drop-shadow, brightness, and contrast filters. */
 #wrapper > a > img {
   padding-top: clamp(1.75rem, 50%, 3rem);
   width: clamp(3.5rem, 7.5vw, 5rem);
   filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
 }
 
+/* .text-label i
+  - Adds padding-top using clamp for responsive design.
+  - Sets the font size using clamp for responsive design.
+  - Applies drop-shadow filter. */
 .text-label i {
   padding-top: clamp(1rem, 20%, 2.75rem);
   font-size: clamp(2.75rem, 7vw, 4rem);
   filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43));
 }
 
+/* nav
+  - Initially hides the navigation.
+  - Adds padding-top and sets position to absolute.
+  - Sets height to 100% of the viewport height.
+  - Sets z-index to -1 and background color.
+  - Sets width to 100%, positions at top-left, and centers text.
+  - Sets font size using clamp for responsive design. */
 nav {
   display: none;
   padding-top: 3rem;
@@ -268,47 +349,74 @@ nav {
   font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
+/* #nav-toggle:checked ~ .text-label i:last-child,
+  nav,
+  nav li
+  - Displays the navigation and list items when nav-toggle is checked. */
 #nav-toggle:checked ~ .text-label i:last-child,
 nav,
 nav li {
   display: block;
 }
 
+/* #nav-toggle:not(:checked) ~ nav li
+  - Hides the list items when nav-toggle is not checked. */
 #nav-toggle:not(:checked) ~ nav li {
   display: none;
 }
 
+/* #nav-toggle:not(:checked) ~ nav,
+  nav li
+  - Translates navigation and list items upwards and applies transition. */
 #nav-toggle:not(:checked) ~ nav,
 nav li {
   transform: translateY(-100%);
   transition: transform 250ms ease-in;
 }
 
+/* #nav-toggle:checked ~ nav,
+  nav li
+  - Resets translation and applies transition when nav-toggle is checked. */
 #nav-toggle:checked ~ nav,
 nav li {
   transform: translateY(0%);
   transition: transform 250ms ease-in-out;
 }
 
+/* #nav-toggle:checked ~ .text-label i:first-child
+  - Hides the first child icon when nav-toggle is checked. */
 #nav-toggle:checked ~ .text-label i:first-child {
   display: none;
 }
 
+/* #nav-toggle,
+  .text-label i:last-child
+  - Hides the nav-toggle and last child icon. */
 #nav-toggle,
 .text-label i:last-child {
   display: none;
 }
 
+/* nav li
+  - Adds padding to list items. */
 nav li {
   padding: 0.5rem;
 }
 
+/* nav li:hover,
+  nav li:hover a
+  - Changes background color and text color on hover. */
 nav li:hover,
 nav li:hover a {
   background-color: var(--bg-color);
   color: var(--secondary-color);
 }
 
+/* #socials
+  - Sets width to 100% of the viewport width.
+  - Uses flexbox for layout and centers content.
+  - Fixes position at the bottom and sets z-index to 100.
+  - Adds bottom margin. */
 #socials {
   width: 100vw;
   display: flex;
@@ -319,18 +427,27 @@ nav li:hover a {
   margin-bottom: 0.5rem;
 }
 
+/* .social-icons
+  - Sets width to 75% of the viewport width.
+  - Uses flexbox for layout and justifies content evenly. */
 .social-icons {
   width: 75vw;
   display: flex;
   justify-content: space-evenly;
 }
 
+/* .social-icons i
+  - Sets font size using clamp for responsive design.
+  - Applies drop-shadow filter and opacity.
+  - Sets color with !important. */
 .social-icons i {
   font-size: clamp(2.25rem, 7.5vw, 3rem);
   filter: var(--drop-shadow) opacity(0.65);
   color: var(--secondary-color) !important;
 }
 
+/* .social-icons i:hover
+  - Applies drop-shadow filter, opacity, and changes color on hover. */
 .social-icons i:hover {
   filter: var(--drop-shadow) opacity(0.65);
   color: bisque !important;
@@ -338,7 +455,73 @@ nav li:hover a {
 
 /* Main and Section styles */
 
+/* 
+  Styles for various div elements within specific IDs (#ymir, #odin, #thor, #tyr, #angraboda, #freyja, #freyr, #althing):
+  - Flexbox layout with column direction, centered content, and self-alignment.
+  - Rounded borders with specific colors and thickness.
+  - Width set to 90% of the viewport width.
+  - Maximum height set to 60% of the viewport height with vertical scrolling enabled.
+  - Smooth scrolling behavior.
+  - Padding and margin adjustments.
+  - Text color and background color using CSS variables.
+  - Glassmorphic effect applied using backdrop-filter.
+  - z-index set to 97 for stacking context.
+*/
 #ymir div,
+#odin div,
+#thor div,
+#tyr div,
+#angraboda div,
+#freyja div,
+#freyr div,
+#althing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  align-items: center;
+  align-self: center;
+  border-radius: 0.5rem;
+  border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
+  border-right: 0.05rem solid hsla(0, 0%, 55%, 0.4);
+  border-bottom: 0.05rem solid hsla(0, 0%, 55%, 0.4);
+  border-left: 0.05rem solid hsla(0, 0%, 100%, 0.35);
+  width: 90vw;
+  max-height: 60vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  color: var(--secondary-color);
+  background-color: var(--glassmorphic-color);
+  backdrop-filter: var(--glassmorphic-filter);
+  z-index: 97;
+}
+
+/* 
+  Additional styles for div elements within #althing:
+  - Overflow set to visible.
+  - Maximum height set to fit-content.
+  - Top margin increased to 2rem.
+*/
+#althing div {
+  overflow: visible;
+  max-height: fit-content;
+  margin-top: 2rem;
+}
+
+/* 
+  Styles for h2 elements within article elements, excluding those with ID #hero:
+  - Top margin set to 5rem.
+  - Left margin set to 1rem.
+  - Font size adjusted using clamp to be responsive between 2rem and 5rem based on viewport width.
+*/
+article:not(#hero) h2 {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  font-size: clamp(2rem, 12vw, 5rem);
+}
 #odin div,
 #thor div,
 #tyr div,
@@ -384,23 +567,40 @@ article:not(#hero) h2 {
 
 /* Hero section */
 
+
+/* #god-menu:
+  - Hides the god menu by default.
+  - Sets a high z-index to ensure it appears above other elements when displayed.
+*/
 #god-menu {
   display: none;
   z-index: 99;
 }
 
+/* #hero:
+  - Sets a background image and overlay for the hero section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #hero {
   background: var(--section-bg-overlay-two),
-    url("../images/sections/legends_of_asgard_header.avif") no-repeat 37.5% 50% /
-      cover;
+    url("../images/sections/legends_of_asgard_header.avif") no-repeat 37.5% 50% / cover;
 }
 
+/* .hero-title:
+  - Sets a responsive width using the clamp function.
+  - Adds padding and margin for spacing.
+*/
 .hero-title {
   width: clamp(10rem, 95vw, 50rem);
   padding: 2rem 3rem 1rem 4rem;
   margin-bottom: 3rem;
 }
 
+/* .hero-blurb:
+  - Sets a responsive width using the clamp function and makes it important.
+  - Adds padding and centers the text.
+  - Transforms text to uppercase.
+*/
 .hero-blurb {
   width: clamp(10rem, 60vw, 100rem) !important;
   padding: 1rem;
@@ -408,53 +608,91 @@ article:not(#hero) h2 {
   text-transform: uppercase;
 }
 
+/* .hero-blurb > h3:
+  - Sets the text color to the secondary color variable.
+*/
 .hero-blurb > h3 {
   color: var(--secondary-color);
 }
 
 /* YMIR section */
+/* #ymir:
+  - Sets a background image and overlay for the Ymir section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #ymir {
   background: var(--section-bg-overlay-one),
     url("../images/sections/ymir2.avif") no-repeat 55% 65% / cover;
 }
 
 /* ODIN section */
+/* #odin:
+  - Sets a background image and overlay for the Odin section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #odin {
   background: var(--section-bg-overlay-two),
     url("../images/sections/odin_section.avif") no-repeat 50% 65% / cover;
 }
 
 /* THOR section */
+/* #thor:
+  - Sets a background image and overlay for the Thor section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #thor {
   background: var(--section-bg-overlay-one),
     url("../images/sections/thor2.avif") no-repeat 37.5% 65% / cover;
 }
 
 /* TYR section */
+/* #tyr:
+  - Sets a background image and overlay for the Tyr section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #tyr {
   background: var(--section-bg-overlay-two),
     url("../images/sections/tyr_catches_fenrir.avif") no-repeat 65% 65% / cover;
 }
 
 /* ANGRABODA section */
+/* #angraboda:
+  - Sets a background image and overlay for the Angraboda section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #angraboda {
   background: var(--section-bg-overlay-one),
     url("../images/sections/angraboda3.avif") no-repeat 40% 65% / cover;
 }
 
 /* FREYJA section */
+/* #freyja:
+  - Sets a background image and overlay for the Freyja section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #freyja {
   background: var(--section-bg-overlay-two),
     url("../images/sections/freyja.avif") no-repeat 50% 65% / cover;
 }
 
 /* FREYR section */
+/* #freyr:
+  - Sets a background image and overlay for the Freyr section.
+  - Positions the background image and scales it to cover the entire section.
+*/
 #freyr {
   background: var(--section-bg-overlay-one),
     url("../images/sections/freyr.avif") no-repeat 60% 65% / cover;
 }
 
 /* YGGDRASSIL section */
+/* 
+  Styles for the Yggdrassil section and tooltips in the Legends of Asgard project.
+
+  #yggdrassil:
+    - Sets the background with an overlay and an image.
+    - Uses flexbox to center its content both vertically and horizontally.
+*/
 #yggdrassil {
   background: var(--section-bg-overlay-two),
     url("../images/sections/yggdrassil_section.avif") no-repeat 52.5% 65% /
@@ -465,6 +703,11 @@ article:not(#hero) h2 {
   justify-content: center;
 }
 
+/* 
+  #yggy:
+    - Uses flexbox to center its content both vertically and horizontally.
+    - Adds a top margin.
+*/
 #yggy {
   display: flex;
   flex-direction: column;
@@ -473,12 +716,21 @@ article:not(#hero) h2 {
   margin-top: 4rem;
 }
 
+/* 
+  .yggy h2:
+    - Sets the color and font size for h2 elements inside the .yggy class.
+    - Adds margin around the element.
+*/
 .yggy h2 {
   color: var(--tertiary-alternative);
   font-size: clamp(1.25rem, 6vw, 3rem) !important;
   margin: 0 1rem 1rem;
 }
 
+/* 
+  Tooltip headers (h3):
+    - Sets the color and font size for h3 elements inside various tooltip classes.
+*/
 .asgard-tooltip h3,
 .muspelheim-tooltip h3,
 .vanaheim-tooltip h3,
@@ -492,7 +744,10 @@ article:not(#hero) h2 {
   font-size: clamp(0.75rem, 7.5vw, 3rem);
 }
 
-/* Tooltip container */
+/* 
+  Tooltip containers:
+    - Sets the width, position, display, alignment, and margin for various tooltip containers.
+*/
 .asgard-tooltip,
 .muspelheim-tooltip,
 .vanaheim-tooltip,
@@ -512,7 +767,11 @@ article:not(#hero) h2 {
   margin: -1rem;
 }
 
-/* Tooltip text */
+/* 
+  Tooltip text:
+    - Initially hidden.
+    - Sets the width, height, overflow behavior, background color, text color, padding, border radius, shadow, alignment, position, and z-index for tooltip text elements.
+*/
 .asgard-tooltip .asgard-tooltext,
 .muspelheim-tooltip .muspelheim-tooltext,
 .vanaheim-tooltip .vanaheim-tooltext,
@@ -530,7 +789,6 @@ article:not(#hero) h2 {
   border-radius: 5px;
   filter: drop-shadow(0px 2px 1px black);
   align-self: center;
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
@@ -551,12 +809,14 @@ article:not(#hero) h2 {
   border-radius: 5px;
   filter: drop-shadow(0px 2px 1px black);
   align-self: center;
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+/* 
+  Tooltip text visibility on hover:
+    - Makes the tooltip text visible when hovering over the tooltip container.
+*/
 .asgard-tooltip:hover .asgard-tooltext,
 .muspelheim-tooltip:hover .muspelheim-tooltext,
 .vanaheim-tooltip:hover .vanaheim-tooltext,
@@ -569,6 +829,10 @@ article:not(#hero) h2 {
   visibility: visible;
 }
 
+/* 
+  Tooltip images:
+    - Sets the width, border radius, and padding for images inside various tooltip classes.
+*/
 .asgard-tooltip img,
 .muspelheim-tooltip img,
 .vanaheim-tooltip img,
@@ -583,6 +847,10 @@ article:not(#hero) h2 {
   padding: 1rem;
 }
 
+/* 
+  Tooltip container direction:
+    - Sets the flex direction to row-reverse for specific tooltip containers.
+*/
 .asgard-tooltip,
 .muspelheim-tooltip,
 .vanaheim-tooltip,
@@ -592,6 +860,11 @@ article:not(#hero) h2 {
 }
 
 /* ALTHING section */
+/* 
+  #althing 
+  Styles for the main container with id "althing". It includes a background image with a linear gradient overlay, 
+  full viewport height, padding, and flexbox properties for centering content.
+*/
 #althing {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
@@ -604,19 +877,35 @@ article:not(#hero) h2 {
   align-items: center;
 }
 
+/* 
+  #althing > h2 
+  Styles for the h2 element inside the "althing" container. It includes responsive font size and top padding.
+*/
 #althing > h2 {
   font-size: clamp(1.25rem, 10vw, 3rem);
   padding-top: 3rem;
 }
 
+/* 
+  #althing > h3 
+  Styles for the h3 element inside the "althing" container. It includes responsive font size.
+*/
 #althing > h3 {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
+/* 
+  #althing > p 
+  Styles for the p element inside the "althing" container. It sets the text color to the primary color variable.
+*/
 #althing > p {
   color: var(--primary-color);
 }
 
+/* 
+  #althing-form 
+  Styles for the form inside the "althing" container. It includes flexbox properties for layout.
+*/
 #althing-form {
   display: flex;
   flex-direction: column;
@@ -624,11 +913,20 @@ article:not(#hero) h2 {
   align-items: center;
 }
 
+/* 
+  #althing > div > p 
+  Styles for the p element inside a div within the "althing" container. It includes maximum width and centered text alignment.
+*/
 #althing > div > p {
   max-width: 60rem;
   text-align: center;
 }
 
+/* 
+  #althing form input 
+  Styles for input elements inside the form within the "althing" container. It includes full width, height, margin, padding, 
+  font properties, border radius, background color, and text color.
+*/
 #althing form input {
   width: 100%;
   height: 2.5rem;
@@ -642,6 +940,11 @@ article:not(#hero) h2 {
   color: var(--secondary-color);
 }
 
+/* 
+  #althing form textarea, #althing form button 
+  Styles for textarea and button elements inside the form within the "althing" container. It includes full width, padding, 
+  font properties, background color, and text color.
+*/
 #althing form textarea,
 #althing form button {
   width: 100%;
@@ -653,6 +956,11 @@ article:not(#hero) h2 {
   border: 0;
 }
 
+/* 
+  #althing form textarea 
+  Additional styles for textarea elements inside the form within the "althing" container. It includes border radius, 
+  text color, margin, padding, and disables resizing.
+*/
 #althing form textarea {
   border-radius: 10px;
   color: var(--secondary-color);
@@ -661,11 +969,20 @@ article:not(#hero) h2 {
   resize: none;
 }
 
+/* 
+  #althing form input::placeholder, #althing form textarea::placeholder 
+  Styles for placeholder text inside input and textarea elements within the form in the "althing" container. It sets the text color.
+*/
 #althing form input::placeholder,
 #althing form textarea::placeholder {
   color: var(--primary-color);
 }
 
+/* 
+  #althing form button 
+  Additional styles for button elements inside the form within the "althing" container. It includes responsive width, 
+  background color, border radius, font size, text color, and font weight.
+*/
 #althing form button {
   width: clamp(7.5rem, 50vw, 20rem);
   background-color: var(--tertiary-color);
@@ -675,26 +992,55 @@ article:not(#hero) h2 {
   font-weight: bold;
 }
 
+/* 
+  #althing form button:hover 
+  Styles for button elements on hover inside the form within the "althing" container. It changes the background color and text color.
+*/
 #althing form button:hover {
   background-color: var(--tertiary-highlight-color);
   color: var(--secondary-color);
 }
 
+/* 
+  #althing form input:focus-within::placeholder, #althing form textarea:focus-within::placeholder 
+  Styles for placeholder text inside focused input and textarea elements within the form in the "althing" container. It changes the text color.
+*/
 #althing form input:focus-within::placeholder,
 #althing form textarea:focus-within::placeholder {
   color: var(--secondary-color);
 }
 
+/* 
+  #althing form input:focus-within, #althing form textarea:focus-within 
+  Styles for focused input and textarea elements within the form in the "althing" container. It changes the background color.
+*/
 #althing form input:focus-within,
 #althing form textarea:focus-within {
   background-color: var(--tertiary-color);
 }
 
+/* Althing form response page */
+
+/* 
+  #thankyou
+  - Applies a background with a linear gradient and an image.
+  - The image is positioned at 45% horizontally and 95% vertically, and covers the entire element.
+*/
 #thankyou {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
 }
 
+/* 
+  #back2asgard
+  - A flex container with space-between alignment and centered items.
+  - Width is responsive, ranging from 7.5rem to 20rem.
+  - Background color is set to a tertiary color variable.
+  - Rounded corners with a 50px radius.
+  - Font size is responsive, ranging from 1.25rem to 1.75rem.
+  - Padding and margin are applied for spacing.
+  - Text color is white and bold.
+*/
 #back2asgard {
   display: flex;
   justify-content: space-between;
@@ -710,26 +1056,60 @@ article:not(#hero) h2 {
   font-weight: bold;
 }
 
+/* 
+  #back2asgard i
+  - Sets the font size of the icon to 3.5rem.
+*/
 #back2asgard i {
   font-size: 3.5rem;
 }
 
+/* 
+  #back2asgard:hover
+  - Changes the background color to a tertiary highlight color on hover.
+*/
 #back2asgard:hover {
   background-color: var(--tertiary-highlight-color);
 }
 
-/* Responsiveness Props */
+/* 
+  Responsiveness Props
+
+  Media Queries for tablets (screen size 768px+):
+  - Hides the navigation bar.
+  - Adjusts padding for the hero title.
+  - Sets margin and width for various div elements.
+  - Centers the header container and hides certain elements.
+  - Styles the god menu with fixed positioning and flex layout.
+  - Styles back-to-top icon with hover effects.
+  - Styles image items with borders, grayscale, and hover effects.
+  - Adds 3D transformation effects to the menu list and image items.
+  - Shows figcaption on image item hover.
+  - Adjusts margin for the world tree.
+
+  Media Queries for laptops (screen size 992px+):
+  - Adjusts the width of various div elements.
+
+  Media Queries for desktops and larger devices (screen size 1200px+):
+  - Further adjusts the width of various div elements.
+
+  Media Queries for larger devices and 4k+ devices (screen size 1440px+):
+  - Increases margin and width for various div elements.
+*/
 
 /* Media Queries for tablets (screen size 768px+) */
 @media screen and (min-width: 768px) {
+  /* Hides the navigation bar */
   nav {
     display: none;
   }
 
+  /* Adjusts padding for the hero title */
   .hero-title {
     padding-left: 1rem;
   }
 
+  /* Sets margin and width for various div elements */
   #hero div,
   #ymir div,
   #odin div,
@@ -745,7 +1125,7 @@ article:not(#hero) h2 {
     align-self: flex-start;
   }
 
-  /* Header Container and Nav */
+  /* Centers the header container and hides certain elements */
   #wrapper {
     justify-content: center;
     padding-top: 1.5rem;
@@ -756,7 +1136,7 @@ article:not(#hero) h2 {
     display: none;
   }
 
-  /* God Menu and Animation Props */
+  /* Styles the god menu with fixed positioning and flex layout */
   #god-menu {
     width: 20.5vh;
     margin: 1rem 0.5rem;
@@ -767,6 +1147,7 @@ article:not(#hero) h2 {
     right: 0;
   }
 
+  /* Styles back-to-top icon with hover effects */
   .b2t i {
     position: absolute;
     z-index: 200;
@@ -781,6 +1162,7 @@ article:not(#hero) h2 {
     filter: grayscale(0);
   }
 
+  /* Styles image items with borders, grayscale, and hover effects */
   .image-item img {
     width: 100%;
     border-radius: 10px;
@@ -792,11 +1174,24 @@ article:not(#hero) h2 {
     border-bottom: 2px solid rgba(10, 235, 216, 0.35);
   }
 
+  /* Adds 3D transformation effects to the menu list and image items */
+
+  /* 
+    .menu-list:
+    - Applies 3D transformation settings to the menu list.
+    - Uses perspective to give a sense of depth.
+  */
   .menu-list {
     transform-style: preserve-3d;
     transform: perspective(1750px);
   }
 
+  /* 
+    .image-item:
+    - Displays items as flex containers centered both horizontally and vertically.
+    - Applies grayscale and brightness filters.
+    - Adds a transition effect for smooth changes.
+  */
   .image-item {
     display: flex;
     justify-content: center;
@@ -805,21 +1200,40 @@ article:not(#hero) h2 {
     transition: 0.3s ease-in-out;
   }
 
+  /* 
+    .image-item:hover:
+    - Removes grayscale and adjusts brightness on hover.
+    - Translates the item in 3D space.
+  */
   .image-item:hover {
     filter: brightness(1) grayscale(0);
     transform: translateZ(100px) translateX(-10px);
   }
 
+  /* 
+    .image-item:hover + *:
+    - Applies filters and 3D transformations to the next sibling element when the image item is hovered.
+  */
   .image-item:hover + * {
     filter: brightness(0.4);
     transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
   }
 
+  /* 
+    .image-item:has(+ *:hover):
+    - Applies filters and 3D transformations to the previous sibling element when the image item is hovered.
+  */
   .image-item:has(+ *:hover) {
     filter: brightness(0.4);
     transform: translateZ(40px) translateX(-10px) rotateX(30deg);
   }
 
+  /* 
+    .image-item a:
+    - Positions the anchor element relatively.
+    - Displays the anchor as a flex container centered both horizontally and vertically.
+    - Aligns items in a column.
+  */
   .image-item a {
     position: relative;
     display: flex;
@@ -828,6 +1242,7 @@ article:not(#hero) h2 {
     align-items: center;
   }
 
+  /* Shows figcaption on image item hover */
   .image-item figcaption {
     display: none;
     filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
@@ -842,12 +1257,14 @@ article:not(#hero) h2 {
     display: block;
   }
 
+  /* Adjusts margin for the world tree */
   #world-tree {
     margin-left: -6rem !important;
   }
 }
 
 /* Media Queries for laptops (screen size 992px+) */
+/* Adjusts the width of various div elements */
 @media screen and (min-width: 992px) {
   #hero div,
   #ymir div,
@@ -864,6 +1281,7 @@ article:not(#hero) h2 {
 }
 
 /* Media Queries for desktops and larger devices (screen size 1200px+) */
+/* Further adjusts the width of various div elements */
 @media screen and (min-width: 1200px) {
   #hero div,
   #ymir div,
@@ -880,6 +1298,7 @@ article:not(#hero) h2 {
 }
 
 /* Media Queries for larger devices and 4k+ devices (screen size 1440px+) */
+/* Increases margin and width for various div elements */
 @media screen and (min-width: 1440px) {
   #hero div,
   #ymir div,
@@ -895,3 +1314,4 @@ article:not(#hero) h2 {
     width: clamp(10rem, 80vw, 160rem);
   }
 }
+
