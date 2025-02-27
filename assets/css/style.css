@@ -424,7 +424,9 @@ nav li:hover a {
   position: fixed;
   bottom: 0;
   z-index: 100;
-  margin-bottom: 0.5rem;
+  background-color: var(--glassmorphic-color);
+  backdrop-filter: var(--glassmorphic-filter);
+  padding: 0.5rem;
 }
 
 /* .social-icons
@@ -574,7 +576,7 @@ article:not(#hero) h2 {
 */
 #god-menu {
   display: none;
-  z-index: 99;
+  z-index: 101;
 }
 
 /* #hero:
@@ -709,6 +711,7 @@ article:not(#hero) h2 {
     - Adds a top margin.
 */
 #yggy {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -731,6 +734,8 @@ article:not(#hero) h2 {
   Tooltip headers (h3):
     - Sets the color and font size for h3 elements inside various tooltip classes.
 */
+
+
 .asgard-tooltip h3,
 .muspelheim-tooltip h3,
 .vanaheim-tooltip h3,
@@ -739,9 +744,11 @@ article:not(#hero) h2 {
 .alfheim-tooltip h3,
 .midgard-tooltip h3,
 .nidavellir-tooltip h3,
-.helheim-tooltip h3 {
+.helheim-tooltip h3
+.info-tooltip h3 {
   color: white;
-  font-size: clamp(0.75rem, 7.5vw, 3rem);
+  font-size: clamp(0.75rem, 7.5vw, 2rem);
+  margin: 0 1rem;
 }
 
 /* 
@@ -757,21 +764,51 @@ article:not(#hero) h2 {
 .midgard-tooltip,
 .nidavellir-tooltip,
 .helheim-tooltip {
-  width: clamp(20rem, 50%, 50rem) !important;
+  width: clamp(20rem, 75%, 50rem) !important;
   position: relative;
   display: flex;
   justify-self: center;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin: -1rem;
+  margin: 1.25rem 0;
 }
+
+
+.info-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.info-tooltip h3,
+.info-tooltip i {
+  font-size: clamp(0.5rem, 7.5vw, 3rem);
+  justify-self: center;
+  align-self: center;
+}
+
+
 
 /* 
   Tooltip text:
     - Initially hidden.
     - Sets the width, height, overflow behavior, background color, text color, padding, border radius, shadow, alignment, position, and z-index for tooltip text elements.
 */
+.info-tooltip .info-tooltext {
+  visibility: hidden;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  text-align: left;
+  padding: 0.75rem;
+  border-radius: 5px;
+  filter: drop-shadow(0px 2px 1px black);
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+}
+
+
 .asgard-tooltip .asgard-tooltext,
 .muspelheim-tooltip .muspelheim-tooltext,
 .vanaheim-tooltip .vanaheim-tooltext,
@@ -825,7 +862,8 @@ article:not(#hero) h2 {
 .alfheim-tooltip:hover .alfheim-tooltext,
 .midgard-tooltip:hover .midgard-tooltext,
 .nidavellir-tooltip:hover .nidavellir-tooltext,
-.helheim-tooltip:hover .helheim-tooltext {
+.helheim-tooltip:hover .helheim-tooltext,
+.info-tooltip:hover .info-tooltext {
   visibility: visible;
 }
 
@@ -842,9 +880,9 @@ article:not(#hero) h2 {
 .midgard-tooltip img,
 .nidavellir-tooltip img,
 .helheim-tooltip img {
-  width: clamp(6rem, 25vw, 10rem);
+  width: clamp(6rem, 20vw, 10rem);
   border-radius: 50%;
-  padding: 1rem;
+  margin: 0 2rem;
 }
 
 /* 
@@ -1130,15 +1168,15 @@ article:not(#hero) h2 {
   .b2t i {
     position: absolute;
     z-index: 200;
-    bottom: 2.25rem;
-    left: -3.5rem;
+    bottom: 3.5rem;
+    left: -3rem;
     color: var(--primary-color);
-    filter: opacity(0.75) grayscale(1);
+    filter: opacity(0.75);
     font-size: 3rem;
   }
 
   .b2t i:hover {
-    filter: grayscale(0);
+    color: var(--secondary-color);
   }
 
   /* Styles image items with borders, grayscale, and hover effects */

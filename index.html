@@ -321,102 +321,106 @@ for styling the web page. -->
             </article>
             <article id="yggdrassil" aria-label="yggdrassil section">
                 <h2>YGGDRASSIL</h2>
-                <h3>
-                    The Nine Realms
-                </h3>
+                <div class="info-tooltip" aria-label="The nine realms info tooltip">
+                    <h3>
+                        The Nine Realms&nbsp;&nbsp;
+                    </h3>
+                    <i class="fa-solid fa-circle-info" aria-label="info tooltip icon, hover for more info"></i>
+                    <figcaption class="info-tooltext">
+                        <strong>Info</strong><br>Hover over each of the following realms to learn more about them.
+                    </figcaption>
+                </div>
                 <div class="yggy">
-                    <div id="world-tree">
-                        <div class="asgard-tooltip">
-                            <h3>Asgard</h3>
-                            <img src="assets/images/realms/asgard_realm.avif" alt="">
-                            <figcaption class="asgard-tooltext">
-                                <strong>Asgard</strong><br>The celestial home of the Aesir gods, ruled by
-                                Odin.<br><br>It is a realm of divine governance, order, and power, connected to Midgard
-                                by the rainbow bridge, Bifrost.<br><br>Asgard represents strength and wisdom, often
-                                depicted as a majestic, fortified city.
-                            </figcaption>
-                        </div>
-                        <div class="alfheim-tooltip">
-                            <h3>Alfheim</h3>
-                            <img src="assets/images/realms/alfheim_realm.avif" alt="">
-                            <figcaption class="alfheim-tooltext">
-                                <strong>Alfheim</strong><br>The ethereal realm of the light elves, beings of beauty and
-                                magic.<br><br>Known for their wisdom and benevolence, the elves maintain harmony in the
-                                cosmos.<br><br>Alfheim is often depicted as a luminous, verdant paradise filled with
-                                otherworldly light and enchantment.
-                            </figcaption>
-                        </div>
-                        <div class="muspelheim-tooltip">
-                            <h3>Muspelheim</h3>
-                            <img src="assets/images/realms/muspelheim_realm.avif" alt="">
-                            <figcaption class="muspelheim-tooltext">
-                                <strong>Muspelheim</strong><br>The fiery realm ruled by the fire giant Surtr.<br><br>It
-                                is a land of molten lava, flames, and scorching heat, representing destruction and
-                                chaos.<br><br>Muspelheim is destined to play a pivotal role in Ragnarok, the prophesied
-                                end of the world.
-                            </figcaption>
-                        </div>
-                        <div class="midgard-tooltip">
-                            <h3>Midgard</h3>
-                            <img src="assets/images/realms/midguard_realm.avif" alt="">
-                            <figcaption class="midgard-tooltext">
-                                <strong>Midgard</strong><br>The world of humans, located at the center of Yggdrasil, the
-                                great world tree.<br><br>Protected by the gods, it serves as the bridge between the
-                                divine and mortal realms.<br><br>Surrounded by an impassable ocean, it is the heart of
-                                human existence in Norse mythology.
-                            </figcaption>
-                        </div>
-                        <div class="vanaheim-tooltip">
-                            <h3>Vanaheim</h3>
-                            <img src="assets/images/realms/vanaheim_realm.avif" alt="">
-                            <figcaption class="vanaheim-tooltext">
-                                <strong>Vanaheim</strong><br>The home of the Vanir gods, associated with fertility,
-                                nature, and wealth.<br><br>Peaceful and harmonious, it contrasts with Asgard’s warrior
-                                ethos.<br><br>After the Aesir-Vanir war, the two pantheons formed a truce, with Vanaheim
-                                embodying a balance of prosperity and serenity.
-                            </figcaption>
-                        </div>
-                        <div class="nidavellir-tooltip">
-                            <h3>Nidavellir</h3>
-                            <img src="assets/images/realms/nidavellir_realm.avif" alt="">
-                            <figcaption class="nidavellir-tooltext">
-                                <strong>Nidavellir</strong><br>The underground home of the dwarves, master craftsmen and
-                                artisans who forge the gods' most powerful artifacts, including Thor's hammer,
-                                Mjölnir.<br><br>Nidavellir is depicted as a dark, labyrinthine realm filled with glowing
-                                forges, embodying ingenuity, craftsmanship, and the transformative power of fire and
-                                metal.
-                            </figcaption>
-                        </div>
-                        <div class="jotunheimr-tooltip">
-                            <h3>Jotunheimr</h3>
-                            <img src="assets/images/realms/jotunheimr_realm.avif" alt="">
-                            <figcaption class="jotunheimr-tooltext">
-                                <strong>Jotunheimr</strong><br>The untamed land of the giants, or Jotnar, who often
-                                rival the gods.<br><br>It is a harsh, rocky realm with dense forests and icy peaks,
-                                symbolizing chaos and primordial nature. The giants represent ancient forces,
-                                challenging the order of Asgard.
-                            </figcaption>
-                        </div>
-                        <div class="helheim-tooltip">
-                            <h3>Helheim</h3>
-                            <img src="assets/images/realms/hel_realm.avif" alt="">
-                            <figcaption class="helheim-tooltext">
-                                <strong>Helheim</strong><br>The shadowy underworld ruled by Hel, daughter of
-                                Loki.<br><br>It is a realm for those who die of old age or illness, distinct from
-                                Valhalla.<br><br>Helheim is a somber place of rest, embodying the inevitability of death
-                                and the quiet end of mortal life.
-                            </figcaption>
-                        </div>
-                        <div class="niflheim-tooltip">
-                            <h3>Niflheim</h3>
-                            <img src="assets/images/realms/niflheim_realm.avif" alt="">
-                            <figcaption class="niflheim-tooltext">
-                                <strong>Niflheim</strong><br>A primordial realm of ice, fog, and eternal cold.<br><br>It
-                                is one of the first worlds to form in Norse mythology and the source of icy
-                                rivers.<br><br>Overlapping with Helheim, it is a land of death, symbolizing desolation
-                                and the origins of life itself.
-                            </figcaption>
-                        </div>
+                    <div class="asgard-tooltip">
+                        <h3>Asgard</h3>
+                        <img src="assets/images/realms/asgard_realm.avif" alt="">
+                        <figcaption class="asgard-tooltext">
+                            <strong>Asgard</strong><br>The celestial home of the Aesir gods, ruled by
+                            Odin.<br><br>It is a realm of divine governance, order, and power, connected to Midgard
+                            by the rainbow bridge, Bifrost.<br><br>Asgard represents strength and wisdom, often
+                            depicted as a majestic, fortified city.
+                        </figcaption>
+                    </div>
+                    <div class="alfheim-tooltip">
+                        <h3>Alfheim</h3>
+                        <img src="assets/images/realms/alfheim_realm.avif" alt="">
+                        <figcaption class="alfheim-tooltext">
+                            <strong>Alfheim</strong><br>The ethereal realm of the light elves, beings of beauty and
+                            magic.<br><br>Known for their wisdom and benevolence, the elves maintain harmony in the
+                            cosmos.<br><br>Alfheim is often depicted as a luminous, verdant paradise filled with
+                            otherworldly light and enchantment.
+                        </figcaption>
+                    </div>
+                    <div class="muspelheim-tooltip">
+                        <h3>Muspelheim</h3>
+                        <img src="assets/images/realms/muspelheim_realm.avif" alt="">
+                        <figcaption class="muspelheim-tooltext">
+                            <strong>Muspelheim</strong><br>The fiery realm ruled by the fire giant Surtr.<br><br>It
+                            is a land of molten lava, flames, and scorching heat, representing destruction and
+                            chaos.<br><br>Muspelheim is destined to play a pivotal role in Ragnarok, the prophesied
+                            end of the world.
+                        </figcaption>
+                    </div>
+                    <div class="midgard-tooltip">
+                        <h3>Midgard</h3>
+                        <img src="assets/images/realms/midguard_realm.avif" alt="">
+                        <figcaption class="midgard-tooltext">
+                            <strong>Midgard</strong><br>The world of humans, located at the center of Yggdrasil, the
+                            great world tree.<br><br>Protected by the gods, it serves as the bridge between the
+                            divine and mortal realms.<br><br>Surrounded by an impassable ocean, it is the heart of
+                            human existence in Norse mythology.
+                        </figcaption>
+                    </div>
+                    <div class="vanaheim-tooltip">
+                        <h3>Vanaheim</h3>
+                        <img src="assets/images/realms/vanaheim_realm.avif" alt="">
+                        <figcaption class="vanaheim-tooltext">
+                            <strong>Vanaheim</strong><br>The home of the Vanir gods, associated with fertility,
+                            nature, and wealth.<br><br>Peaceful and harmonious, it contrasts with Asgard’s warrior
+                            ethos.<br><br>After the Aesir-Vanir war, the two pantheons formed a truce, with Vanaheim
+                            embodying a balance of prosperity and serenity.
+                        </figcaption>
+                    </div>
+                    <div class="nidavellir-tooltip">
+                        <h3>Nidavellir</h3>
+                        <img src="assets/images/realms/nidavellir_realm.avif" alt="">
+                        <figcaption class="nidavellir-tooltext">
+                            <strong>Nidavellir</strong><br>The underground home of the dwarves, master craftsmen and
+                            artisans who forge the gods' most powerful artifacts, including Thor's hammer,
+                            Mjölnir.<br><br>Nidavellir is depicted as a dark, labyrinthine realm filled with glowing
+                            forges, embodying ingenuity, craftsmanship, and the transformative power of fire and
+                            metal.
+                        </figcaption>
+                    </div>
+                    <div class="jotunheimr-tooltip">
+                        <h3>Jotunheimr</h3>
+                        <img src="assets/images/realms/jotunheimr_realm.avif" alt="">
+                        <figcaption class="jotunheimr-tooltext">
+                            <strong>Jotunheimr</strong><br>The untamed land of the giants, or Jotnar, who often
+                            rival the gods.<br><br>It is a harsh, rocky realm with dense forests and icy peaks,
+                            symbolizing chaos and primordial nature. The giants represent ancient forces,
+                            challenging the order of Asgard.
+                        </figcaption>
+                    </div>
+                    <div class="helheim-tooltip">
+                        <h3>Helheim</h3>
+                        <img src="assets/images/realms/hel_realm.avif" alt="">
+                        <figcaption class="helheim-tooltext">
+                            <strong>Helheim</strong><br>The shadowy underworld ruled by Hel, daughter of
+                            Loki.<br><br>It is a realm for those who die of old age or illness, distinct from
+                            Valhalla.<br><br>Helheim is a somber place of rest, embodying the inevitability of death
+                            and the quiet end of mortal life.
+                        </figcaption>
+                    </div>
+                    <div class="niflheim-tooltip">
+                        <h3>Niflheim</h3>
+                        <img src="assets/images/realms/niflheim_realm.avif" alt="">
+                        <figcaption class="niflheim-tooltext">
+                            <strong>Niflheim</strong><br>A primordial realm of ice, fog, and eternal cold.<br><br>It
+                            is one of the first worlds to form in Norse mythology and the source of icy
+                            rivers.<br><br>Overlapping with Helheim, it is a land of death, symbolizing desolation
+                            and the origins of life itself.
+                        </figcaption>
                     </div>
                 </div>
             </article>
