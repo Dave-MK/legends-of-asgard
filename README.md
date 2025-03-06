@@ -1,80 +1,267 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/icons/asgard_icon.png" alt="asgard icon" width="150"> 
+<img src="documentation/asgard_icon.png" height="12.5%" width="12.5%" />
 
-# LEGENDS OF ASGARD
-#### Welcome to the readme file for the Legends of Asgard website!
+# Legends of Asgard
+---
 
-## PLANNING & DESIGN
+Legends of Asgard is a site for visitors to get their fix of Norse Mythology, whether they are a newcomer, an enthusiast or just a returning visitor they can learn about
+the many Gods and the Realms in which they dwelled. There is a contact form available and social links where visitors can follow the sites social accounts.
 
-   Legends of Asgard is an informational website centred around the Old Norse Gods/Goddesses, the Aesir and Vanir.
-   This site has been created for a project while undertaking the Code Institute Level 5 Diploma - Web Application Development. 
-   I have a real passion for Norse Mythology and enjoy talking about it. I figured there would be others like me
-   who like to learn and chat about this topic, and so the purpose of this site is to provide eye-catching and informative content about a subject 
-   that intrigues so many people, with the objective of strengthening the community and providing a platform for said community to flourish.
-   
-   ### User Stories & Target Audience
-   The user stories can be found within the tasks [HERE](https://github.com/users/Dave-MK/projects/3)
-   - Aimed at people of all ages and backgrounds, this site is created with entertainment as this is centered around Norse Mythology, so nothing is stated as factual.
-   - The site is perfect for anyone interested in the Norse culture, whether knowledgeable already or none prior.
+The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of-asgard)
 
-   #### The site will contain:
-   - A one page structure with mobile first design
-   - 10 sections in total:
-       - A hero containing CTAs with a mobile first approach, with sticky side menu
-       - 7 sections each for the Sagas of the Norse Gods
-       - A section containing information about the 9 realms/worlds of Norse mythology
-       - A contact section in the footer
+---
+## User Stories
 
-#### The general direction and structure can be seen here in the [WIREFRAMES](https://github.com/Dave-MK/mp1-legends-of-asgard/blob/main/assets/images/planning/Latest-LoA-Wireframe.png)
+### First Time Visitor Goals:
 
-   ### Directional reasoning
-   - Some original decisions made in the planning phase were reviewed during development:
-       - Originally it was planned to utilise Bootstrap for the layout and style support, but it became apparent that using Bootstrap would complicate and potentially cause issues when creating some of the custom CSS rules
-       - The menu and sections were originally planned to be a carousel, but opted for a linear flow during development as to prevent confusion and ensure a simple flow of content and readability
-       - Originally the animated menu on larger screens was to be laid out along the bottom of the page, but I decided that in-line with the above change, the menu would flow better fixed to the right side of the page
-       - Each section was to have a header with an image of the god and the name, but due to the image size and portability, I decided to make each section fill the viewport with a full background image, this ensures that when moving from device to device users will have the same experience
-       - A share icon was originally planned, but this was forsaken during development as browsers provide this functionality and I saw this as an extra icon/distraction away from the content
-       - The plan was to have a tree of gods and how each relates to one another, but during development this was proven to be more work than originally perceived and so altered this to be a list of the nine realms with tooltip info
+* As an event planner, I would like to contact the site owner, to discuss working together on a Norse themed event I am planning
 
-- Structure
-    - Being an informational site, I wanted users to have an experience similar to reading a kindle book and so went for a one page structure separated into sections thats utilise scroll snapping, allowing users the options of easier scrolling or use of the menu
-    - A linear, one page approach I feel was justified when designing with a mobile first approach, but using media queries easily ensuring content is responsive and suitable for larger devices
-    - A mobile menu is availble for small devices, but is transformed into an animated carousel menu for larger devices or smaller devices that are landscape orientation
-    - I have depicted my thoughts in my wireframes, though some changes came later
+### Returning Visitor Goals:
 
-- Imagery
-    - This was a painstaking process, as I wanted something that makes the content seem new or refreshing
-    - Rather than use stock images, that appeared bland and lacked imagination, my images and realm icons were generated using adobe firefly text to image prompts, but proved fruitful once I had the overall theme and idea in mind
-    - Creating the images helped finalise the colour design choices for the overall site
+* As a lover of Old Norse culture I want to see more information about the nine realms together with the ability to see the information about them, so that I better understand the Old Norse beliefs
+* As a Norse Mythology teacher, I would like the ability to share information about the Viking gods and Sagas, so that I can easily share them with my students in an interesting format
+* As a returning visitor of the site, I would like to sign up for updates, so that I can find out when new gods and sagas are added
 
-- Colour
-    - As mentioned above I had an idea of a general colour design, which I tested various times during the gathering of the images
-    - Once I had settled on the theme of the images, I then colour picked based on the overall shadows, midtones and highlights of the images
-    - There was some small alterations once in development to ensure text properly contrasted from the background 
-
-### Features
-
-- Glassmorphism
-    - The colours chosen for the site meant the text on smaller screens was a bit less visible. After some research and trial and error I found a solution in having a glassmorphic background for each of the Saga divs. You can read more about this HERE and see a tutorial I utilised HERE.
-
-- Mobile Menu / Animated Carousel side menu
-    - Probably the most prominent features of the site on smaller devices you will use the hamburger menu, which has a small animation when opened and closed. The mobile menu changes when traversing onto medium and large devices, a vertical menu fixed to the right side of the screen, when static appears greyscale and plain, but when hovered
-    over gives life to the menu and creates an oscelating style animation between each of the elements in the menu. The best part about this menu is the fact thats it is CSS only and no JS is needed, allowing me to add in some functionality and animation without the need for JS.
-
-## IMPLEMENTATION & TESTING
-
-### Live Site
-The live working site can be viewed [HERE](https://dave-mk.github.io/mp1-legends-of-asgard)
-
-### Project Management
-All project tasks along with issues logged can be viewed [HERE](https://github.com/users/Dave-MK/projects/3)
-
-### Testing
-The original manual test script can be viewed [HERE](https://github.com/Dave-MK/mp1-legends-of-asgard/blob/main/TESTING.md)
-
-## ACKNOWLEDGEMENTS
-
-- All photographic/artistic imagery used on this project has been generated by David Kilgallon using Adobe Firefly Text to Image AI - click here to learn more
-- The logo, which is also displayed atop this file is the Old Norse symbol representing Asgard and was downloaded from freepik.com
-- The animated CSS only side menu as seen on some tablet, laptop and desktop resolutions was created with the help of a youtube tutorial by LunDev, which can be viewed HERE
+### Frequent Visitor Goals:
+* As a Mythology/Folklore enthusiast, I would like an area showing all the gods with links to their short blurbs and saga info displayed in eye catching card format, so that I may quickly find the sagas and all the information I need
+* As a Norse Mythology student, I would like to click a link that goes to external knowledge articles with more in depth information, so that I can build on my knowledge and ensure my work is cited from a reputable source
 
 
+## Features
+
++ ### Navbar
+
++ ##### Navigation
+    - Taking a Mobile first approach:
+        * On mobile and tablet Devices <br>
+        <img src="documentation/mobile_menu_closed.png" height="12.5%" width="12.5%" />
+        - When the hamburger menu is clicked, there is dropdown menu with the links in the same order. Essentially this is a mobile version of the
+        Desktop side menu specified below.<br>
+        <img src="documentation/mobile_menu_open.png" height="12.5%" width="12.5%" />
+        <img src="documentation/tablet_menu_open.png" height="20%" width="20%" />
+
+        * On Desktop devices: 
+        - The navigation bar has the logo in the center and the hamburger menu disappears and is replaced with a fixed graphical side menu positioned a bit further down the viewport on the right hand side. With a nice CSS hover effect.     
+        <img src="documentation/desktop_nav_menu.png" height="75%" width="75%" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="documentation/god_menu_hover.png" height="8.5%" width="8.5%" />
+    
+
+---
+
++ #### Hero Section
+
+    - Hero section has a fixed background image.
+
+    - Hero section has a header text that consist:
+
+        * The name of the site.
+        * Short blurb building anticipation for the content that follows.
+    
+    <img src="documentation/desktop_nav_menu.png" height="75%" width="75%" />
+
+--- 
+
++ #### God Section(s)
+
+    - Each section contains a static background image of the relevant God, with the Gods name at the top.
+
+    - A lengthy blurb with a Glassmorphic background contains details relating to the God for its relevant section.
+
+    - The blurb (sagas) tell stories urging the user to continue reading.
+
+    
+    <img src="documentation/ymir.png" height="50%" width="50%" />
+    <img src="documentation/odin.png" height="50%" width="50%" />
+    <img src="documentation/thor.png" height="50%" width="50%" />
+    <img src="documentation/tyr.png" height="50%" width="50%" />
+    <img src="documentation/angraboda.png" height="50%" width="50%" />
+    <img src="documentation/freyja.png" height="50%" width="50%" />
+    <img src="documentation/freyr.png" height="50%" width="50%" />  
+
+
+    ---
++ #### YGGDRASSIL
+
+    - Originally planned to be a tree of the gods showing links and relationships, but realised
+    during development that this would be more time consuming than originally planned.
+
+    - This is the section that shows the nine realms in norse myth instead.
+
+    - Each realm is hoverable and when hovered displays a tooltip with a description.<br>
+    <img src="documentation/yggdrassil.png" height="40%" width="40%" />  
+
+---
++ #### The Althing
+
+    - The Althing section has a contact form:
+
+        - All text input fields are customized.
+        - Labels are animated when the input field is in focus and are not empty.
+        - All inputs are set to be required to fill out.
+
+        - The submit button is animated on hover.
+
+    - The 'Gods Hear Me' button leads to the response page.<br>
+​
+    <img src="documentation/althing.png" height="50%" width="50%" />  
+
+---
+
++ #### Footer
+
+    - Footer contains social media links that open in a new tab.
+
+    - This is a fixed footer.
+
+    - Links highlight on hover.
+
+    <img src="documentation/footer.png" height="50%" width="50%" />  
+
+
+---
+
++ ### Thank you response page
+
+    - Response page appears after submitting the contact form.
+    - It contains the thank you message and a button to return to the homepage.
+
+    <img src="documentation/response_page.png" height="50%" width="50%" />  
+
+---
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the site.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items simmetrically on the pages.
+- [CSS roots](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) was used to declaring global CSS variables and apply them throughout the project. 
+- [Figma](https://figma.com/) was used to make wireframes for the website.
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [Adobe Firefly](https://www.adobe.co.uk/) was used to create images and icons for the site using AI text to image technology.
+
+
+---
+## Design
+
+### Color Scheme
+
+![Color pallet](documentation/color_pallet.png)
+
+- Soft blue color was used as the main color of the website due to its phycological effect on people's minds. As this color is associated with trustworthiness and reliability, website visitors could build a firm believe in the organization "Animal Shelter".
+
+- Light Blue Color was used as a background color since this color creates a sense of tranquility and makes a connection between animal's ownership and peacefulness.
+
+- Purple color was used to make an emphasis on the logo and leave a memorable effect on the website visitors.
+
+### Typography
+
+![Main Font](documentation/primary_font.png)
+
+- Lato Google Font was used as the main font of the website in order to increase readability of the content on the pages.
+
+![Accent Font](documentation/accent_font.png)
+
+- Lobster Google Font was used to attract viewers' attention to the company's logo, to make an accent on the strong points of the company, and to incentivize visitors to contact "Animal Shelter".
+
+
+### Wireframes
+
+#### All screen sizes
+
+- [All wireframes](documentation/latest_wireframe.png)
+
+
+
+---
+
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
+
+### Accessibility & Performance
+
+#### BEFORE
+
+<img src="documentation/Lighthouse_test1.png" height="40%" width="40%" />  
+
+#### AFTER
+
+<img src="documentation/Lighthouse_test2.png" height="40%" width="40%" /> 
+<img src="documentation/wave_report.png" height="20%" width="20%" />  
+
+---
+
+
+## Deployment
+
+### Deployment to GitHub Pages
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/Dave-MK/mp1-legends-of-asgard), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://dave-mk.github.io/mp1-legends-of-asgard)
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/Dave-MK/mp1-legends-of-asgard.git`
+
+---
+
+## Future improvements
+- Add custom 404 page.
+- Improve the quality of the commit messages (I am aware that some of them may not meet the standards and will improve these in the future)
+- Add fully functional contact form.
+- Add opt-in form for email addresses or incorporate this into the contact form via a opt-in checkbox.
+- Add the external links to God wikis for more reputable source referencing.
+
+---
+## Credits
+
++ #### Content
+
+    - Inspiration for the gallery hover effect came from the article "How to add a gradient to overlay to a background image using just CSS and HTML" published the website [Web Dev etc](https://webdevetc.com).
+    - Inspiration for the responsive hamburger navbar came from [Kevin Powell](https://www.youtube.com/user/KepowOb) on his YouTube channel.
+
++ #### Media
+
+    - All the images for the website were created using text to image AI in [Adobe Firefly](https://www.adobe.com).
+    + [Hero image](https://unsplash.com/photos/9gz3wfHr65U);
+    + God section images:
+        - [1st image](https://unsplash.com/photos/_STvosrG-pw)
+        - [2nd image](https://unsplash.com/photos/v3-zcCWMjgM);
+        - [3rd image](https://unsplash.com/photos/W4EUiwceZjs);
+        - [4th image](https://unsplash.com/photos/sXU6BeWoZqI).
+    + Yggdrassil Section: 
+        - [1st image](https://unsplash.com/photos/UCFgM_AojFg);
+        - [2nd image](https://unsplash.com/photos/ISg37AI2A-s);
+        - [3rd image](https://unsplash.com/photos/2WeHZHIW6v0).
+    + Althing section:
+        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
+        - [2nd image](https://unsplash.com/photos/FdR_CoENqp8);
+        - [3rd image](https://unsplash.com/photos/C0zDWAPFT9A);
+    + Thank you reponse page:
+        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
+
++ #### Tools
+
+    - [Compress PNG](https://compresspng.com/) was used to compress PNG images.
+    - [Convert PNG to WEBP](https://compresspng.com/) was used to convert PNG images to WEBP.
+    - [Convert WEBP to AVIF](https://compresspng.com/) was used to convert WEBP images to AVIF.
+    - [Coolers](https://coolors.co/) & [Adobe Color](https://compresspng.com/) were used to create the color palette.
+
+
+---
+
+## Acknowledgments
+
+- [Miguel](https://) 
+- [Iuliia Konovalova](https://github.com/IuliiaKonovalova/), my code institute mentor was a huge asset in the mid to late stages of the project, assisting with syntax and semantic code improvements and best practices.
+- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+- [Lun Dev](https://www.youtube.com/user/lundev) for his amazing tutorials on CSS wizardry.
+
+---

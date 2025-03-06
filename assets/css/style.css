@@ -1274,10 +1274,6 @@ article:not(#hero) h2 {
     display: block;
   }
 
-  /* Adjusts margin for the world tree */
-  #world-tree {
-    margin-left: -6rem !important;
-  }
 }
 
 /* Media Queries for laptops (screen size 992px+) */
