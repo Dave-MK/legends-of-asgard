@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* The below code is importing a Google Fonts stylesheet for the fonts "Kanit" and "Russo One" with
 various font weights and styles. The imported stylesheet will be used to apply these fonts to the
 HTML elements on the webpage. */
@@ -50,7 +57,8 @@ for styling elements across different browsers by removing default browser styli
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* The code below is styling a custom scrollbar for webkit browsers (such as Chrome and Safari). It
@@ -67,6 +75,7 @@ scrollbar thumb with a linear gradient background and border radius of 10px. */
 }
 
 ::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(52, 204, 196)), to(rgb(202, 83, 206)));
   background: linear-gradient(rgb(52, 204, 196), rgb(202, 83, 206));
   border-radius: 10px;
 }
@@ -79,7 +88,8 @@ scrollbar thumb with a linear gradient background and border radius of 10px. */
 each part of the code is doing: */
 
 html {
-  scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -87,8 +97,13 @@ html {
 body {
   background-color: var(--bg-color);
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
   font-family: var(--secondary-font);
 }
@@ -101,20 +116,23 @@ h2 {
   font-size: var(--font-h1);
   letter-spacing: 0.1rem;
   color: var(--primary-color);
-  filter: var(--drop-shadow);
+  -webkit-filter: var(--drop-shadow);
+          filter: var(--drop-shadow);
 }
 
 h2 {
   font-size: var(--font-h2);
   margin-bottom: 0.75rem;
   color: var(--secondary-color);
-  filter: var(--drop-shadow);
+  -webkit-filter: var(--drop-shadow);
+          filter: var(--drop-shadow);
 }
 
 h3 {
   font-size: var(--font-h3);
   color: bisque;
-  filter: var(--drop-shadow);
+  -webkit-filter: var(--drop-shadow);
+          filter: var(--drop-shadow);
 }
 
 p {
@@ -123,7 +141,8 @@ p {
   font-weight: 300;
   letter-spacing: 0.075rem;
   z-index: 98;
-  filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
+  -webkit-filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
+          filter: var(--drop-shadow-alt) var(--drop-shadow-alt);
 }
 
 /* This section of code is a CSS code snippet. It sets the text decoration of anchor elements (`a`) to none
@@ -150,10 +169,19 @@ footer {
 }
 
 article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   width: 100vw;
   padding: 0rem 1rem 1rem 0rem;
@@ -193,8 +221,12 @@ footer {
   height: 100vh;
   position: fixed;
   display: none;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: var(--bg-color);
   z-index: 100;
 }
@@ -204,6 +236,8 @@ footer {
  * Activates the loader by changing display to flex.
  */
 .loader-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -227,7 +261,8 @@ footer {
   height: 1.75rem;
   background: var(--primary-color);
   border-radius: 100px;
-  animation: loader 1s 0.5s infinite ease-in;
+  -webkit-animation: loader 1s 0.5s infinite ease-in;
+          animation: loader 1s 0.5s infinite ease-in;
 }
 
 /**
@@ -249,7 +284,8 @@ footer {
   width: 4.5rem;
   height: 1.75rem;
   background: var(--secondary-color);
-  animation: loader 1s infinite ease-in;
+  -webkit-animation: loader 1s infinite ease-in;
+          animation: loader 1s infinite ease-in;
   border-radius: 100px;
 }
 
@@ -264,27 +300,60 @@ footer {
  * - 75%: scale(1.05) translateY(0px); z-index: 0; (third intermediate state)
  * - 100%: scale(0.85) translateY(-15px); (final state)
  */
-@keyframes loader {
+@-webkit-keyframes loader {
   0% {
-    transform: scale(0.85) translateY(-15px);
+    -webkit-transform: scale(0.85) translateY(-15px);
+            transform: scale(0.85) translateY(-15px);
   }
 
   25% {
-    transform: scale(1.05) translateY(0px);
+    -webkit-transform: scale(1.05) translateY(0px);
+            transform: scale(1.05) translateY(0px);
     z-index: 1;
   }
 
   50% {
-    transform: scale(1.05) translateY(15px);
+    -webkit-transform: scale(1.05) translateY(15px);
+            transform: scale(1.05) translateY(15px);
   }
 
   75% {
-    transform: scale(1.05) translateY(0px);
+    -webkit-transform: scale(1.05) translateY(0px);
+            transform: scale(1.05) translateY(0px);
     z-index: 0;
   }
 
   100% {
-    transform: scale(0.85) translateY(-15px);
+    -webkit-transform: scale(0.85) translateY(-15px);
+            transform: scale(0.85) translateY(-15px);
+  }
+}
+@keyframes loader {
+  0% {
+    -webkit-transform: scale(0.85) translateY(-15px);
+            transform: scale(0.85) translateY(-15px);
+  }
+
+  25% {
+    -webkit-transform: scale(1.05) translateY(0px);
+            transform: scale(1.05) translateY(0px);
+    z-index: 1;
+  }
+
+  50% {
+    -webkit-transform: scale(1.05) translateY(15px);
+            transform: scale(1.05) translateY(15px);
+  }
+
+  75% {
+    -webkit-transform: scale(1.05) translateY(0px);
+            transform: scale(1.05) translateY(0px);
+    z-index: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(0.85) translateY(-15px);
+            transform: scale(0.85) translateY(-15px);
   }
 }
 
@@ -300,10 +369,16 @@ footer {
 #wrapper {
   width: 100vw;
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 3rem;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.25rem 0.85rem 0.5rem 0.5rem;
   z-index: 99;
 }
@@ -315,7 +390,8 @@ footer {
 #wrapper > a > img {
   padding-top: clamp(1.75rem, 50%, 3rem);
   width: clamp(3.5rem, 7.5vw, 5rem);
-  filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
+  -webkit-filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
+          filter: drop-shadow(-2px 2px 1px rgb(0, 0, 0)) brightness(200%) contrast(200%);
 }
 
 /* .text-label i
@@ -325,7 +401,8 @@ footer {
 .text-label i {
   padding-top: clamp(1rem, 20%, 2.75rem);
   font-size: clamp(2.75rem, 7vw, 4rem);
-  filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43));
+  -webkit-filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43));
+          filter: drop-shadow(-2px 2px 2px rgb(43, 43, 43));
 }
 
 /* nav
@@ -370,8 +447,14 @@ nav li {
   - Translates navigation and list items upwards and applies transition. */
 #nav-toggle:not(:checked) ~ nav,
 nav li {
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  -o-transition: transform 250ms ease-in;
   transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 
 /* #nav-toggle:checked ~ nav,
@@ -379,8 +462,14 @@ nav li {
   - Resets translation and applies transition when nav-toggle is checked. */
 #nav-toggle:checked ~ nav,
 nav li {
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 /* #nav-toggle:checked ~ .text-label i:first-child
@@ -419,13 +508,18 @@ nav li:hover a {
   - Adds bottom margin. */
 #socials {
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   bottom: 0;
   z-index: 100;
   background-color: var(--glassmorphic-color);
-  backdrop-filter: var(--glassmorphic-filter);
+  -webkit-backdrop-filter: var(--glassmorphic-filter);
+          backdrop-filter: var(--glassmorphic-filter);
   padding: 0.5rem;
 }
 
@@ -434,8 +528,12 @@ nav li:hover a {
   - Uses flexbox for layout and justifies content evenly. */
 .social-icons {
   width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 /* .social-icons i
@@ -444,14 +542,16 @@ nav li:hover a {
   - Sets color with !important. */
 .social-icons i {
   font-size: clamp(2.25rem, 7.5vw, 3rem);
-  filter: var(--drop-shadow) opacity(0.65);
+  -webkit-filter: var(--drop-shadow) opacity(0.65);
+          filter: var(--drop-shadow) opacity(0.65);
   color: var(--secondary-color) !important;
 }
 
 /* .social-icons i:hover
   - Applies drop-shadow filter, opacity, and changes color on hover. */
 .social-icons i:hover {
-  filter: var(--drop-shadow) opacity(0.65);
+  -webkit-filter: var(--drop-shadow) opacity(0.65);
+          filter: var(--drop-shadow) opacity(0.65);
   color: bisque !important;
 }
 
@@ -477,11 +577,22 @@ nav li:hover a {
 #freyja div,
 #freyr div,
 #althing div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: safe center;
-  align-items: center;
-  align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: safe center;
+      -ms-flex-pack: safe center;
+          justify-content: safe center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   border-radius: 0.5rem;
   border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
   border-right: 0.05rem solid hsla(0, 0%, 55%, 0.4);
@@ -497,7 +608,8 @@ nav li:hover a {
   margin-bottom: 5rem;
   color: var(--secondary-color);
   background-color: var(--glassmorphic-color);
-  backdrop-filter: var(--glassmorphic-filter);
+  -webkit-backdrop-filter: var(--glassmorphic-filter);
+          backdrop-filter: var(--glassmorphic-filter);
   z-index: 97;
 }
 
@@ -509,6 +621,8 @@ nav li:hover a {
 */
 #althing div {
   overflow: visible;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   margin-top: 2rem;
 }
@@ -531,11 +645,22 @@ article:not(#hero) h2 {
 #freyja div,
 #freyr div,
 #althing div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: safe center;
-  align-items: center;
-  align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: safe center;
+      -ms-flex-pack: safe center;
+          justify-content: safe center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   border-radius: 0.5rem;
   border-top: 0.05rem solid hsla(0, 0%, 100%, 0.35);
   border-right: 0.05rem solid hsla(0, 0%, 55%, 0.4);
@@ -551,12 +676,15 @@ article:not(#hero) h2 {
   margin-bottom: 5rem;
   color: var(--secondary-color);
   background-color: var(--glassmorphic-color);
-  backdrop-filter: var(--glassmorphic-filter);
+  -webkit-backdrop-filter: var(--glassmorphic-filter);
+          backdrop-filter: var(--glassmorphic-filter);
   z-index: 97;
 }
 
 #althing div {
   overflow: visible;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   margin-top: 2rem;
 }
@@ -606,7 +734,9 @@ article:not(#hero) h2 {
 .hero-blurb {
   width: clamp(10rem, 60vw, 100rem) !important;
   padding: 1rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-transform: uppercase;
 }
 
@@ -699,10 +829,19 @@ article:not(#hero) h2 {
   background: var(--section-bg-overlay-two),
     url("../images/sections/yggdrassil_section.avif") no-repeat 52.5% 65% /
       cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* 
@@ -712,10 +851,19 @@ article:not(#hero) h2 {
 */
 #yggy {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 4rem;
 }
 
@@ -766,26 +914,42 @@ article:not(#hero) h2 {
 .helheim-tooltip {
   width: clamp(20rem, 75%, 50rem) !important;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-self: center;
-  align-items: center;
-  justify-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1.25rem 0;
 }
 
 
 .info-tooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 2rem 0;
 }
 
 .info-tooltip h3,
 .info-tooltip i {
   font-size: clamp(0.5rem, 7.5vw, 3rem);
-  justify-self: center;
-  align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 
@@ -802,8 +966,11 @@ article:not(#hero) h2 {
   text-align: left;
   padding: 0.75rem;
   border-radius: 5px;
-  filter: drop-shadow(0px 2px 1px black);
-  align-self: center;
+  -webkit-filter: drop-shadow(0px 2px 1px black);
+          filter: drop-shadow(0px 2px 1px black);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: absolute;
   z-index: 1;
 }
@@ -824,8 +991,11 @@ article:not(#hero) h2 {
   text-align: left;
   padding: 0.75rem;
   border-radius: 5px;
-  filter: drop-shadow(0px 2px 1px black);
-  align-self: center;
+  -webkit-filter: drop-shadow(0px 2px 1px black);
+          filter: drop-shadow(0px 2px 1px black);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: absolute;
   z-index: 1;
 }
@@ -844,8 +1014,11 @@ article:not(#hero) h2 {
   text-align: left;
   padding: 0.75rem;
   border-radius: 5px;
-  filter: drop-shadow(0px 2px 1px black);
-  align-self: center;
+  -webkit-filter: drop-shadow(0px 2px 1px black);
+          filter: drop-shadow(0px 2px 1px black);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: absolute;
   z-index: 1;
 }
@@ -894,7 +1067,10 @@ article:not(#hero) h2 {
 .vanaheim-tooltip,
 .jotunheimr-tooltip,
 .niflheim-tooltip {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 /* ALTHING section */
@@ -904,15 +1080,28 @@ article:not(#hero) h2 {
   full viewport height, padding, and flexbox properties for centering content.
 */
 #althing {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
   min-height: 100vh;
   padding-top: 3rem;
   padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* 
@@ -945,10 +1134,18 @@ article:not(#hero) h2 {
   Styles for the form inside the "althing" container. It includes flexbox properties for layout.
 */
 #althing-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* 
@@ -1011,6 +1208,18 @@ article:not(#hero) h2 {
   #althing form input::placeholder, #althing form textarea::placeholder 
   Styles for placeholder text inside input and textarea elements within the form in the "althing" container. It sets the text color.
 */
+#althing form input::-webkit-input-placeholder, #althing form textarea::-webkit-input-placeholder {
+  color: var(--primary-color);
+}
+#althing form input::-moz-placeholder, #althing form textarea::-moz-placeholder {
+  color: var(--primary-color);
+}
+#althing form input:-ms-input-placeholder, #althing form textarea:-ms-input-placeholder {
+  color: var(--primary-color);
+}
+#althing form input::-ms-input-placeholder, #althing form textarea::-ms-input-placeholder {
+  color: var(--primary-color);
+}
 #althing form input::placeholder,
 #althing form textarea::placeholder {
   color: var(--primary-color);
@@ -1043,6 +1252,18 @@ article:not(#hero) h2 {
   #althing form input:focus-within::placeholder, #althing form textarea:focus-within::placeholder 
   Styles for placeholder text inside focused input and textarea elements within the form in the "althing" container. It changes the text color.
 */
+#althing form input:focus-within::-webkit-input-placeholder, #althing form textarea:focus-within::-webkit-input-placeholder {
+  color: var(--secondary-color);
+}
+#althing form input:focus-within::-moz-placeholder, #althing form textarea:focus-within::-moz-placeholder {
+  color: var(--secondary-color);
+}
+#althing form input:focus-within:-ms-input-placeholder, #althing form textarea:focus-within:-ms-input-placeholder {
+  color: var(--secondary-color);
+}
+#althing form input:focus-within::-ms-input-placeholder, #althing form textarea:focus-within::-ms-input-placeholder {
+  color: var(--secondary-color);
+}
 #althing form input:focus-within::placeholder,
 #althing form textarea:focus-within::placeholder {
   color: var(--secondary-color);
@@ -1065,6 +1286,10 @@ article:not(#hero) h2 {
   - The image is positioned at 45% horizontally and 95% vertically, and covers the entire element.
 */
 #thankyou {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../images/sections/contact_bg.avif") no-repeat 45% 95% / cover;
 }
@@ -1080,9 +1305,15 @@ article:not(#hero) h2 {
   - Text color is white and bold.
 */
 #back2asgard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: clamp(7.5rem, 50vw, 20rem);
   background-color: var(--tertiary-color);
   border-radius: 50px;
@@ -1139,12 +1370,15 @@ article:not(#hero) h2 {
   #althing div {
     margin-left: 4rem;
     width: clamp(10rem, 65vw, 130rem);
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 
   /* Centers the header container and hides certain elements */
   #wrapper {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 1.5rem;
   }
 
@@ -1159,8 +1393,13 @@ article:not(#hero) h2 {
     margin: 1rem 0.5rem;
     padding: 0.75rem;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     right: 0;
   }
 
@@ -1171,7 +1410,8 @@ article:not(#hero) h2 {
     bottom: 3.5rem;
     left: -3rem;
     color: var(--primary-color);
-    filter: opacity(0.75);
+    -webkit-filter: opacity(0.75);
+            filter: opacity(0.75);
     font-size: 3rem;
   }
 
@@ -1183,8 +1423,11 @@ article:not(#hero) h2 {
   .image-item img {
     width: 100%;
     border-radius: 10px;
-    align-self: center;
-    justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
     border-top: 2px solid rgba(255, 166, 0, 0.35);
     border-left: 2px solid rgba(10, 235, 216, 0.35);
     border-right: 2px solid rgba(255, 166, 0, 0.35);
@@ -1199,8 +1442,10 @@ article:not(#hero) h2 {
     - Uses perspective to give a sense of depth.
   */
   .menu-list {
-    transform-style: preserve-3d;
-    transform: perspective(1750px);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(1750px);
+            transform: perspective(1750px);
   }
 
   /* 
@@ -1210,10 +1455,17 @@ article:not(#hero) h2 {
     - Adds a transition effect for smooth changes.
   */
   .image-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     justify-items: center;
-    filter: grayscale(1) brightness(0.5);
+    -webkit-filter: grayscale(1) brightness(0.5);
+            filter: grayscale(1) brightness(0.5);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
 
@@ -1223,8 +1475,10 @@ article:not(#hero) h2 {
     - Translates the item in 3D space.
   */
   .image-item:hover {
-    filter: brightness(1) grayscale(0);
-    transform: translateZ(100px) translateX(-10px);
+    -webkit-filter: brightness(1) grayscale(0);
+            filter: brightness(1) grayscale(0);
+    -webkit-transform: translateZ(100px) translateX(-10px);
+            transform: translateZ(100px) translateX(-10px);
   }
 
   /* 
@@ -1232,8 +1486,10 @@ article:not(#hero) h2 {
     - Applies filters and 3D transformations to the next sibling element when the image item is hovered.
   */
   .image-item:hover + * {
-    filter: brightness(0.4);
-    transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
+    -webkit-filter: brightness(0.4);
+            filter: brightness(0.4);
+    -webkit-transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
+            transform: translateZ(45px) translateX(-10px) rotateX(-30deg);
   }
 
   /* 
@@ -1241,8 +1497,10 @@ article:not(#hero) h2 {
     - Applies filters and 3D transformations to the previous sibling element when the image item is hovered.
   */
   .image-item:has(+ *:hover) {
-    filter: brightness(0.4);
-    transform: translateZ(40px) translateX(-10px) rotateX(30deg);
+    -webkit-filter: brightness(0.4);
+            filter: brightness(0.4);
+    -webkit-transform: translateZ(40px) translateX(-10px) rotateX(30deg);
+            transform: translateZ(40px) translateX(-10px) rotateX(30deg);
   }
 
   /* 
@@ -1253,16 +1511,26 @@ article:not(#hero) h2 {
   */
   .image-item a {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   /* Shows figcaption on image item hover */
   .image-item figcaption {
     display: none;
-    filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
+    -webkit-filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
+            filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
     position: absolute;
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -1327,4 +1595,3 @@ article:not(#hero) h2 {
     width: clamp(10rem, 80vw, 160rem);
   }
 }
-

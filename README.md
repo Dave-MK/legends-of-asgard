@@ -170,8 +170,6 @@ The site can be accessed by this [link](https://dave-mk.github.io/mp1-legends-of
 
 - [All wireframes](documentation/latest_wireframe.png)
 
-
-
 ---
 
 ## Testing
@@ -187,7 +185,8 @@ Please refer to the [TESTING.md](TESTING.md) file for all test-related documenta
 #### AFTER
 
 <img src="documentation/Lighthouse_test2.png" height="40%" width="40%" /> 
-<img src="documentation/wave_report.png" height="20%" width="20%" />  
+<img src="documentation/wave_report.png" height="20%" width="20%" />
+<img src="documentation/css_validation.png" height="40%" width="40%" /> 
 
 ---
 
@@ -230,22 +229,6 @@ In your IDE Terminal, type the following command to clone my repository:
 + #### Media
 
     - All the images for the website were created using text to image AI in [Adobe Firefly](https://www.adobe.com).
-    + [Hero image](https://unsplash.com/photos/9gz3wfHr65U);
-    + God section images:
-        - [1st image](https://unsplash.com/photos/_STvosrG-pw)
-        - [2nd image](https://unsplash.com/photos/v3-zcCWMjgM);
-        - [3rd image](https://unsplash.com/photos/W4EUiwceZjs);
-        - [4th image](https://unsplash.com/photos/sXU6BeWoZqI).
-    + Yggdrassil Section: 
-        - [1st image](https://unsplash.com/photos/UCFgM_AojFg);
-        - [2nd image](https://unsplash.com/photos/ISg37AI2A-s);
-        - [3rd image](https://unsplash.com/photos/2WeHZHIW6v0).
-    + Althing section:
-        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
-        - [2nd image](https://unsplash.com/photos/FdR_CoENqp8);
-        - [3rd image](https://unsplash.com/photos/C0zDWAPFT9A);
-    + Thank you reponse page:
-        - [1st image](https://unsplash.com/photos/gKXKBY-C-Dk);
 
 + #### Tools
 
@@ -259,7 +242,7 @@ In your IDE Terminal, type the following command to clone my repository:
 
 ## Acknowledgments
 
-- [Miguel](https://) 
+- [Miguel Ortiz](https://cityofbristolcollege.ac.uk) My college tutor has been majoryly supportive, allowing me an extension when issues at home conflicted with my project. 
 - [Iuliia Konovalova](https://github.com/IuliiaKonovalova/), my code institute mentor was a huge asset in the mid to late stages of the project, assisting with syntax and semantic code improvements and best practices.
 - [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
 - [Lun Dev](https://www.youtube.com/user/lundev) for his amazing tutorials on CSS wizardry.
