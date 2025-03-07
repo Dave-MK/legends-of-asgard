@@ -719,6 +719,11 @@ article:not(#hero) h2 {
   margin-bottom: 3rem;
 }
 
+.hero-title h2 {
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
 /* .hero-blurb:
   - Sets a responsive width using the clamp function and makes it important.
   - Adds padding and centers the text.
@@ -1519,8 +1524,8 @@ article:not(#hero) h2 {
             align-items: center;
   }
 
-  /* Shows figcaption on image item hover */
-  .image-item figcaption {
+  /* Shows span on image item hover */
+  .image-item span {
     display: none;
     -webkit-filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
             filter: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 6px black);
@@ -1531,7 +1536,7 @@ article:not(#hero) h2 {
     bottom: 0.75rem;
   }
 
-  .image-item:hover figcaption {
+  .image-item:hover span {
     display: block;
   }
 

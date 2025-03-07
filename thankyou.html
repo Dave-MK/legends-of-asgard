@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn of the of the chaos surrounding the Legends of Asgard, told within these thrilling Sagas from old Norse mythology!">
-    <meta name="keywords" content="norse, old norse, mythology, nordic, scandinavian, danish, danelaw, legends, asgard, odin, tyr, thor, freyja, freyr">
+    <meta name="description"
+        content="Learn of the of the chaos surrounding the Legends of Asgard, told within these thrilling Sagas from old Norse mythology!">
+    <meta name="keywords"
+        content="norse, old norse, mythology, nordic, scandinavian, danish, danelaw, legends, asgard, odin, tyr, thor, freyja, freyr">
     <!-- Favicons for major devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
@@ -15,6 +18,7 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body id="thankyou">
     <!-- Load screen animation -->
     <aside class="loader loader-active">
@@ -89,6 +93,7 @@
     <!-- Main Body containing God Menu, Sagas, and Yggdrassil -->
     <main>
         <section>
+            <h2 aria-hidden="true" hidden>THANK YOU</h2>
             <article>
                 <h2>YOUR VOICE IS HEARD!</h2>
                 <div>
@@ -96,13 +101,15 @@
                         Thank you for your feedback
                     </h3>
                 </div>
-                <a href="./index.html" id="back2asgard" onclick="window.close()"><i class="fa-solid fa-circle-arrow-left"></i>Return</a>
+                <a href="./index.html" id="back2asgard" onclick="window.close()"><i
+                        class="fa-solid fa-circle-arrow-left"></i>Return</a>
             </article>
         </section>
         <aside id="socials">
             <div class="social-icons">
                 <a href="https://x.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-square-instagram"></i></a>
                 <a href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
             </div>
@@ -124,12 +131,13 @@
 
         // Attach click event to each link
         links.forEach((link) => {
-        link.addEventListener("click", function (event) {
-            const checkbox = document.getElementById("nav-toggle");
-            // Trigger a click on the checkbox to toggle content
-            checkbox.click();
-        });
+            link.addEventListener("click", function (event) {
+                const checkbox = document.getElementById("nav-toggle");
+                // Trigger a click on the checkbox to toggle content
+                checkbox.click();
+            });
         });
     </script>
 </body>
+
 </html>

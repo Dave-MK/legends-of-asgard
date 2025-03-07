@@ -181,8 +181,19 @@ Please refer to the [TESTING.md](TESTING.md) file for all test-related documenta
 
 ### Accessibility & Performance
 
+#### LIGHTHOUSE TEST REPORT
 <img src="documentation/lighthouse_test2.png" height="40%" width="40%" /> 
+
+#### WAVE ACCESSIBILITY REPORT
 <img src="documentation/wave_report.png" height="20%" width="20%" />
+
+#### HOME PAGE HTML VALIDITY
+<img src="documentation/html_valid.png" height="40%" width="40%" />
+
+#### THANK YOU PAGE HTML VALIDITY
+<img src="documentation/thankyou_html_valid.png" height="40%" width="40%" />
+
+#### CSS VALIDITY
 <img src="documentation/css_validation.png" height="40%" width="40%" /> 
 
 ---
