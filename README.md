@@ -181,7 +181,7 @@ Please refer to the [TESTING.md](TESTING.md) file for all test-related documenta
 
 ### Accessibility & Performance
 
-<img src="documentation/Lighthouse_test2.png" height="40%" width="40%" /> 
+<img src="documentation/lighthouse_test2.png" height="40%" width="40%" /> 
 <img src="documentation/wave_report.png" height="20%" width="20%" />
 <img src="documentation/css_validation.png" height="40%" width="40%" /> 
 
