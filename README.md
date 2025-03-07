@@ -239,7 +239,7 @@ In your IDE Terminal, type the following command to clone my repository:
 
 ## Acknowledgments
 
-- [Miguel Ortiz](https://www.cityofbristol.ac.uk/), my college tutor has been majorly supportive, allowing me an extension when issues at home conflicted with my project. 
+- [Miguel Ortega Legorreta](https://www.cityofbristol.ac.uk/), my college tutor has been majorly supportive, allowing me an extension when issues at home conflicted with my project. 
 - [Iuliia Konovalova](https://github.com/IuliiaKonovalova/), my code institute mentor was a huge asset in the mid to late stages of the project, assisting with syntax and semantic code improvements and best practices.
 - [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
 - [Lun Dev](https://www.youtube.com/user/lundev) for his amazing tutorials on CSS wizardry.
