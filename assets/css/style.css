@@ -195,19 +195,19 @@ footer {
 
 /* Load screen */
 
-/**
- * .loader
- * A full-screen loader that is initially hidden and can be activated by adding the .loader-active class.
- * 
- * Properties:
- * - width: 100vw; (full viewport width)
- * - height: 100vh; (full viewport height)
- * - position: fixed; (fixed position relative to the viewport)
- * - display: none; (initially hidden)
- * - align-items: center; (center items vertically)
- * - justify-content: center; (center items horizontally)
- * - background: var(--bg-color); (background color from CSS variable)
- * - z-index: 100; (stacking order)
+/*
+  .loader
+  A full-screen loader that is initially hidden and can be activated by adding the .loader-active class.
+  
+  Properties:
+  - width: 100vw; (full viewport width)
+  - height: 100vh; (full viewport height)
+  - position: fixed; (fixed position relative to the viewport)
+  - display: none; (initially hidden)
+  - align-items: center; (center items vertically)
+  - justify-content: center; (center items horizontally)
+  - background: var(--bg-color); (background color from CSS variable)
+  - z-index: 100; (stacking order)
  */
 .loader {
   width: 100vw;
@@ -224,9 +224,9 @@ footer {
   z-index: 300;
 }
 
-/**
- * .loader-active
- * Activates the loader by changing display to flex.
+/*
+  .loader-active
+  Activates the loader by changing display to flex.
  */
 .loader-active {
   display: -webkit-box;
@@ -234,18 +234,18 @@ footer {
   display: flex;
 }
 
-/**
- * .loader::before
- * A pseudo-element representing the primary part of the loader animation.
- * 
- * Properties:
- * - content: ""; (empty content)
- * - position: absolute; (absolute positioning)
- * - width: 5rem; (width of the element)
- * - height: 1.75rem; (height of the element)
- * - background: var(--primary-color); (background color from CSS variable)
- * - border-radius: 100px; (rounded corners)
- * - animation: loader 1s 0.5s infinite ease-in; (animation with delay)
+/*
+  .loader::before
+  A pseudo-element representing the primary part of the loader animation.
+  
+  Properties:
+  - content: ""; (empty content)
+  - position: absolute; (absolute positioning)
+  - width: 5rem; (width of the element)
+  - height: 1.75rem; (height of the element)
+  - background: var(--primary-color); (background color from CSS variable)
+  - border-radius: 100px; (rounded corners)
+  - animation: loader 1s 0.5s infinite ease-in; (animation with delay)
  */
 .loader::before {
   content: "";
@@ -258,18 +258,18 @@ footer {
           animation: loader 1s 0.5s infinite ease-in;
 }
 
-/**
- * .loader::after
- * A pseudo-element representing the secondary part of the loader animation.
- * 
- * Properties:
- * - content: ""; (empty content)
- * - position: absolute; (absolute positioning)
- * - width: 4.5rem; (width of the element)
- * - height: 1.75rem; (height of the element)
- * - background: var(--secondary-color); (background color from CSS variable)
- * - border-radius: 100px; (rounded corners)
- * - animation: loader 1s infinite ease-in; (animation without delay)
+/*
+  .loader::after
+  A pseudo-element representing the secondary part of the loader animation.
+  
+  Properties:
+  - content: ""; (empty content)
+  - position: absolute; (absolute positioning)
+  - width: 4.5rem; (width of the element)
+  - height: 1.75rem; (height of the element)
+  - background: var(--secondary-color); (background color from CSS variable)
+  - border-radius: 100px; (rounded corners)
+  - animation: loader 1s infinite ease-in; (animation without delay)
  */
 .loader::after {
   content: "";
@@ -282,16 +282,16 @@ footer {
   border-radius: 100px;
 }
 
-/**
- * @keyframes loader
- * Defines the keyframes for the loader animation.
- * 
- * Keyframes:
- * - 0%: scale(0.85) translateY(-15px); (initial state)
- * - 25%: scale(1.05) translateY(0px); z-index: 1; (first intermediate state)
- * - 50%: scale(1.05) translateY(15px); (second intermediate state)
- * - 75%: scale(1.05) translateY(0px); z-index: 0; (third intermediate state)
- * - 100%: scale(0.85) translateY(-15px); (final state)
+/*
+  @keyframes loader
+  Defines the keyframes for the loader animation.
+  
+  Keyframes:
+  - 0%: scale(0.85) translateY(-15px); (initial state)
+  - 25%: scale(1.05) translateY(0px); z-index: 1; (first intermediate state)
+  - 50%: scale(1.05) translateY(15px); (second intermediate state)
+  - 75%: scale(1.05) translateY(0px); z-index: 0; (third intermediate state)
+  - 100%: scale(0.85) translateY(-15px); (final state)
  */
 @-webkit-keyframes loader {
   0% {
